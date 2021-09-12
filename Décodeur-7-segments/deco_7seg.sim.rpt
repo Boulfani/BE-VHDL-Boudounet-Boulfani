@@ -1,0 +1,282 @@
+Simulator report for deco_7seg
+Fri Sep 03 11:11:16 2021
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 120 nodes    ;
+; Simulation Coverage         ;     100.00 % ;
+; Total Number of Transitions ; 6421         ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                              ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Option                                                                                     ; Setting            ; Default Value ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+; Simulation mode                                                                            ; Functional         ; Timing        ;
+; Start time                                                                                 ; 0 ns               ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF               ;               ;
+; Vector input source                                                                        ; deco_7seg_simu.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                 ; On            ;
+; Check outputs                                                                              ; Off                ; Off           ;
+; Report simulation coverage                                                                 ; On                 ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                 ; On            ;
+; Display missing 1-value coverage report                                                    ; On                 ; On            ;
+; Display missing 0-value coverage report                                                    ; On                 ; On            ;
+; Detect setup and hold time violations                                                      ; Off                ; Off           ;
+; Detect glitches                                                                            ; Off                ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                ; Off           ;
+; Generate Signal Activity File                                                              ; Off                ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                 ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE         ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                 ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto               ; Auto          ;
++--------------------------------------------------------------------------------------------+--------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;     100.00 % ;
+; Total nodes checked                                 ; 120          ;
+; Total output ports checked                          ; 120          ;
+; Total output ports with complete 1/0-value coverage ; 120          ;
+; Total output ports with no 1/0-value coverage       ; 0            ;
+; Total output ports with no 1-value coverage         ; 0            ;
+; Total output ports with no 0-value coverage         ; 0            ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                    ;
++----------------------+----------------------+------------------+
+; Node Name            ; Output Port Name     ; Output Port Type ;
++----------------------+----------------------+------------------+
+; |deco_7seg|S~0       ; |deco_7seg|S~0       ; out              ;
+; |deco_7seg|S~1       ; |deco_7seg|S~1       ; out              ;
+; |deco_7seg|S~2       ; |deco_7seg|S~2       ; out              ;
+; |deco_7seg|S~3       ; |deco_7seg|S~3       ; out              ;
+; |deco_7seg|S~4       ; |deco_7seg|S~4       ; out              ;
+; |deco_7seg|S~5       ; |deco_7seg|S~5       ; out              ;
+; |deco_7seg|S~6       ; |deco_7seg|S~6       ; out              ;
+; |deco_7seg|S~7       ; |deco_7seg|S~7       ; out              ;
+; |deco_7seg|S~8       ; |deco_7seg|S~8       ; out              ;
+; |deco_7seg|S~9       ; |deco_7seg|S~9       ; out              ;
+; |deco_7seg|S~10      ; |deco_7seg|S~10      ; out              ;
+; |deco_7seg|S~11      ; |deco_7seg|S~11      ; out              ;
+; |deco_7seg|S~12      ; |deco_7seg|S~12      ; out              ;
+; |deco_7seg|S~13      ; |deco_7seg|S~13      ; out              ;
+; |deco_7seg|S~14      ; |deco_7seg|S~14      ; out              ;
+; |deco_7seg|S~15      ; |deco_7seg|S~15      ; out              ;
+; |deco_7seg|S~16      ; |deco_7seg|S~16      ; out              ;
+; |deco_7seg|S~17      ; |deco_7seg|S~17      ; out              ;
+; |deco_7seg|S~18      ; |deco_7seg|S~18      ; out              ;
+; |deco_7seg|S~19      ; |deco_7seg|S~19      ; out              ;
+; |deco_7seg|S~20      ; |deco_7seg|S~20      ; out              ;
+; |deco_7seg|S~21      ; |deco_7seg|S~21      ; out              ;
+; |deco_7seg|S~22      ; |deco_7seg|S~22      ; out              ;
+; |deco_7seg|S~23      ; |deco_7seg|S~23      ; out              ;
+; |deco_7seg|S~24      ; |deco_7seg|S~24      ; out              ;
+; |deco_7seg|S~25      ; |deco_7seg|S~25      ; out              ;
+; |deco_7seg|S~26      ; |deco_7seg|S~26      ; out              ;
+; |deco_7seg|S~27      ; |deco_7seg|S~27      ; out              ;
+; |deco_7seg|S~28      ; |deco_7seg|S~28      ; out              ;
+; |deco_7seg|S~29      ; |deco_7seg|S~29      ; out              ;
+; |deco_7seg|S~30      ; |deco_7seg|S~30      ; out              ;
+; |deco_7seg|S~31      ; |deco_7seg|S~31      ; out              ;
+; |deco_7seg|S~32      ; |deco_7seg|S~32      ; out              ;
+; |deco_7seg|S~33      ; |deco_7seg|S~33      ; out              ;
+; |deco_7seg|S~34      ; |deco_7seg|S~34      ; out              ;
+; |deco_7seg|S~35      ; |deco_7seg|S~35      ; out              ;
+; |deco_7seg|S~36      ; |deco_7seg|S~36      ; out              ;
+; |deco_7seg|S~37      ; |deco_7seg|S~37      ; out              ;
+; |deco_7seg|S~38      ; |deco_7seg|S~38      ; out              ;
+; |deco_7seg|S~39      ; |deco_7seg|S~39      ; out              ;
+; |deco_7seg|S~40      ; |deco_7seg|S~40      ; out              ;
+; |deco_7seg|S~41      ; |deco_7seg|S~41      ; out              ;
+; |deco_7seg|S~42      ; |deco_7seg|S~42      ; out              ;
+; |deco_7seg|S~43      ; |deco_7seg|S~43      ; out              ;
+; |deco_7seg|S~44      ; |deco_7seg|S~44      ; out              ;
+; |deco_7seg|S~45      ; |deco_7seg|S~45      ; out              ;
+; |deco_7seg|S~46      ; |deco_7seg|S~46      ; out              ;
+; |deco_7seg|S~47      ; |deco_7seg|S~47      ; out              ;
+; |deco_7seg|S~48      ; |deco_7seg|S~48      ; out              ;
+; |deco_7seg|S~49      ; |deco_7seg|S~49      ; out              ;
+; |deco_7seg|S~50      ; |deco_7seg|S~50      ; out              ;
+; |deco_7seg|S~51      ; |deco_7seg|S~51      ; out              ;
+; |deco_7seg|S~52      ; |deco_7seg|S~52      ; out              ;
+; |deco_7seg|S~53      ; |deco_7seg|S~53      ; out              ;
+; |deco_7seg|S~54      ; |deco_7seg|S~54      ; out              ;
+; |deco_7seg|S~55      ; |deco_7seg|S~55      ; out              ;
+; |deco_7seg|S~56      ; |deco_7seg|S~56      ; out              ;
+; |deco_7seg|S~57      ; |deco_7seg|S~57      ; out              ;
+; |deco_7seg|S~58      ; |deco_7seg|S~58      ; out              ;
+; |deco_7seg|S~59      ; |deco_7seg|S~59      ; out              ;
+; |deco_7seg|S~60      ; |deco_7seg|S~60      ; out              ;
+; |deco_7seg|S~61      ; |deco_7seg|S~61      ; out              ;
+; |deco_7seg|S~62      ; |deco_7seg|S~62      ; out              ;
+; |deco_7seg|S~63      ; |deco_7seg|S~63      ; out              ;
+; |deco_7seg|S~64      ; |deco_7seg|S~64      ; out              ;
+; |deco_7seg|S~65      ; |deco_7seg|S~65      ; out              ;
+; |deco_7seg|S~66      ; |deco_7seg|S~66      ; out              ;
+; |deco_7seg|S~67      ; |deco_7seg|S~67      ; out              ;
+; |deco_7seg|S~68      ; |deco_7seg|S~68      ; out              ;
+; |deco_7seg|S~69      ; |deco_7seg|S~69      ; out              ;
+; |deco_7seg|S~70      ; |deco_7seg|S~70      ; out              ;
+; |deco_7seg|S~71      ; |deco_7seg|S~71      ; out              ;
+; |deco_7seg|S~72      ; |deco_7seg|S~72      ; out              ;
+; |deco_7seg|S~73      ; |deco_7seg|S~73      ; out              ;
+; |deco_7seg|S~74      ; |deco_7seg|S~74      ; out              ;
+; |deco_7seg|S~75      ; |deco_7seg|S~75      ; out              ;
+; |deco_7seg|S~76      ; |deco_7seg|S~76      ; out              ;
+; |deco_7seg|S~77      ; |deco_7seg|S~77      ; out              ;
+; |deco_7seg|S~78      ; |deco_7seg|S~78      ; out              ;
+; |deco_7seg|S~79      ; |deco_7seg|S~79      ; out              ;
+; |deco_7seg|S~80      ; |deco_7seg|S~80      ; out              ;
+; |deco_7seg|S~81      ; |deco_7seg|S~81      ; out              ;
+; |deco_7seg|S~82      ; |deco_7seg|S~82      ; out              ;
+; |deco_7seg|S~83      ; |deco_7seg|S~83      ; out              ;
+; |deco_7seg|S~84      ; |deco_7seg|S~84      ; out              ;
+; |deco_7seg|S~85      ; |deco_7seg|S~85      ; out              ;
+; |deco_7seg|S~86      ; |deco_7seg|S~86      ; out              ;
+; |deco_7seg|S~87      ; |deco_7seg|S~87      ; out              ;
+; |deco_7seg|S~88      ; |deco_7seg|S~88      ; out              ;
+; |deco_7seg|S~89      ; |deco_7seg|S~89      ; out              ;
+; |deco_7seg|S~90      ; |deco_7seg|S~90      ; out              ;
+; |deco_7seg|S~91      ; |deco_7seg|S~91      ; out              ;
+; |deco_7seg|S~92      ; |deco_7seg|S~92      ; out              ;
+; |deco_7seg|E[0]      ; |deco_7seg|E[0]      ; out              ;
+; |deco_7seg|E[1]      ; |deco_7seg|E[1]      ; out              ;
+; |deco_7seg|E[2]      ; |deco_7seg|E[2]      ; out              ;
+; |deco_7seg|E[3]      ; |deco_7seg|E[3]      ; out              ;
+; |deco_7seg|S[0]      ; |deco_7seg|S[0]      ; pin_out          ;
+; |deco_7seg|S[1]      ; |deco_7seg|S[1]      ; pin_out          ;
+; |deco_7seg|S[2]      ; |deco_7seg|S[2]      ; pin_out          ;
+; |deco_7seg|S[3]      ; |deco_7seg|S[3]      ; pin_out          ;
+; |deco_7seg|S[4]      ; |deco_7seg|S[4]      ; pin_out          ;
+; |deco_7seg|S[5]      ; |deco_7seg|S[5]      ; pin_out          ;
+; |deco_7seg|S[6]      ; |deco_7seg|S[6]      ; pin_out          ;
+; |deco_7seg|Equal0~0  ; |deco_7seg|Equal0~0  ; out0             ;
+; |deco_7seg|Equal1~0  ; |deco_7seg|Equal1~0  ; out0             ;
+; |deco_7seg|Equal2~0  ; |deco_7seg|Equal2~0  ; out0             ;
+; |deco_7seg|Equal3~0  ; |deco_7seg|Equal3~0  ; out0             ;
+; |deco_7seg|Equal4~0  ; |deco_7seg|Equal4~0  ; out0             ;
+; |deco_7seg|Equal5~0  ; |deco_7seg|Equal5~0  ; out0             ;
+; |deco_7seg|Equal6~0  ; |deco_7seg|Equal6~0  ; out0             ;
+; |deco_7seg|Equal7~0  ; |deco_7seg|Equal7~0  ; out0             ;
+; |deco_7seg|Equal8~0  ; |deco_7seg|Equal8~0  ; out0             ;
+; |deco_7seg|Equal9~0  ; |deco_7seg|Equal9~0  ; out0             ;
+; |deco_7seg|Equal10~0 ; |deco_7seg|Equal10~0 ; out0             ;
+; |deco_7seg|Equal11~0 ; |deco_7seg|Equal11~0 ; out0             ;
+; |deco_7seg|Equal12~0 ; |deco_7seg|Equal12~0 ; out0             ;
+; |deco_7seg|Equal13~0 ; |deco_7seg|Equal13~0 ; out0             ;
+; |deco_7seg|Equal14~0 ; |deco_7seg|Equal14~0 ; out0             ;
+; |deco_7seg|Equal15~0 ; |deco_7seg|Equal15~0 ; out0             ;
++----------------------+----------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------+
+; Missing 1-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------+
+; Missing 0-Value Coverage                        ;
++-----------+------------------+------------------+
+; Node Name ; Output Port Name ; Output Port Type ;
++-----------+------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Sep 03 11:11:15 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off deco_7seg -c deco_7seg
+Info: Using vector source file "C:/Users/Etudiant/Documents/BE VHDL/Décodeur 7 segments/deco_7seg_simu.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of deco_7seg_simu.vwf called deco_7seg.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is     100.00 %
+Info: Number of transitions in simulation is 6421
+Info: Vector file deco_7seg_simu.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 150 megabytes
+    Info: Processing ended: Fri Sep 03 11:11:16 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
