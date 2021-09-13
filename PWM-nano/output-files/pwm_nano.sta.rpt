@@ -1,0 +1,1324 @@
+TimeQuest Timing Analyzer report for pwm_nano
+Sun Sep 12 17:49:09 2021
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow 1200mV 85C Model Fmax Summary
+  6. Slow 1200mV 85C Model Setup Summary
+  7. Slow 1200mV 85C Model Hold Summary
+  8. Slow 1200mV 85C Model Recovery Summary
+  9. Slow 1200mV 85C Model Removal Summary
+ 10. Slow 1200mV 85C Model Minimum Pulse Width Summary
+ 11. Slow 1200mV 85C Model Setup: 'clk'
+ 12. Slow 1200mV 85C Model Hold: 'clk'
+ 13. Slow 1200mV 85C Model Minimum Pulse Width: 'clk'
+ 14. Clock to Output Times
+ 15. Minimum Clock to Output Times
+ 16. Slow 1200mV 85C Model Metastability Report
+ 17. Slow 1200mV 0C Model Fmax Summary
+ 18. Slow 1200mV 0C Model Setup Summary
+ 19. Slow 1200mV 0C Model Hold Summary
+ 20. Slow 1200mV 0C Model Recovery Summary
+ 21. Slow 1200mV 0C Model Removal Summary
+ 22. Slow 1200mV 0C Model Minimum Pulse Width Summary
+ 23. Slow 1200mV 0C Model Setup: 'clk'
+ 24. Slow 1200mV 0C Model Hold: 'clk'
+ 25. Slow 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 26. Clock to Output Times
+ 27. Minimum Clock to Output Times
+ 28. Slow 1200mV 0C Model Metastability Report
+ 29. Fast 1200mV 0C Model Setup Summary
+ 30. Fast 1200mV 0C Model Hold Summary
+ 31. Fast 1200mV 0C Model Recovery Summary
+ 32. Fast 1200mV 0C Model Removal Summary
+ 33. Fast 1200mV 0C Model Minimum Pulse Width Summary
+ 34. Fast 1200mV 0C Model Setup: 'clk'
+ 35. Fast 1200mV 0C Model Hold: 'clk'
+ 36. Fast 1200mV 0C Model Minimum Pulse Width: 'clk'
+ 37. Clock to Output Times
+ 38. Minimum Clock to Output Times
+ 39. Fast 1200mV 0C Model Metastability Report
+ 40. Multicorner Timing Analysis Summary
+ 41. Clock to Output Times
+ 42. Minimum Clock to Output Times
+ 43. Board Trace Model Assignments
+ 44. Input Transition Times
+ 45. Slow Corner Signal Integrity Metrics
+ 46. Fast Corner Signal Integrity Metrics
+ 47. Setup Transfers
+ 48. Hold Transfers
+ 49. Report TCCS
+ 50. Report RSKM
+ 51. Unconstrained Paths
+ 52. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++-------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                   ;
++--------------------+----------------------------------------------------------------+
+; Quartus II Version ; Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition ;
+; Revision Name      ; pwm_nano                                                       ;
+; Device Family      ; Cyclone IV E                                                   ;
+; Device Name        ; EP4CE22F17C6                                                   ;
+; Timing Models      ; Preliminary                                                    ;
+; Delay Model        ; Combined                                                       ;
+; Rise/Fall Delays   ; Enabled                                                        ;
++--------------------+----------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                          ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+; clk        ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clk } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+---------+
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                        ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 464.68 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++-------------------------------------+
+; Slow 1200mV 85C Model Setup Summary ;
++-------+--------+--------------------+
+; Clock ; Slack  ; End Point TNS      ;
++-------+--------+--------------------+
+; clk   ; -1.152 ; -10.288            ;
++-------+--------+--------------------+
+
+
++------------------------------------+
+; Slow 1200mV 85C Model Hold Summary ;
++-------+-------+--------------------+
+; Clock ; Slack ; End Point TNS      ;
++-------+-------+--------------------+
+; clk   ; 0.556 ; 0.000              ;
++-------+-------+--------------------+
+
+
+------------------------------------------
+; Slow 1200mV 85C Model Recovery Summary ;
+------------------------------------------
+No paths to report.
+
+
+-----------------------------------------
+; Slow 1200mV 85C Model Removal Summary ;
+-----------------------------------------
+No paths to report.
+
+
++---------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width Summary ;
++-------+--------+----------------------------------+
+; Clock ; Slack  ; End Point TNS                    ;
++-------+--------+----------------------------------+
+; clk   ; -3.000 ; -13.000                          ;
++-------+--------+----------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Setup: 'clk'                                                                                                                                                      ;
++--------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                        ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.152 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.084      ;
+; -1.152 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.084      ;
+; -1.152 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.084      ;
+; -1.152 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.084      ;
+; -1.152 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.084      ;
+; -1.152 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.084      ;
+; -1.152 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.084      ;
+; -1.152 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.084      ;
+; -1.098 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.030      ;
+; -1.098 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.030      ;
+; -1.098 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.030      ;
+; -1.098 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.030      ;
+; -1.098 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.030      ;
+; -1.098 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.030      ;
+; -1.098 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.030      ;
+; -1.098 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.030      ;
+; -1.089 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.021      ;
+; -1.089 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.021      ;
+; -1.089 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.021      ;
+; -1.089 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.021      ;
+; -1.089 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.021      ;
+; -1.089 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.021      ;
+; -1.089 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.021      ;
+; -1.089 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 2.021      ;
+; -0.992 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.924      ;
+; -0.992 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.924      ;
+; -0.992 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.924      ;
+; -0.992 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.924      ;
+; -0.992 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.924      ;
+; -0.992 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.924      ;
+; -0.992 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.924      ;
+; -0.992 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.924      ;
+; -0.950 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.882      ;
+; -0.950 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.882      ;
+; -0.950 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.882      ;
+; -0.950 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.882      ;
+; -0.950 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.882      ;
+; -0.950 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.882      ;
+; -0.950 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.882      ;
+; -0.950 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.882      ;
+; -0.921 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.853      ;
+; -0.921 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.853      ;
+; -0.921 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.853      ;
+; -0.921 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.853      ;
+; -0.921 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.853      ;
+; -0.921 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.853      ;
+; -0.921 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.853      ;
+; -0.921 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.853      ;
+; -0.855 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.787      ;
+; -0.855 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.787      ;
+; -0.855 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.787      ;
+; -0.855 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.787      ;
+; -0.855 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.787      ;
+; -0.855 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.787      ;
+; -0.855 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.787      ;
+; -0.855 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.787      ;
+; -0.698 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.630      ;
+; -0.698 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.630      ;
+; -0.698 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.630      ;
+; -0.698 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.630      ;
+; -0.698 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.630      ;
+; -0.698 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.630      ;
+; -0.698 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.630      ;
+; -0.698 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.630      ;
+; -0.663 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.595      ;
+; -0.663 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.595      ;
+; -0.663 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.595      ;
+; -0.663 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.595      ;
+; -0.663 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.595      ;
+; -0.663 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.595      ;
+; -0.663 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.595      ;
+; -0.663 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.063     ; 1.595      ;
+; -0.574 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.063     ; 1.506      ;
+; -0.565 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.063     ; 1.497      ;
+; -0.498 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.063     ; 1.430      ;
+; -0.492 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.063     ; 1.424      ;
+; -0.468 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.063     ; 1.400      ;
+; -0.352 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.063     ; 1.284      ;
+; -0.346 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.063     ; 1.278      ;
+; -0.345 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.063     ; 1.277      ;
+; -0.331 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.063     ; 1.263      ;
+; -0.213 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.063     ; 1.145      ;
+; -0.188 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.063     ; 1.120      ;
+; -0.156 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.063     ; 1.088      ;
+; -0.093 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.063     ; 1.025      ;
+; -0.031 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.063     ; 0.963      ;
+; -0.027 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.063     ; 0.959      ;
++--------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Hold: 'clk'                                                                                                                                                      ;
++-------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                        ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.556 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 0.796      ;
+; 0.558 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 0.798      ;
+; 0.558 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 0.798      ;
+; 0.560 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 0.800      ;
+; 0.562 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 0.802      ;
+; 0.574 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 0.814      ;
+; 0.629 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.063      ; 0.869      ;
+; 0.629 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.063      ; 0.869      ;
+; 0.671 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.063      ; 0.911      ;
+; 0.693 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 0.933      ;
+; 0.706 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 0.946      ;
+; 0.734 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.063      ; 0.974      ;
+; 0.779 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.063      ; 1.019      ;
+; 0.800 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.063      ; 1.040      ;
+; 0.831 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.071      ;
+; 0.832 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.072      ;
+; 0.834 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.074      ;
+; 0.844 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.084      ;
+; 0.846 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.086      ;
+; 0.846 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.086      ;
+; 0.848 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.088      ;
+; 0.849 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.089      ;
+; 0.851 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.091      ;
+; 0.859 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.063      ; 1.099      ;
+; 0.873 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.063      ; 1.113      ;
+; 0.900 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.063      ; 1.140      ;
+; 0.941 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.181      ;
+; 0.942 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.182      ;
+; 0.943 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.183      ;
+; 0.944 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.063      ; 1.184      ;
+; 0.944 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.184      ;
+; 0.944 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.184      ;
+; 0.956 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.196      ;
+; 0.958 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.198      ;
+; 0.958 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.198      ;
+; 0.960 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.200      ;
+; 0.961 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.201      ;
+; 0.977 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.063      ; 1.217      ;
+; 0.981 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.221      ;
+; 1.034 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.063      ; 1.274      ;
+; 1.041 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.063      ; 1.281      ;
+; 1.052 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.063      ; 1.292      ;
+; 1.053 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.293      ;
+; 1.054 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.294      ;
+; 1.056 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.063      ; 1.296      ;
+; 1.056 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.296      ;
+; 1.068 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.308      ;
+; 1.070 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.310      ;
+; 1.070 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.310      ;
+; 1.133 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.373      ;
+; 1.133 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.373      ;
+; 1.133 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.373      ;
+; 1.133 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.373      ;
+; 1.133 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.373      ;
+; 1.133 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.373      ;
+; 1.133 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.373      ;
+; 1.133 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.373      ;
+; 1.166 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.406      ;
+; 1.180 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.420      ;
+; 1.273 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.513      ;
+; 1.273 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.513      ;
+; 1.273 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.513      ;
+; 1.273 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.513      ;
+; 1.273 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.513      ;
+; 1.273 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.513      ;
+; 1.387 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.627      ;
+; 1.387 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.627      ;
+; 1.387 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.627      ;
+; 1.461 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.701      ;
+; 1.461 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.701      ;
+; 1.461 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.701      ;
+; 1.461 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.701      ;
+; 1.461 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.701      ;
+; 1.491 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.731      ;
+; 1.491 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.731      ;
+; 1.491 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.731      ;
+; 1.491 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.731      ;
+; 1.566 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.806      ;
+; 1.566 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.806      ;
+; 1.570 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.810      ;
+; 1.689 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.929      ;
+; 1.689 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.929      ;
+; 1.689 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.929      ;
+; 1.689 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.929      ;
+; 1.689 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.929      ;
+; 1.689 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.929      ;
+; 1.689 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.063      ; 1.929      ;
++-------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Minimum Pulse Width: 'clk'                                                                                       ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; clk   ; Rise       ; clk                                                   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ;
+; 0.187  ; 0.371        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ;
+; 0.336  ; 0.336        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|o                                           ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|comparateur_cpt_duty|S_temp|clk                  ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|comparateur_cpt_freq|S_temp|clk                  ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[0]|clk                           ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[1]|clk                           ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[2]|clk                           ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[3]|clk                           ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[4]|clk                           ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[5]|clk                           ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[6]|clk                           ;
+; 0.349  ; 0.349        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[7]|clk                           ;
+; 0.352  ; 0.352        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]                             ;
+; 0.352  ; 0.352        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|outclk                               ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ;
+; 0.411  ; 0.627        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|i                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|i                                           ;
+; 0.648  ; 0.648        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]                             ;
+; 0.648  ; 0.648        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|outclk                               ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|comparateur_cpt_duty|S_temp|clk                  ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|comparateur_cpt_freq|S_temp|clk                  ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[0]|clk                           ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[1]|clk                           ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[2]|clk                           ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[3]|clk                           ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[4]|clk                           ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[5]|clk                           ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[6]|clk                           ;
+; 0.651  ; 0.651        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[7]|clk                           ;
+; 0.664  ; 0.664        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|o                                           ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pwm_out   ; clk        ; 5.573 ; 5.581 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pwm_out   ; clk        ; 5.396 ; 5.402 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+----------------------------------------------
+; Slow 1200mV 85C Model Metastability Report ;
+----------------------------------------------
+No synchronizer chains to report.
+
+
++-----------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                         ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name ; Note                                                          ;
++------------+-----------------+------------+---------------------------------------------------------------+
+; 515.46 MHz ; 250.0 MHz       ; clk        ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++------------------------------------+
+; Slow 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.940 ; -8.255            ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Slow 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.498 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Slow 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Slow 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -13.000                         ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Setup: 'clk'                                                                                                                                                       ;
++--------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                        ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.940 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.879      ;
+; -0.940 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.879      ;
+; -0.940 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.879      ;
+; -0.940 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.879      ;
+; -0.940 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.879      ;
+; -0.940 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.879      ;
+; -0.940 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.879      ;
+; -0.940 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.879      ;
+; -0.893 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.832      ;
+; -0.893 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.832      ;
+; -0.893 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.832      ;
+; -0.893 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.832      ;
+; -0.893 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.832      ;
+; -0.893 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.832      ;
+; -0.893 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.832      ;
+; -0.893 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.832      ;
+; -0.884 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.823      ;
+; -0.884 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.823      ;
+; -0.884 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.823      ;
+; -0.884 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.823      ;
+; -0.884 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.823      ;
+; -0.884 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.823      ;
+; -0.884 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.823      ;
+; -0.884 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.823      ;
+; -0.803 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.742      ;
+; -0.803 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.742      ;
+; -0.803 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.742      ;
+; -0.803 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.742      ;
+; -0.803 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.742      ;
+; -0.803 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.742      ;
+; -0.803 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.742      ;
+; -0.803 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.742      ;
+; -0.753 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.692      ;
+; -0.753 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.692      ;
+; -0.753 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.692      ;
+; -0.753 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.692      ;
+; -0.753 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.692      ;
+; -0.753 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.692      ;
+; -0.753 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.692      ;
+; -0.753 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.692      ;
+; -0.741 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.680      ;
+; -0.741 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.680      ;
+; -0.741 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.680      ;
+; -0.741 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.680      ;
+; -0.741 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.680      ;
+; -0.741 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.680      ;
+; -0.741 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.680      ;
+; -0.741 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.680      ;
+; -0.677 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.616      ;
+; -0.677 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.616      ;
+; -0.677 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.616      ;
+; -0.677 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.616      ;
+; -0.677 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.616      ;
+; -0.677 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.616      ;
+; -0.677 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.616      ;
+; -0.677 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.616      ;
+; -0.531 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.470      ;
+; -0.531 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.470      ;
+; -0.531 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.470      ;
+; -0.531 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.470      ;
+; -0.531 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.470      ;
+; -0.531 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.470      ;
+; -0.531 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.470      ;
+; -0.531 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.470      ;
+; -0.499 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.438      ;
+; -0.499 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.438      ;
+; -0.499 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.438      ;
+; -0.499 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.438      ;
+; -0.499 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.438      ;
+; -0.499 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.438      ;
+; -0.499 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.438      ;
+; -0.499 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.056     ; 1.438      ;
+; -0.397 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.056     ; 1.336      ;
+; -0.388 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.056     ; 1.327      ;
+; -0.338 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.056     ; 1.277      ;
+; -0.329 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.056     ; 1.268      ;
+; -0.307 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.056     ; 1.246      ;
+; -0.213 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.056     ; 1.152      ;
+; -0.196 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.056     ; 1.135      ;
+; -0.192 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.056     ; 1.131      ;
+; -0.181 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.056     ; 1.120      ;
+; -0.081 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.056     ; 1.020      ;
+; -0.061 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.056     ; 1.000      ;
+; -0.026 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.056     ; 0.965      ;
+; 0.030  ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.056     ; 0.909      ;
+; 0.076  ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.056     ; 0.863      ;
+; 0.081  ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.056     ; 0.858      ;
++--------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Hold: 'clk'                                                                                                                                                       ;
++-------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                        ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.498 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.718      ;
+; 0.499 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.719      ;
+; 0.499 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.719      ;
+; 0.500 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.720      ;
+; 0.502 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.722      ;
+; 0.512 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.732      ;
+; 0.567 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.056      ; 0.787      ;
+; 0.567 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.056      ; 0.787      ;
+; 0.608 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.056      ; 0.828      ;
+; 0.634 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.854      ;
+; 0.640 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.860      ;
+; 0.661 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.056      ; 0.881      ;
+; 0.709 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.056      ; 0.929      ;
+; 0.728 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.056      ; 0.948      ;
+; 0.742 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.962      ;
+; 0.744 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.964      ;
+; 0.745 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.965      ;
+; 0.746 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.966      ;
+; 0.748 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.968      ;
+; 0.751 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.971      ;
+; 0.753 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.973      ;
+; 0.755 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.975      ;
+; 0.758 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 0.978      ;
+; 0.773 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.056      ; 0.993      ;
+; 0.787 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.056      ; 1.007      ;
+; 0.820 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.056      ; 1.040      ;
+; 0.831 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.051      ;
+; 0.833 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.053      ;
+; 0.834 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.054      ;
+; 0.838 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.058      ;
+; 0.840 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.060      ;
+; 0.842 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.062      ;
+; 0.844 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.064      ;
+; 0.847 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.067      ;
+; 0.849 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.069      ;
+; 0.851 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.071      ;
+; 0.859 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.056      ; 1.079      ;
+; 0.877 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.056      ; 1.097      ;
+; 0.883 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.103      ;
+; 0.927 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.147      ;
+; 0.929 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.149      ;
+; 0.936 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.156      ;
+; 0.938 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.158      ;
+; 0.940 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.056      ; 1.160      ;
+; 0.940 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.160      ;
+; 0.943 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.056      ; 1.163      ;
+; 0.944 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.056      ; 1.164      ;
+; 0.945 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.165      ;
+; 0.946 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.056      ; 1.166      ;
+; 1.021 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.241      ;
+; 1.021 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.241      ;
+; 1.021 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.241      ;
+; 1.021 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.241      ;
+; 1.021 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.241      ;
+; 1.021 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.241      ;
+; 1.021 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.241      ;
+; 1.021 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.241      ;
+; 1.025 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.245      ;
+; 1.034 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.254      ;
+; 1.155 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.375      ;
+; 1.155 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.375      ;
+; 1.155 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.375      ;
+; 1.155 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.375      ;
+; 1.155 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.375      ;
+; 1.155 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.375      ;
+; 1.257 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.477      ;
+; 1.257 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.477      ;
+; 1.257 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.477      ;
+; 1.320 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.540      ;
+; 1.320 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.540      ;
+; 1.320 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.540      ;
+; 1.320 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.540      ;
+; 1.320 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.540      ;
+; 1.347 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.567      ;
+; 1.347 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.567      ;
+; 1.347 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.567      ;
+; 1.347 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.567      ;
+; 1.414 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.634      ;
+; 1.414 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.634      ;
+; 1.416 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.636      ;
+; 1.520 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.740      ;
+; 1.520 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.740      ;
+; 1.520 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.740      ;
+; 1.520 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.740      ;
+; 1.520 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.740      ;
+; 1.520 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.740      ;
+; 1.520 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.056      ; 1.740      ;
++-------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Minimum Pulse Width: 'clk'                                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; clk   ; Rise       ; clk                                                   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ;
+; 0.183  ; 0.367        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ;
+; 0.336  ; 0.336        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|o                                           ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|comparateur_cpt_duty|S_temp|clk                  ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|comparateur_cpt_freq|S_temp|clk                  ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[0]|clk                           ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[1]|clk                           ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[2]|clk                           ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[3]|clk                           ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[4]|clk                           ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[5]|clk                           ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[6]|clk                           ;
+; 0.343  ; 0.343        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[7]|clk                           ;
+; 0.345  ; 0.345        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]                             ;
+; 0.345  ; 0.345        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|outclk                               ;
+; 0.417  ; 0.633        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ;
+; 0.417  ; 0.633        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ;
+; 0.417  ; 0.633        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ;
+; 0.417  ; 0.633        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ;
+; 0.417  ; 0.633        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ;
+; 0.417  ; 0.633        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ;
+; 0.417  ; 0.633        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ;
+; 0.417  ; 0.633        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ;
+; 0.417  ; 0.633        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ;
+; 0.417  ; 0.633        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|i                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|i                                           ;
+; 0.655  ; 0.655        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]                             ;
+; 0.655  ; 0.655        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|outclk                               ;
+; 0.657  ; 0.657        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|comparateur_cpt_duty|S_temp|clk                  ;
+; 0.657  ; 0.657        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|comparateur_cpt_freq|S_temp|clk                  ;
+; 0.657  ; 0.657        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[0]|clk                           ;
+; 0.657  ; 0.657        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[1]|clk                           ;
+; 0.657  ; 0.657        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[2]|clk                           ;
+; 0.657  ; 0.657        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[3]|clk                           ;
+; 0.657  ; 0.657        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[4]|clk                           ;
+; 0.657  ; 0.657        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[5]|clk                           ;
+; 0.657  ; 0.657        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[6]|clk                           ;
+; 0.657  ; 0.657        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[7]|clk                           ;
+; 0.664  ; 0.664        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|o                                           ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pwm_out   ; clk        ; 5.289 ; 5.274 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pwm_out   ; clk        ; 5.119 ; 5.104 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Slow 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++------------------------------------+
+; Fast 1200mV 0C Model Setup Summary ;
++-------+--------+-------------------+
+; Clock ; Slack  ; End Point TNS     ;
++-------+--------+-------------------+
+; clk   ; -0.172 ; -1.376            ;
++-------+--------+-------------------+
+
+
++-----------------------------------+
+; Fast 1200mV 0C Model Hold Summary ;
++-------+-------+-------------------+
+; Clock ; Slack ; End Point TNS     ;
++-------+-------+-------------------+
+; clk   ; 0.288 ; 0.000             ;
++-------+-------+-------------------+
+
+
+-----------------------------------------
+; Fast 1200mV 0C Model Recovery Summary ;
+-----------------------------------------
+No paths to report.
+
+
+----------------------------------------
+; Fast 1200mV 0C Model Removal Summary ;
+----------------------------------------
+No paths to report.
+
+
++--------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width Summary ;
++-------+--------+---------------------------------+
+; Clock ; Slack  ; End Point TNS                   ;
++-------+--------+---------------------------------+
+; clk   ; -3.000 ; -13.580                         ;
++-------+--------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Setup: 'clk'                                                                                                                                                       ;
++--------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                        ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -0.172 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.122      ;
+; -0.172 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.122      ;
+; -0.172 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.122      ;
+; -0.172 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.122      ;
+; -0.172 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.122      ;
+; -0.172 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.122      ;
+; -0.172 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.122      ;
+; -0.172 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.122      ;
+; -0.148 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.098      ;
+; -0.148 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.098      ;
+; -0.148 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.098      ;
+; -0.148 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.098      ;
+; -0.148 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.098      ;
+; -0.148 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.098      ;
+; -0.148 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.098      ;
+; -0.148 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.098      ;
+; -0.145 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.095      ;
+; -0.145 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.095      ;
+; -0.145 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.095      ;
+; -0.145 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.095      ;
+; -0.145 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.095      ;
+; -0.145 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.095      ;
+; -0.145 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.095      ;
+; -0.145 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.095      ;
+; -0.082 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.032      ;
+; -0.082 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.032      ;
+; -0.082 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.032      ;
+; -0.082 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.032      ;
+; -0.082 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.032      ;
+; -0.082 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.032      ;
+; -0.082 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.032      ;
+; -0.082 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.032      ;
+; -0.067 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.017      ;
+; -0.067 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.017      ;
+; -0.067 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.017      ;
+; -0.067 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.017      ;
+; -0.067 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.017      ;
+; -0.067 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.017      ;
+; -0.067 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.017      ;
+; -0.067 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 1.017      ;
+; -0.038 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.988      ;
+; -0.038 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.988      ;
+; -0.038 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.988      ;
+; -0.038 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.988      ;
+; -0.038 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.988      ;
+; -0.038 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.988      ;
+; -0.038 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.988      ;
+; -0.038 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.988      ;
+; -0.009 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.959      ;
+; -0.009 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.959      ;
+; -0.009 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.959      ;
+; -0.009 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.959      ;
+; -0.009 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.959      ;
+; -0.009 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.959      ;
+; -0.009 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.959      ;
+; -0.009 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.959      ;
+; 0.078  ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.872      ;
+; 0.078  ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.872      ;
+; 0.078  ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.872      ;
+; 0.078  ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.872      ;
+; 0.078  ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.872      ;
+; 0.078  ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.872      ;
+; 0.078  ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.872      ;
+; 0.078  ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.872      ;
+; 0.096  ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.854      ;
+; 0.096  ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.854      ;
+; 0.096  ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.854      ;
+; 0.096  ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.854      ;
+; 0.096  ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.854      ;
+; 0.096  ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.854      ;
+; 0.096  ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.854      ;
+; 0.096  ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 1.000        ; -0.037     ; 0.854      ;
+; 0.116  ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.834      ;
+; 0.119  ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.831      ;
+; 0.167  ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.037     ; 0.783      ;
+; 0.172  ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.037     ; 0.778      ;
+; 0.182  ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.768      ;
+; 0.242  ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.037     ; 0.708      ;
+; 0.247  ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.703      ;
+; 0.250  ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.037     ; 0.700      ;
+; 0.255  ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.695      ;
+; 0.326  ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.037     ; 0.624      ;
+; 0.328  ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.037     ; 0.622      ;
+; 0.348  ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.602      ;
+; 0.392  ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.558      ;
+; 0.427  ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 1.000        ; -0.037     ; 0.523      ;
+; 0.431  ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 1.000        ; -0.037     ; 0.519      ;
++--------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Hold: 'clk'                                                                                                                                                       ;
++-------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                        ; To Node                                               ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.288 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.429      ;
+; 0.290 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.431      ;
+; 0.290 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.431      ;
+; 0.290 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.431      ;
+; 0.291 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.432      ;
+; 0.298 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.439      ;
+; 0.321 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.462      ;
+; 0.323 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.037      ; 0.464      ;
+; 0.339 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.480      ;
+; 0.357 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.498      ;
+; 0.362 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.503      ;
+; 0.377 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.518      ;
+; 0.401 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.037      ; 0.542      ;
+; 0.407 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.037      ; 0.548      ;
+; 0.437 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.578      ;
+; 0.439 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.580      ;
+; 0.439 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.580      ;
+; 0.445 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.586      ;
+; 0.447 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.588      ;
+; 0.448 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.589      ;
+; 0.449 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.590      ;
+; 0.450 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.591      ;
+; 0.451 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.592      ;
+; 0.452 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.593      ;
+; 0.452 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.593      ;
+; 0.464 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.037      ; 0.605      ;
+; 0.487 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.037      ; 0.628      ;
+; 0.500 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.641      ;
+; 0.502 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.643      ;
+; 0.502 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.643      ;
+; 0.503 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.644      ;
+; 0.505 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.646      ;
+; 0.510 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.651      ;
+; 0.513 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.654      ;
+; 0.514 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.655      ;
+; 0.515 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.656      ;
+; 0.515 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.656      ;
+; 0.516 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.657      ;
+; 0.517 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.658      ;
+; 0.540 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.037      ; 0.681      ;
+; 0.544 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ; clk          ; clk         ; 0.000        ; 0.037      ; 0.685      ;
+; 0.553 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.694      ;
+; 0.556 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ; clk          ; clk         ; 0.000        ; 0.037      ; 0.697      ;
+; 0.566 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.707      ;
+; 0.568 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.709      ;
+; 0.571 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.712      ;
+; 0.579 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.720      ;
+; 0.580 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.721      ;
+; 0.582 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.723      ;
+; 0.589 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.730      ;
+; 0.589 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.730      ;
+; 0.589 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.730      ;
+; 0.589 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.730      ;
+; 0.589 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.730      ;
+; 0.589 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.730      ;
+; 0.589 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.730      ;
+; 0.589 ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.730      ;
+; 0.634 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.775      ;
+; 0.645 ; pwm:pwm1|cpt_8bits:compteur|nombre[0]            ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.786      ;
+; 0.656 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.797      ;
+; 0.656 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.797      ;
+; 0.656 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.797      ;
+; 0.656 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.797      ;
+; 0.656 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.797      ;
+; 0.656 ; pwm:pwm1|cpt_8bits:compteur|nombre[6]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.797      ;
+; 0.723 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.864      ;
+; 0.723 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.864      ;
+; 0.723 ; pwm:pwm1|cpt_8bits:compteur|nombre[3]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.864      ;
+; 0.762 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.903      ;
+; 0.762 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.903      ;
+; 0.762 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.903      ;
+; 0.762 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.903      ;
+; 0.762 ; pwm:pwm1|cpt_8bits:compteur|nombre[5]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.903      ;
+; 0.781 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.922      ;
+; 0.781 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.922      ;
+; 0.781 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.922      ;
+; 0.781 ; pwm:pwm1|cpt_8bits:compteur|nombre[4]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.922      ;
+; 0.824 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.965      ;
+; 0.824 ; pwm:pwm1|cpt_8bits:compteur|nombre[2]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.965      ;
+; 0.827 ; pwm:pwm1|cpt_8bits:compteur|nombre[1]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 0.968      ;
+; 0.898 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 1.039      ;
+; 0.898 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 1.039      ;
+; 0.898 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 1.039      ;
+; 0.898 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 1.039      ;
+; 0.898 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 1.039      ;
+; 0.898 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 1.039      ;
+; 0.898 ; pwm:pwm1|cpt_8bits:compteur|nombre[7]            ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ; clk          ; clk         ; 0.000        ; 0.037      ; 1.039      ;
++-------+--------------------------------------------------+-------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------+
+; Fast 1200mV 0C Model Minimum Pulse Width: 'clk'                                                                                        ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+; -3.000 ; 1.000        ; 4.000          ; Port Rate        ; clk   ; Rise       ; clk                                                   ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ;
+; -1.000 ; 1.000        ; 2.000          ; Min Period       ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ;
+; -0.058 ; 0.126        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ;
+; -0.058 ; 0.126        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ;
+; -0.058 ; 0.126        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ;
+; -0.058 ; 0.126        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ;
+; -0.058 ; 0.126        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ;
+; -0.058 ; 0.126        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ;
+; -0.058 ; 0.126        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ;
+; -0.058 ; 0.126        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ;
+; -0.058 ; 0.126        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ;
+; -0.058 ; 0.126        ; 0.184          ; Low Pulse Width  ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ;
+; 0.117  ; 0.117        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|o                                           ;
+; 0.121  ; 0.121        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|comparateur_cpt_duty|S_temp|clk                  ;
+; 0.121  ; 0.121        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|comparateur_cpt_freq|S_temp|clk                  ;
+; 0.121  ; 0.121        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[0]|clk                           ;
+; 0.121  ; 0.121        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[1]|clk                           ;
+; 0.121  ; 0.121        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[2]|clk                           ;
+; 0.121  ; 0.121        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[3]|clk                           ;
+; 0.121  ; 0.121        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[4]|clk                           ;
+; 0.121  ; 0.121        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[5]|clk                           ;
+; 0.121  ; 0.121        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[6]|clk                           ;
+; 0.121  ; 0.121        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; pwm1|compteur|nombre[7]|clk                           ;
+; 0.129  ; 0.129        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]                             ;
+; 0.129  ; 0.129        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~inputclkctrl|outclk                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|i                                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clk   ; Rise       ; clk~input|i                                           ;
+; 0.657  ; 0.873        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|comparateur:comparateur_cpt_freq|S_temp      ;
+; 0.657  ; 0.873        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|comparateur_duty:comparateur_cpt_duty|S_temp ;
+; 0.657  ; 0.873        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[0]                 ;
+; 0.657  ; 0.873        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[1]                 ;
+; 0.657  ; 0.873        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[2]                 ;
+; 0.657  ; 0.873        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[3]                 ;
+; 0.657  ; 0.873        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[4]                 ;
+; 0.657  ; 0.873        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[5]                 ;
+; 0.657  ; 0.873        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[6]                 ;
+; 0.657  ; 0.873        ; 0.216          ; High Pulse Width ; clk   ; Rise       ; pwm:pwm1|cpt_8bits:compteur|nombre[7]                 ;
+; 0.870  ; 0.870        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|inclk[0]                             ;
+; 0.870  ; 0.870        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~inputclkctrl|outclk                               ;
+; 0.878  ; 0.878        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|comparateur_cpt_duty|S_temp|clk                  ;
+; 0.878  ; 0.878        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|comparateur_cpt_freq|S_temp|clk                  ;
+; 0.878  ; 0.878        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[0]|clk                           ;
+; 0.878  ; 0.878        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[1]|clk                           ;
+; 0.878  ; 0.878        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[2]|clk                           ;
+; 0.878  ; 0.878        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[3]|clk                           ;
+; 0.878  ; 0.878        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[4]|clk                           ;
+; 0.878  ; 0.878        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[5]|clk                           ;
+; 0.878  ; 0.878        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[6]|clk                           ;
+; 0.878  ; 0.878        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; pwm1|compteur|nombre[7]|clk                           ;
+; 0.883  ; 0.883        ; 0.000          ; High Pulse Width ; clk   ; Rise       ; clk~input|o                                           ;
++--------+--------------+----------------+------------------+-------+------------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pwm_out   ; clk        ; 3.299 ; 3.349 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pwm_out   ; clk        ; 3.193 ; 3.241 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
+---------------------------------------------
+; Fast 1200mV 0C Model Metastability Report ;
+---------------------------------------------
+No synchronizer chains to report.
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.152  ; 0.288 ; N/A      ; N/A     ; -3.000              ;
+;  clk             ; -1.152  ; 0.288 ; N/A      ; N/A     ; -3.000              ;
+; Design-wide TNS  ; -10.288 ; 0.0   ; 0.0      ; 0.0     ; -13.58              ;
+;  clk             ; -10.288 ; 0.000 ; N/A      ; N/A     ; -13.580             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pwm_out   ; clk        ; 5.573 ; 5.581 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; pwm_out   ; clk        ; 3.193 ; 3.241 ; Rise       ; clk             ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Board Trace Model Assignments                                                                                                                                                                                                                                                                                                                                    ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; Pin           ; I/O Standard ; Near Tline Length ; Near Tline L per Length ; Near Tline C per Length ; Near Series R ; Near Differential R ; Near Pull-up R ; Near Pull-down R ; Near C ; Far Tline Length ; Far Tline L per Length ; Far Tline C per Length ; Far Series R ; Far Pull-up R ; Far Pull-down R ; Far C ; Termination Voltage ; Far Differential R ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+; pwm_out       ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 in              ; 0 H/in                  ; 0 F/in                  ; short         ; -                   ; open           ; open             ; open   ; 0 in             ; 0 H/in                 ; 0 F/in                 ; short        ; open          ; open            ; open  ; 0 V                 ; -                  ;
++---------------+--------------+-------------------+-------------------------+-------------------------+---------------+---------------------+----------------+------------------+--------+------------------+------------------------+------------------------+--------------+---------------+-----------------+-------+---------------------+--------------------+
+
+
++----------------------------------------------------------------------------+
+; Input Transition Times                                                     ;
++-------------------------+--------------+-----------------+-----------------+
+; Pin                     ; I/O Standard ; 10-90 Rise Time ; 90-10 Fall Time ;
++-------------------------+--------------+-----------------+-----------------+
+; clk                     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; araz                    ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_ASDO_DATA1~     ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_FLASH_nCE_nCSO~ ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
+; ~ALTERA_DATA0~          ; 2.5 V        ; 2000 ps         ; 2000 ps         ;
++-------------------------+--------------+-----------------+-----------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; pwm_out       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.06e-006 V                  ; 2.36 V              ; -0.00549 V          ; 0.108 V                              ; 0.017 V                              ; 4.48e-010 s                 ; 4.25e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 1.06e-006 V                 ; 2.36 V             ; -0.00549 V         ; 0.108 V                             ; 0.017 V                             ; 4.48e-010 s                ; 4.25e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 5.68e-007 V                  ; 2.36 V              ; -0.0226 V           ; 0.073 V                              ; 0.034 V                              ; 3.97e-010 s                 ; 3.26e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 5.68e-007 V                 ; 2.36 V             ; -0.0226 V          ; 0.073 V                             ; 0.034 V                             ; 3.97e-010 s                ; 3.26e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 9.36e-007 V                  ; 2.35 V              ; -0.00575 V          ; 0.081 V                              ; 0.032 V                              ; 5.3e-010 s                  ; 7.56e-010 s                 ; Yes                        ; Yes                        ; 2.32 V                      ; 9.36e-007 V                 ; 2.35 V             ; -0.00575 V         ; 0.081 V                             ; 0.032 V                             ; 5.3e-010 s                 ; 7.56e-010 s                ; Yes                       ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Corner Signal Integrity Metrics                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; Pin           ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+; pwm_out       ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 4.02e-008 V                  ; 2.71 V              ; -0.0351 V           ; 0.173 V                              ; 0.098 V                              ; 2.73e-010 s                 ; 2.69e-010 s                 ; Yes                        ; Yes                        ; 2.62 V                      ; 4.02e-008 V                 ; 2.71 V             ; -0.0351 V          ; 0.173 V                             ; 0.098 V                             ; 2.73e-010 s                ; 2.69e-010 s                ; Yes                       ; Yes                       ;
+; ~ALTERA_DCLK~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 2.2e-008 V                   ; 2.74 V              ; -0.061 V            ; 0.159 V                              ; 0.078 V                              ; 2.7e-010 s                  ; 2.2e-010 s                  ; No                         ; Yes                        ; 2.62 V                      ; 2.2e-008 V                  ; 2.74 V             ; -0.061 V           ; 0.159 V                             ; 0.078 V                             ; 2.7e-010 s                 ; 2.2e-010 s                 ; No                        ; Yes                       ;
+; ~ALTERA_nCEO~ ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 3.52e-008 V                  ; 2.7 V               ; -0.012 V            ; 0.274 V                              ; 0.034 V                              ; 3.18e-010 s                 ; 4.96e-010 s                 ; No                         ; Yes                        ; 2.62 V                      ; 3.52e-008 V                 ; 2.7 V              ; -0.012 V           ; 0.274 V                             ; 0.034 V                             ; 3.18e-010 s                ; 4.96e-010 s                ; No                        ; Yes                       ;
++---------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 123      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clk        ; clk      ; 123      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 1     ; 1    ;
+; Unconstrained Input Port Paths  ; 10    ; 10   ;
+; Unconstrained Output Ports      ; 1     ; 1    ;
+; Unconstrained Output Port Paths ; 1     ; 1    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II TimeQuest Timing Analyzer
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Sun Sep 12 17:49:07 2021
+Info: Command: quartus_sta pwm_nano -c pwm_nano
+Info: qsta_default_script.tcl version: #1
+Info: Core supply voltage is 1.2V
+Info: Low junction temperature is 0 degrees C
+Info: High junction temperature is 85 degrees C
+Critical Warning: Synopsys Design Constraints File file not found: 'pwm_nano.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info: No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info: Deriving Clocks
+    Info: create_clock -period 1.000 -name clk clk
+Info: No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+Info: Analyzing Slow 1200mV 85C Model
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -1.152
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -1.152       -10.288 clk 
+Info: Worst-case hold slack is 0.556
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.556         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.000       -13.000 clk 
+Info: Analyzing Slow 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Warning: Timing characteristics of device EP4CE22F17C6 are preliminary
+Info: Delay annotation completed successfully
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.940
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.940        -8.255 clk 
+Info: Worst-case hold slack is 0.498
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.498         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.000       -13.000 clk 
+Info: Analyzing Fast 1200mV 0C Model
+Info: Started post-fitting delay annotation
+Warning: Timing characteristics of device EP4CE22F17C6 are preliminary
+Info: Delay annotation completed successfully
+Info: Deriving Clock Uncertainty
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -setup 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -rise_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -rise_to [get_clocks {clk}] -hold 0.020
+    Info: set_clock_uncertainty -fall_from [get_clocks {clk}] -fall_to [get_clocks {clk}] -hold 0.020
+Critical Warning: Timing requirements not met
+Info: Worst-case setup slack is -0.172
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -0.172        -1.376 clk 
+Info: Worst-case hold slack is 0.288
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:     0.288         0.000 clk 
+Info: No Recovery paths to report
+Info: No Removal paths to report
+Info: Worst-case minimum pulse width slack is -3.000
+    Info:     Slack End Point TNS Clock 
+    Info: ========= ============= =====================
+    Info:    -3.000       -13.580 clk 
+Info: Design is not fully constrained for setup requirements
+Info: Design is not fully constrained for hold requirements
+Info: Quartus II TimeQuest Timing Analyzer was successful. 0 errors, 6 warnings
+    Info: Peak virtual memory: 263 megabytes
+    Info: Processing ended: Sun Sep 12 17:49:09 2021
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
+
+
