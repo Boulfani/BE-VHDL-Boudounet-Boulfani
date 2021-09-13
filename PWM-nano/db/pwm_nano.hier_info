@@ -1,0 +1,111 @@
+|pwm_nano
+clk => pwm:pwm1.clk
+araz => pwm:pwm1.araz
+pwm_out <= pwm:pwm1.pwm_out
+
+
+|pwm_nano|pwm:pwm1
+clk => comparateur:comparateur_cpt_freq.clk
+clk => cpt_8bits:compteur.clk
+clk => comparateur_duty:comparateur_cpt_duty.clk
+araz => comparateur:comparateur_cpt_freq.araz
+araz => cpt_8bits:compteur.araz
+araz => comparateur_duty:comparateur_cpt_duty.araz
+freq[0] => comparateur:comparateur_cpt_freq.in2[0]
+freq[1] => comparateur:comparateur_cpt_freq.in2[1]
+freq[2] => comparateur:comparateur_cpt_freq.in2[2]
+freq[3] => comparateur:comparateur_cpt_freq.in2[3]
+freq[4] => comparateur:comparateur_cpt_freq.in2[4]
+freq[5] => comparateur:comparateur_cpt_freq.in2[5]
+freq[6] => comparateur:comparateur_cpt_freq.in2[6]
+freq[7] => comparateur:comparateur_cpt_freq.in2[7]
+duty[0] => comparateur_duty:comparateur_cpt_duty.in2[0]
+duty[1] => comparateur_duty:comparateur_cpt_duty.in2[1]
+duty[2] => comparateur_duty:comparateur_cpt_duty.in2[2]
+duty[3] => comparateur_duty:comparateur_cpt_duty.in2[3]
+duty[4] => comparateur_duty:comparateur_cpt_duty.in2[4]
+duty[5] => comparateur_duty:comparateur_cpt_duty.in2[5]
+duty[6] => comparateur_duty:comparateur_cpt_duty.in2[6]
+duty[7] => comparateur_duty:comparateur_cpt_duty.in2[7]
+pwm_out <= comparateur_duty:comparateur_cpt_duty.S
+
+
+|pwm_nano|pwm:pwm1|comparateur:comparateur_cpt_freq
+clk => S_temp.CLK
+araz => S_temp.ACLR
+in1[0] => Equal0.IN14
+in1[1] => Equal0.IN13
+in1[2] => Equal0.IN12
+in1[3] => Equal0.IN11
+in1[4] => Equal0.IN10
+in1[5] => Equal0.IN9
+in1[6] => Equal0.IN8
+in1[7] => Equal0.IN7
+in2[0] => Equal0.IN15
+in2[1] => Add0.IN14
+in2[2] => Add0.IN13
+in2[3] => Add0.IN12
+in2[4] => Add0.IN11
+in2[5] => Add0.IN10
+in2[6] => Add0.IN9
+in2[7] => Add0.IN8
+S <= S_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pwm_nano|pwm:pwm1|cpt_8bits:compteur
+clk => nombre[0].CLK
+clk => nombre[1].CLK
+clk => nombre[2].CLK
+clk => nombre[3].CLK
+clk => nombre[4].CLK
+clk => nombre[5].CLK
+clk => nombre[6].CLK
+clk => nombre[7].CLK
+araz => nombre[0].ACLR
+araz => nombre[1].ACLR
+araz => nombre[2].ACLR
+araz => nombre[3].ACLR
+araz => nombre[4].ACLR
+araz => nombre[5].ACLR
+araz => nombre[6].ACLR
+araz => nombre[7].ACLR
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+S[0] <= nombre[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= nombre[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= nombre[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= nombre[3].DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= nombre[4].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= nombre[5].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= nombre[6].DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= nombre[7].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|pwm_nano|pwm:pwm1|comparateur_duty:comparateur_cpt_duty
+clk => S_temp.CLK
+araz => S_temp.ACLR
+in1[0] => LessThan0.IN8
+in1[1] => LessThan0.IN7
+in1[2] => LessThan0.IN6
+in1[3] => LessThan0.IN5
+in1[4] => LessThan0.IN4
+in1[5] => LessThan0.IN3
+in1[6] => LessThan0.IN2
+in1[7] => LessThan0.IN1
+in2[0] => LessThan0.IN16
+in2[1] => LessThan0.IN15
+in2[2] => LessThan0.IN14
+in2[3] => LessThan0.IN13
+in2[4] => LessThan0.IN12
+in2[5] => LessThan0.IN11
+in2[6] => LessThan0.IN10
+in2[7] => LessThan0.IN9
+S <= S_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+

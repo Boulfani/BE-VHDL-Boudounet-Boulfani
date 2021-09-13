@@ -1,0 +1,244 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+12
+1135
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+pwm_nano
+# storage
+db|pwm_nano.(0).cnf
+db|pwm_nano.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+pwm_nano.vhd
+5e8871fb575bc273f9eca8ac653b8d47
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|m2 eea sme|be vhdl boulfani boudounet|mypackage|mypackage.vhd
+bb9d9eb72872bbf01087d7f935e8dbc6
+}
+# hierarchies {
+|
+}
+# lmf
+|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+pwm
+# storage
+db|pwm_nano.(1).cnf
+db|pwm_nano.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|m2 eea sme|be vhdl boulfani boudounet|mypackage|pwm.vhd
+2036b47be1d8af759628572844d0bf34
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(freq)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(duty)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|m2 eea sme|be vhdl boulfani boudounet|mypackage|mypackage.vhd
+bb9d9eb72872bbf01087d7f935e8dbc6
+}
+# hierarchies {
+pwm:pwm1
+}
+# lmf
+|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+comparateur
+# storage
+db|pwm_nano.(2).cnf
+db|pwm_nano.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|m2 eea sme|be vhdl boulfani boudounet|mypackage|comparateur.vhd
+d828128a5159f24587526bac2467a9
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(in1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in2)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|m2 eea sme|be vhdl boulfani boudounet|mypackage|mypackage.vhd
+bb9d9eb72872bbf01087d7f935e8dbc6
+}
+# hierarchies {
+pwm:pwm1|comparateur:comparateur_cpt_freq
+}
+# lmf
+|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+cpt_8bits
+# storage
+db|pwm_nano.(3).cnf
+db|pwm_nano.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|m2 eea sme|be vhdl boulfani boudounet|mypackage|cpt_8bits.vhd
+f3cfbe8104713a944480b7f657b0fd
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(s)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|m2 eea sme|be vhdl boulfani boudounet|mypackage|mypackage.vhd
+bb9d9eb72872bbf01087d7f935e8dbc6
+}
+# hierarchies {
+pwm:pwm1|cpt_8bits:compteur
+}
+# lmf
+|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+comparateur_duty
+# storage
+db|pwm_nano.(4).cnf
+db|pwm_nano.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|m2 eea sme|be vhdl boulfani boudounet|mypackage|comparateur_duty.vhd
+6039ce3bdd51ce8eb8ac73889336681
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(in1)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(in2)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|m2 eea sme|be vhdl boulfani boudounet|mypackage|mypackage.vhd
+bb9d9eb72872bbf01087d7f935e8dbc6
+}
+# hierarchies {
+pwm:pwm1|comparateur_duty:comparateur_cpt_duty
+}
+# lmf
+|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+
