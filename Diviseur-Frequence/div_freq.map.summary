@@ -1,0 +1,14 @@
+Analysis & Synthesis Status : Successful - Tue Sep 07 08:42:46 2021
+Quartus II Version : 9.0 Build 235 06/17/2009 SP 2 SJ Web Edition
+Revision Name : div_freq
+Top-level Entity Name : div_freq
+Family : Cyclone II
+Total logic elements : 55
+    Total combinational functions : 55
+    Dedicated logic registers : 33
+Total registers : 33
+Total pins : 2
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0

@@ -1,0 +1,418 @@
+Simulator report for div_freq
+Tue Sep 07 08:33:26 2021
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 1.0 us       ;
+; Simulation Netlist Size     ; 129 nodes    ;
+; Simulation Coverage         ;       1.56 % ;
+; Total Number of Transitions ; 199          ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                             ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+; Option                                                                                     ; Setting           ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+; Simulation mode                                                                            ; Functional        ; Timing        ;
+; Start time                                                                                 ; 0 ns              ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF              ;               ;
+; Vector input source                                                                        ; div_freq_simu.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                ; On            ;
+; Check outputs                                                                              ; Off               ; Off           ;
+; Report simulation coverage                                                                 ; On                ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                ; On            ;
+; Display missing 1-value coverage report                                                    ; On                ; On            ;
+; Display missing 0-value coverage report                                                    ; On                ; On            ;
+; Detect setup and hold time violations                                                      ; Off               ; Off           ;
+; Detect glitches                                                                            ; Off               ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off               ; Off           ;
+; Generate Signal Activity File                                                              ; Off               ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off               ; Off           ;
+; Group bus channels in simulation results                                                   ; Off               ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE        ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off               ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto              ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;       1.56 % ;
+; Total nodes checked                                 ; 129          ;
+; Total output ports checked                          ; 128          ;
+; Total output ports with complete 1/0-value coverage ; 2            ;
+; Total output ports with no 1/0-value coverage       ; 126          ;
+; Total output ports with no 1-value coverage         ; 126          ;
+; Total output ports with no 0-value coverage         ; 126          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++----------------------------------------------------------+
+; Complete 1/0-Value Coverage                              ;
++-------------------+-------------------+------------------+
+; Node Name         ; Output Port Name  ; Output Port Type ;
++-------------------+-------------------+------------------+
+; |div_freq|clk     ; |div_freq|clk     ; out              ;
+; |div_freq|clk_out ; |div_freq|clk_out ; pin_out          ;
++-------------------+-------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++--------------------------------------------------------------------+
+; Missing 1-Value Coverage                                           ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |div_freq|compteur[0]  ; |div_freq|compteur[0]  ; regout           ;
+; |div_freq|compteur~0   ; |div_freq|compteur~0   ; out              ;
+; |div_freq|compteur~1   ; |div_freq|compteur~1   ; out              ;
+; |div_freq|compteur~2   ; |div_freq|compteur~2   ; out              ;
+; |div_freq|compteur~3   ; |div_freq|compteur~3   ; out              ;
+; |div_freq|compteur~4   ; |div_freq|compteur~4   ; out              ;
+; |div_freq|compteur~5   ; |div_freq|compteur~5   ; out              ;
+; |div_freq|compteur~6   ; |div_freq|compteur~6   ; out              ;
+; |div_freq|compteur~7   ; |div_freq|compteur~7   ; out              ;
+; |div_freq|compteur~8   ; |div_freq|compteur~8   ; out              ;
+; |div_freq|compteur~9   ; |div_freq|compteur~9   ; out              ;
+; |div_freq|compteur~10  ; |div_freq|compteur~10  ; out              ;
+; |div_freq|compteur~11  ; |div_freq|compteur~11  ; out              ;
+; |div_freq|compteur~12  ; |div_freq|compteur~12  ; out              ;
+; |div_freq|compteur~13  ; |div_freq|compteur~13  ; out              ;
+; |div_freq|compteur~14  ; |div_freq|compteur~14  ; out              ;
+; |div_freq|compteur~15  ; |div_freq|compteur~15  ; out              ;
+; |div_freq|compteur~16  ; |div_freq|compteur~16  ; out              ;
+; |div_freq|compteur~17  ; |div_freq|compteur~17  ; out              ;
+; |div_freq|compteur~18  ; |div_freq|compteur~18  ; out              ;
+; |div_freq|compteur~19  ; |div_freq|compteur~19  ; out              ;
+; |div_freq|compteur~20  ; |div_freq|compteur~20  ; out              ;
+; |div_freq|compteur~21  ; |div_freq|compteur~21  ; out              ;
+; |div_freq|compteur~22  ; |div_freq|compteur~22  ; out              ;
+; |div_freq|compteur~23  ; |div_freq|compteur~23  ; out              ;
+; |div_freq|compteur~24  ; |div_freq|compteur~24  ; out              ;
+; |div_freq|compteur~25  ; |div_freq|compteur~25  ; out              ;
+; |div_freq|compteur~26  ; |div_freq|compteur~26  ; out              ;
+; |div_freq|compteur~27  ; |div_freq|compteur~27  ; out              ;
+; |div_freq|compteur~28  ; |div_freq|compteur~28  ; out              ;
+; |div_freq|compteur~29  ; |div_freq|compteur~29  ; out              ;
+; |div_freq|compteur~30  ; |div_freq|compteur~30  ; out              ;
+; |div_freq|compteur~31  ; |div_freq|compteur~31  ; out              ;
+; |div_freq|compteur[1]  ; |div_freq|compteur[1]  ; regout           ;
+; |div_freq|compteur[2]  ; |div_freq|compteur[2]  ; regout           ;
+; |div_freq|compteur[3]  ; |div_freq|compteur[3]  ; regout           ;
+; |div_freq|compteur[4]  ; |div_freq|compteur[4]  ; regout           ;
+; |div_freq|compteur[5]  ; |div_freq|compteur[5]  ; regout           ;
+; |div_freq|compteur[6]  ; |div_freq|compteur[6]  ; regout           ;
+; |div_freq|compteur[7]  ; |div_freq|compteur[7]  ; regout           ;
+; |div_freq|compteur[8]  ; |div_freq|compteur[8]  ; regout           ;
+; |div_freq|compteur[9]  ; |div_freq|compteur[9]  ; regout           ;
+; |div_freq|compteur[10] ; |div_freq|compteur[10] ; regout           ;
+; |div_freq|compteur[11] ; |div_freq|compteur[11] ; regout           ;
+; |div_freq|compteur[12] ; |div_freq|compteur[12] ; regout           ;
+; |div_freq|compteur[13] ; |div_freq|compteur[13] ; regout           ;
+; |div_freq|compteur[14] ; |div_freq|compteur[14] ; regout           ;
+; |div_freq|compteur[15] ; |div_freq|compteur[15] ; regout           ;
+; |div_freq|compteur[16] ; |div_freq|compteur[16] ; regout           ;
+; |div_freq|compteur[17] ; |div_freq|compteur[17] ; regout           ;
+; |div_freq|compteur[18] ; |div_freq|compteur[18] ; regout           ;
+; |div_freq|compteur[19] ; |div_freq|compteur[19] ; regout           ;
+; |div_freq|compteur[20] ; |div_freq|compteur[20] ; regout           ;
+; |div_freq|compteur[21] ; |div_freq|compteur[21] ; regout           ;
+; |div_freq|compteur[22] ; |div_freq|compteur[22] ; regout           ;
+; |div_freq|compteur[23] ; |div_freq|compteur[23] ; regout           ;
+; |div_freq|compteur[24] ; |div_freq|compteur[24] ; regout           ;
+; |div_freq|compteur[25] ; |div_freq|compteur[25] ; regout           ;
+; |div_freq|compteur[26] ; |div_freq|compteur[26] ; regout           ;
+; |div_freq|compteur[27] ; |div_freq|compteur[27] ; regout           ;
+; |div_freq|compteur[28] ; |div_freq|compteur[28] ; regout           ;
+; |div_freq|compteur[29] ; |div_freq|compteur[29] ; regout           ;
+; |div_freq|compteur[30] ; |div_freq|compteur[30] ; regout           ;
+; |div_freq|compteur[31] ; |div_freq|compteur[31] ; regout           ;
+; |div_freq|Add0~0       ; |div_freq|Add0~0       ; out0             ;
+; |div_freq|Add0~1       ; |div_freq|Add0~1       ; out0             ;
+; |div_freq|Add0~2       ; |div_freq|Add0~2       ; out0             ;
+; |div_freq|Add0~3       ; |div_freq|Add0~3       ; out0             ;
+; |div_freq|Add0~4       ; |div_freq|Add0~4       ; out0             ;
+; |div_freq|Add0~5       ; |div_freq|Add0~5       ; out0             ;
+; |div_freq|Add0~6       ; |div_freq|Add0~6       ; out0             ;
+; |div_freq|Add0~7       ; |div_freq|Add0~7       ; out0             ;
+; |div_freq|Add0~8       ; |div_freq|Add0~8       ; out0             ;
+; |div_freq|Add0~9       ; |div_freq|Add0~9       ; out0             ;
+; |div_freq|Add0~10      ; |div_freq|Add0~10      ; out0             ;
+; |div_freq|Add0~11      ; |div_freq|Add0~11      ; out0             ;
+; |div_freq|Add0~12      ; |div_freq|Add0~12      ; out0             ;
+; |div_freq|Add0~13      ; |div_freq|Add0~13      ; out0             ;
+; |div_freq|Add0~14      ; |div_freq|Add0~14      ; out0             ;
+; |div_freq|Add0~15      ; |div_freq|Add0~15      ; out0             ;
+; |div_freq|Add0~16      ; |div_freq|Add0~16      ; out0             ;
+; |div_freq|Add0~17      ; |div_freq|Add0~17      ; out0             ;
+; |div_freq|Add0~18      ; |div_freq|Add0~18      ; out0             ;
+; |div_freq|Add0~19      ; |div_freq|Add0~19      ; out0             ;
+; |div_freq|Add0~20      ; |div_freq|Add0~20      ; out0             ;
+; |div_freq|Add0~21      ; |div_freq|Add0~21      ; out0             ;
+; |div_freq|Add0~22      ; |div_freq|Add0~22      ; out0             ;
+; |div_freq|Add0~23      ; |div_freq|Add0~23      ; out0             ;
+; |div_freq|Add0~24      ; |div_freq|Add0~24      ; out0             ;
+; |div_freq|Add0~25      ; |div_freq|Add0~25      ; out0             ;
+; |div_freq|Add0~26      ; |div_freq|Add0~26      ; out0             ;
+; |div_freq|Add0~27      ; |div_freq|Add0~27      ; out0             ;
+; |div_freq|Add0~28      ; |div_freq|Add0~28      ; out0             ;
+; |div_freq|Add0~29      ; |div_freq|Add0~29      ; out0             ;
+; |div_freq|Add0~30      ; |div_freq|Add0~30      ; out0             ;
+; |div_freq|Add0~31      ; |div_freq|Add0~31      ; out0             ;
+; |div_freq|Add0~32      ; |div_freq|Add0~32      ; out0             ;
+; |div_freq|Add0~33      ; |div_freq|Add0~33      ; out0             ;
+; |div_freq|Add0~34      ; |div_freq|Add0~34      ; out0             ;
+; |div_freq|Add0~35      ; |div_freq|Add0~35      ; out0             ;
+; |div_freq|Add0~36      ; |div_freq|Add0~36      ; out0             ;
+; |div_freq|Add0~37      ; |div_freq|Add0~37      ; out0             ;
+; |div_freq|Add0~38      ; |div_freq|Add0~38      ; out0             ;
+; |div_freq|Add0~39      ; |div_freq|Add0~39      ; out0             ;
+; |div_freq|Add0~40      ; |div_freq|Add0~40      ; out0             ;
+; |div_freq|Add0~41      ; |div_freq|Add0~41      ; out0             ;
+; |div_freq|Add0~42      ; |div_freq|Add0~42      ; out0             ;
+; |div_freq|Add0~43      ; |div_freq|Add0~43      ; out0             ;
+; |div_freq|Add0~44      ; |div_freq|Add0~44      ; out0             ;
+; |div_freq|Add0~45      ; |div_freq|Add0~45      ; out0             ;
+; |div_freq|Add0~46      ; |div_freq|Add0~46      ; out0             ;
+; |div_freq|Add0~47      ; |div_freq|Add0~47      ; out0             ;
+; |div_freq|Add0~48      ; |div_freq|Add0~48      ; out0             ;
+; |div_freq|Add0~49      ; |div_freq|Add0~49      ; out0             ;
+; |div_freq|Add0~50      ; |div_freq|Add0~50      ; out0             ;
+; |div_freq|Add0~51      ; |div_freq|Add0~51      ; out0             ;
+; |div_freq|Add0~52      ; |div_freq|Add0~52      ; out0             ;
+; |div_freq|Add0~53      ; |div_freq|Add0~53      ; out0             ;
+; |div_freq|Add0~54      ; |div_freq|Add0~54      ; out0             ;
+; |div_freq|Add0~55      ; |div_freq|Add0~55      ; out0             ;
+; |div_freq|Add0~56      ; |div_freq|Add0~56      ; out0             ;
+; |div_freq|Add0~57      ; |div_freq|Add0~57      ; out0             ;
+; |div_freq|Add0~58      ; |div_freq|Add0~58      ; out0             ;
+; |div_freq|Add0~59      ; |div_freq|Add0~59      ; out0             ;
+; |div_freq|Add0~60      ; |div_freq|Add0~60      ; out0             ;
+; |div_freq|Equal0~0     ; |div_freq|Equal0~0     ; out0             ;
++------------------------+------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++--------------------------------------------------------------------+
+; Missing 0-Value Coverage                                           ;
++------------------------+------------------------+------------------+
+; Node Name              ; Output Port Name       ; Output Port Type ;
++------------------------+------------------------+------------------+
+; |div_freq|compteur[0]  ; |div_freq|compteur[0]  ; regout           ;
+; |div_freq|compteur~0   ; |div_freq|compteur~0   ; out              ;
+; |div_freq|compteur~1   ; |div_freq|compteur~1   ; out              ;
+; |div_freq|compteur~2   ; |div_freq|compteur~2   ; out              ;
+; |div_freq|compteur~3   ; |div_freq|compteur~3   ; out              ;
+; |div_freq|compteur~4   ; |div_freq|compteur~4   ; out              ;
+; |div_freq|compteur~5   ; |div_freq|compteur~5   ; out              ;
+; |div_freq|compteur~6   ; |div_freq|compteur~6   ; out              ;
+; |div_freq|compteur~7   ; |div_freq|compteur~7   ; out              ;
+; |div_freq|compteur~8   ; |div_freq|compteur~8   ; out              ;
+; |div_freq|compteur~9   ; |div_freq|compteur~9   ; out              ;
+; |div_freq|compteur~10  ; |div_freq|compteur~10  ; out              ;
+; |div_freq|compteur~11  ; |div_freq|compteur~11  ; out              ;
+; |div_freq|compteur~12  ; |div_freq|compteur~12  ; out              ;
+; |div_freq|compteur~13  ; |div_freq|compteur~13  ; out              ;
+; |div_freq|compteur~14  ; |div_freq|compteur~14  ; out              ;
+; |div_freq|compteur~15  ; |div_freq|compteur~15  ; out              ;
+; |div_freq|compteur~16  ; |div_freq|compteur~16  ; out              ;
+; |div_freq|compteur~17  ; |div_freq|compteur~17  ; out              ;
+; |div_freq|compteur~18  ; |div_freq|compteur~18  ; out              ;
+; |div_freq|compteur~19  ; |div_freq|compteur~19  ; out              ;
+; |div_freq|compteur~20  ; |div_freq|compteur~20  ; out              ;
+; |div_freq|compteur~21  ; |div_freq|compteur~21  ; out              ;
+; |div_freq|compteur~22  ; |div_freq|compteur~22  ; out              ;
+; |div_freq|compteur~23  ; |div_freq|compteur~23  ; out              ;
+; |div_freq|compteur~24  ; |div_freq|compteur~24  ; out              ;
+; |div_freq|compteur~25  ; |div_freq|compteur~25  ; out              ;
+; |div_freq|compteur~26  ; |div_freq|compteur~26  ; out              ;
+; |div_freq|compteur~27  ; |div_freq|compteur~27  ; out              ;
+; |div_freq|compteur~28  ; |div_freq|compteur~28  ; out              ;
+; |div_freq|compteur~29  ; |div_freq|compteur~29  ; out              ;
+; |div_freq|compteur~30  ; |div_freq|compteur~30  ; out              ;
+; |div_freq|compteur~31  ; |div_freq|compteur~31  ; out              ;
+; |div_freq|compteur[1]  ; |div_freq|compteur[1]  ; regout           ;
+; |div_freq|compteur[2]  ; |div_freq|compteur[2]  ; regout           ;
+; |div_freq|compteur[3]  ; |div_freq|compteur[3]  ; regout           ;
+; |div_freq|compteur[4]  ; |div_freq|compteur[4]  ; regout           ;
+; |div_freq|compteur[5]  ; |div_freq|compteur[5]  ; regout           ;
+; |div_freq|compteur[6]  ; |div_freq|compteur[6]  ; regout           ;
+; |div_freq|compteur[7]  ; |div_freq|compteur[7]  ; regout           ;
+; |div_freq|compteur[8]  ; |div_freq|compteur[8]  ; regout           ;
+; |div_freq|compteur[9]  ; |div_freq|compteur[9]  ; regout           ;
+; |div_freq|compteur[10] ; |div_freq|compteur[10] ; regout           ;
+; |div_freq|compteur[11] ; |div_freq|compteur[11] ; regout           ;
+; |div_freq|compteur[12] ; |div_freq|compteur[12] ; regout           ;
+; |div_freq|compteur[13] ; |div_freq|compteur[13] ; regout           ;
+; |div_freq|compteur[14] ; |div_freq|compteur[14] ; regout           ;
+; |div_freq|compteur[15] ; |div_freq|compteur[15] ; regout           ;
+; |div_freq|compteur[16] ; |div_freq|compteur[16] ; regout           ;
+; |div_freq|compteur[17] ; |div_freq|compteur[17] ; regout           ;
+; |div_freq|compteur[18] ; |div_freq|compteur[18] ; regout           ;
+; |div_freq|compteur[19] ; |div_freq|compteur[19] ; regout           ;
+; |div_freq|compteur[20] ; |div_freq|compteur[20] ; regout           ;
+; |div_freq|compteur[21] ; |div_freq|compteur[21] ; regout           ;
+; |div_freq|compteur[22] ; |div_freq|compteur[22] ; regout           ;
+; |div_freq|compteur[23] ; |div_freq|compteur[23] ; regout           ;
+; |div_freq|compteur[24] ; |div_freq|compteur[24] ; regout           ;
+; |div_freq|compteur[25] ; |div_freq|compteur[25] ; regout           ;
+; |div_freq|compteur[26] ; |div_freq|compteur[26] ; regout           ;
+; |div_freq|compteur[27] ; |div_freq|compteur[27] ; regout           ;
+; |div_freq|compteur[28] ; |div_freq|compteur[28] ; regout           ;
+; |div_freq|compteur[29] ; |div_freq|compteur[29] ; regout           ;
+; |div_freq|compteur[30] ; |div_freq|compteur[30] ; regout           ;
+; |div_freq|compteur[31] ; |div_freq|compteur[31] ; regout           ;
+; |div_freq|Add0~0       ; |div_freq|Add0~0       ; out0             ;
+; |div_freq|Add0~1       ; |div_freq|Add0~1       ; out0             ;
+; |div_freq|Add0~2       ; |div_freq|Add0~2       ; out0             ;
+; |div_freq|Add0~3       ; |div_freq|Add0~3       ; out0             ;
+; |div_freq|Add0~4       ; |div_freq|Add0~4       ; out0             ;
+; |div_freq|Add0~5       ; |div_freq|Add0~5       ; out0             ;
+; |div_freq|Add0~6       ; |div_freq|Add0~6       ; out0             ;
+; |div_freq|Add0~7       ; |div_freq|Add0~7       ; out0             ;
+; |div_freq|Add0~8       ; |div_freq|Add0~8       ; out0             ;
+; |div_freq|Add0~9       ; |div_freq|Add0~9       ; out0             ;
+; |div_freq|Add0~10      ; |div_freq|Add0~10      ; out0             ;
+; |div_freq|Add0~11      ; |div_freq|Add0~11      ; out0             ;
+; |div_freq|Add0~12      ; |div_freq|Add0~12      ; out0             ;
+; |div_freq|Add0~13      ; |div_freq|Add0~13      ; out0             ;
+; |div_freq|Add0~14      ; |div_freq|Add0~14      ; out0             ;
+; |div_freq|Add0~15      ; |div_freq|Add0~15      ; out0             ;
+; |div_freq|Add0~16      ; |div_freq|Add0~16      ; out0             ;
+; |div_freq|Add0~17      ; |div_freq|Add0~17      ; out0             ;
+; |div_freq|Add0~18      ; |div_freq|Add0~18      ; out0             ;
+; |div_freq|Add0~19      ; |div_freq|Add0~19      ; out0             ;
+; |div_freq|Add0~20      ; |div_freq|Add0~20      ; out0             ;
+; |div_freq|Add0~21      ; |div_freq|Add0~21      ; out0             ;
+; |div_freq|Add0~22      ; |div_freq|Add0~22      ; out0             ;
+; |div_freq|Add0~23      ; |div_freq|Add0~23      ; out0             ;
+; |div_freq|Add0~24      ; |div_freq|Add0~24      ; out0             ;
+; |div_freq|Add0~25      ; |div_freq|Add0~25      ; out0             ;
+; |div_freq|Add0~26      ; |div_freq|Add0~26      ; out0             ;
+; |div_freq|Add0~27      ; |div_freq|Add0~27      ; out0             ;
+; |div_freq|Add0~28      ; |div_freq|Add0~28      ; out0             ;
+; |div_freq|Add0~29      ; |div_freq|Add0~29      ; out0             ;
+; |div_freq|Add0~30      ; |div_freq|Add0~30      ; out0             ;
+; |div_freq|Add0~31      ; |div_freq|Add0~31      ; out0             ;
+; |div_freq|Add0~32      ; |div_freq|Add0~32      ; out0             ;
+; |div_freq|Add0~33      ; |div_freq|Add0~33      ; out0             ;
+; |div_freq|Add0~34      ; |div_freq|Add0~34      ; out0             ;
+; |div_freq|Add0~35      ; |div_freq|Add0~35      ; out0             ;
+; |div_freq|Add0~36      ; |div_freq|Add0~36      ; out0             ;
+; |div_freq|Add0~37      ; |div_freq|Add0~37      ; out0             ;
+; |div_freq|Add0~38      ; |div_freq|Add0~38      ; out0             ;
+; |div_freq|Add0~39      ; |div_freq|Add0~39      ; out0             ;
+; |div_freq|Add0~40      ; |div_freq|Add0~40      ; out0             ;
+; |div_freq|Add0~41      ; |div_freq|Add0~41      ; out0             ;
+; |div_freq|Add0~42      ; |div_freq|Add0~42      ; out0             ;
+; |div_freq|Add0~43      ; |div_freq|Add0~43      ; out0             ;
+; |div_freq|Add0~44      ; |div_freq|Add0~44      ; out0             ;
+; |div_freq|Add0~45      ; |div_freq|Add0~45      ; out0             ;
+; |div_freq|Add0~46      ; |div_freq|Add0~46      ; out0             ;
+; |div_freq|Add0~47      ; |div_freq|Add0~47      ; out0             ;
+; |div_freq|Add0~48      ; |div_freq|Add0~48      ; out0             ;
+; |div_freq|Add0~49      ; |div_freq|Add0~49      ; out0             ;
+; |div_freq|Add0~50      ; |div_freq|Add0~50      ; out0             ;
+; |div_freq|Add0~51      ; |div_freq|Add0~51      ; out0             ;
+; |div_freq|Add0~52      ; |div_freq|Add0~52      ; out0             ;
+; |div_freq|Add0~53      ; |div_freq|Add0~53      ; out0             ;
+; |div_freq|Add0~54      ; |div_freq|Add0~54      ; out0             ;
+; |div_freq|Add0~55      ; |div_freq|Add0~55      ; out0             ;
+; |div_freq|Add0~56      ; |div_freq|Add0~56      ; out0             ;
+; |div_freq|Add0~57      ; |div_freq|Add0~57      ; out0             ;
+; |div_freq|Add0~58      ; |div_freq|Add0~58      ; out0             ;
+; |div_freq|Add0~59      ; |div_freq|Add0~59      ; out0             ;
+; |div_freq|Add0~60      ; |div_freq|Add0~60      ; out0             ;
+; |div_freq|Equal0~0     ; |div_freq|Equal0~0     ; out0             ;
++------------------------+------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Sep 07 08:33:26 2021
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off div_freq -c div_freq
+Info: Using vector source file "C:/Users/Etudiant/Documents/BE VHDL Boulfani Boudounet/Diviseur fréquence/div_freq_simu.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of div_freq_simu.vwf called div_freq.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is       1.56 %
+Info: Number of transitions in simulation is 199
+Info: Vector file div_freq_simu.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 150 megabytes
+    Info: Processing ended: Tue Sep 07 08:33:26 2021
+    Info: Elapsed time: 00:00:00
+    Info: Total CPU time (on all processors): 00:00:00
+
+
