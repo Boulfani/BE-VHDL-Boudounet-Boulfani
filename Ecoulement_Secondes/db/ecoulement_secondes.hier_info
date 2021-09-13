@@ -1,0 +1,133 @@
+|ecoulement_secondes
+Clk => div_freq:div.clk
+S[0] <= deco_7seg:decodeur.S[0]
+S[1] <= deco_7seg:decodeur.S[1]
+S[2] <= deco_7seg:decodeur.S[2]
+S[3] <= deco_7seg:decodeur.S[3]
+S[4] <= deco_7seg:decodeur.S[4]
+S[5] <= deco_7seg:decodeur.S[5]
+S[6] <= deco_7seg:decodeur.S[6]
+
+
+|ecoulement_secondes|div_freq:div
+clk => var_temp.CLK
+clk => compteur[31].CLK
+clk => compteur[30].CLK
+clk => compteur[29].CLK
+clk => compteur[28].CLK
+clk => compteur[27].CLK
+clk => compteur[26].CLK
+clk => compteur[25].CLK
+clk => compteur[24].CLK
+clk => compteur[23].CLK
+clk => compteur[22].CLK
+clk => compteur[21].CLK
+clk => compteur[20].CLK
+clk => compteur[19].CLK
+clk => compteur[18].CLK
+clk => compteur[17].CLK
+clk => compteur[16].CLK
+clk => compteur[15].CLK
+clk => compteur[14].CLK
+clk => compteur[13].CLK
+clk => compteur[12].CLK
+clk => compteur[11].CLK
+clk => compteur[10].CLK
+clk => compteur[9].CLK
+clk => compteur[8].CLK
+clk => compteur[7].CLK
+clk => compteur[6].CLK
+clk => compteur[5].CLK
+clk => compteur[4].CLK
+clk => compteur[3].CLK
+clk => compteur[2].CLK
+clk => compteur[1].CLK
+clk => compteur[0].CLK
+clk_out <= var_temp.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ecoulement_secondes|cpt_bcd_1:cpt_BCD
+clk => nombre[3].CLK
+clk => nombre[2].CLK
+clk => nombre[1].CLK
+clk => nombre[0].CLK
+S[0] <= nombre[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= nombre[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= nombre[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= nombre[3].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|ecoulement_secondes|deco_7seg:decodeur
+E[0] => Equal15.IN7
+E[0] => Equal14.IN7
+E[0] => Equal13.IN7
+E[0] => Equal12.IN7
+E[0] => Equal11.IN7
+E[0] => Equal10.IN7
+E[0] => Equal9.IN7
+E[0] => Equal8.IN7
+E[0] => Equal7.IN7
+E[0] => Equal6.IN7
+E[0] => Equal5.IN7
+E[0] => Equal4.IN7
+E[0] => Equal3.IN7
+E[0] => Equal2.IN7
+E[0] => Equal1.IN7
+E[0] => Equal0.IN7
+E[1] => Equal15.IN6
+E[1] => Equal14.IN6
+E[1] => Equal13.IN6
+E[1] => Equal12.IN6
+E[1] => Equal11.IN6
+E[1] => Equal10.IN6
+E[1] => Equal9.IN6
+E[1] => Equal8.IN6
+E[1] => Equal7.IN6
+E[1] => Equal6.IN6
+E[1] => Equal5.IN6
+E[1] => Equal4.IN6
+E[1] => Equal3.IN6
+E[1] => Equal2.IN6
+E[1] => Equal1.IN6
+E[1] => Equal0.IN6
+E[2] => Equal15.IN5
+E[2] => Equal14.IN5
+E[2] => Equal13.IN5
+E[2] => Equal12.IN5
+E[2] => Equal11.IN5
+E[2] => Equal10.IN5
+E[2] => Equal9.IN5
+E[2] => Equal8.IN5
+E[2] => Equal7.IN5
+E[2] => Equal6.IN5
+E[2] => Equal5.IN5
+E[2] => Equal4.IN5
+E[2] => Equal3.IN5
+E[2] => Equal2.IN5
+E[2] => Equal1.IN5
+E[2] => Equal0.IN5
+E[3] => Equal15.IN4
+E[3] => Equal14.IN4
+E[3] => Equal13.IN4
+E[3] => Equal12.IN4
+E[3] => Equal11.IN4
+E[3] => Equal10.IN4
+E[3] => Equal9.IN4
+E[3] => Equal8.IN4
+E[3] => Equal7.IN4
+E[3] => Equal6.IN4
+E[3] => Equal5.IN4
+E[3] => Equal4.IN4
+E[3] => Equal3.IN4
+E[3] => Equal2.IN4
+E[3] => Equal1.IN4
+E[3] => Equal0.IN4
+S[0] <= S~92.DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= S~91.DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= S~90.DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= S~89.DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= S~88.DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= S~87.DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= S~86.DB_MAX_OUTPUT_PORT_TYPE
+
+
