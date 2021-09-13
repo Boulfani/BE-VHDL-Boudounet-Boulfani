@@ -1,0 +1,421 @@
+Classic Timing Analyzer report for ecoulement_secondes
+Tue Sep 07 08:54:55 2021
+Quartus II Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Timing Analyzer Summary
+  3. Timing Analyzer Settings
+  4. Clock Settings Summary
+  5. Parallel Compilation
+  6. Clock Setup: 'Clk'
+  7. tco
+  8. Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                                                  ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------+---------------------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                        ; To                        ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------+---------------------------+------------+----------+--------------+
+; Worst-case tco               ; N/A   ; None          ; 10.619 ns                        ; cpt_bcd_1:cpt_BCD|nombre[2] ; S[6]                      ; Clk        ; --       ; 0            ;
+; Clock Setup: 'Clk'           ; N/A   ; None          ; 246.06 MHz ( period = 4.064 ns ) ; div_freq:div|compteur[6]    ; div_freq:div|compteur[24] ; Clk        ; Clk      ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                             ;                           ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+-----------------------------+---------------------------+------------+----------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Settings                                                                                           ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Option                                                              ; Setting            ; From ; To ; Entity Name ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+; Device Name                                                         ; EP2C35F672C6       ;      ;    ;             ;
+; Timing Models                                                       ; Final              ;      ;    ;             ;
+; Default hold multicycle                                             ; Same as Multicycle ;      ;    ;             ;
+; Cut paths between unrelated clock domains                           ; On                 ;      ;    ;             ;
+; Cut off read during write signal paths                              ; On                 ;      ;    ;             ;
+; Cut off feedback from I/O pins                                      ; On                 ;      ;    ;             ;
+; Report Combined Fast/Slow Timing                                    ; Off                ;      ;    ;             ;
+; Ignore Clock Settings                                               ; Off                ;      ;    ;             ;
+; Analyze latches as synchronous elements                             ; On                 ;      ;    ;             ;
+; Enable Recovery/Removal analysis                                    ; Off                ;      ;    ;             ;
+; Enable Clock Latency                                                ; Off                ;      ;    ;             ;
+; Use TimeQuest Timing Analyzer                                       ; Off                ;      ;    ;             ;
+; Minimum Core Junction Temperature                                   ; 0                  ;      ;    ;             ;
+; Maximum Core Junction Temperature                                   ; 85                 ;      ;    ;             ;
+; Number of source nodes to report per destination node               ; 10                 ;      ;    ;             ;
+; Number of destination nodes to report                               ; 10                 ;      ;    ;             ;
+; Number of paths to report                                           ; 200                ;      ;    ;             ;
+; Report Minimum Timing Checks                                        ; Off                ;      ;    ;             ;
+; Use Fast Timing Models                                              ; Off                ;      ;    ;             ;
+; Report IO Paths Separately                                          ; Off                ;      ;    ;             ;
+; Perform Multicorner Analysis                                        ; On                 ;      ;    ;             ;
+; Reports the worst-case path for each clock domain and analysis      ; Off                ;      ;    ;             ;
+; Removes common clock path pessimism (CCPP) during slack computation ; Off                ;      ;    ;             ;
+; Output I/O Timing Endpoint                                          ; Near End           ;      ;    ;             ;
++---------------------------------------------------------------------+--------------------+------+----+-------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Settings Summary                                                                                                                                                             ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clock Node Name ; Clock Setting Name ; Type     ; Fmax Requirement ; Early Latency ; Late Latency ; Based on ; Multiply Base Fmax by ; Divide Base Fmax by ; Offset ; Phase offset ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+; Clk             ;                    ; User Pin ; None             ; 0.000 ns      ; 0.000 ns     ; --       ; N/A                   ; N/A                 ; N/A    ;              ;
++-----------------+--------------------+----------+------------------+---------------+--------------+----------+-----------------------+---------------------+--------+--------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 4      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'Clk'                                                                                                                                                                                                                                                ;
++-----------------------------------------+-----------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack                                   ; Actual fmax (period)                                ; From                      ; To                        ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-----------------------------------------+-----------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A                                     ; 246.06 MHz ( period = 4.064 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.847 ns                ;
+; N/A                                     ; 249.00 MHz ( period = 4.016 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.801 ns                ;
+; N/A                                     ; 253.16 MHz ( period = 3.950 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.735 ns                ;
+; N/A                                     ; 257.40 MHz ( period = 3.885 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.670 ns                ;
+; N/A                                     ; 260.01 MHz ( period = 3.846 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.631 ns                ;
+; N/A                                     ; 260.69 MHz ( period = 3.836 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 3.621 ns                ;
+; N/A                                     ; 261.44 MHz ( period = 3.825 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 3.613 ns                ;
+; N/A                                     ; 263.44 MHz ( period = 3.796 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[6]  ; Clk        ; Clk      ; None                        ; None                      ; 3.584 ns                ;
+; N/A                                     ; 263.50 MHz ( period = 3.795 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 3.583 ns                ;
+; N/A                                     ; 263.57 MHz ( period = 3.794 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 3.582 ns                ;
+; N/A                                     ; 263.92 MHz ( period = 3.789 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.577 ns                ;
+; N/A                                     ; 263.99 MHz ( period = 3.788 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 3.575 ns                ;
+; N/A                                     ; 263.99 MHz ( period = 3.788 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.576 ns                ;
+; N/A                                     ; 264.06 MHz ( period = 3.787 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 3.575 ns                ;
+; N/A                                     ; 264.13 MHz ( period = 3.786 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 3.574 ns                ;
+; N/A                                     ; 264.13 MHz ( period = 3.786 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 3.574 ns                ;
+; N/A                                     ; 265.60 MHz ( period = 3.765 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[30] ; Clk        ; Clk      ; None                        ; None                      ; 3.550 ns                ;
+; N/A                                     ; 267.17 MHz ( period = 3.743 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.528 ns                ;
+; N/A                                     ; 268.67 MHz ( period = 3.722 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 3.509 ns                ;
+; N/A                                     ; 269.03 MHz ( period = 3.717 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[30] ; Clk        ; Clk      ; None                        ; None                      ; 3.504 ns                ;
+; N/A                                     ; 269.98 MHz ( period = 3.704 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.489 ns                ;
+; N/A                                     ; 270.71 MHz ( period = 3.694 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[29] ; Clk        ; Clk      ; None                        ; None                      ; 3.479 ns                ;
+; N/A                                     ; 271.52 MHz ( period = 3.683 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.469 ns                ;
+; N/A                                     ; 272.78 MHz ( period = 3.666 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 3.454 ns                ;
+; N/A                                     ; 272.85 MHz ( period = 3.665 ns )                    ; div_freq:div|compteur[11] ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.448 ns                ;
+; N/A                                     ; 273.45 MHz ( period = 3.657 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 3.444 ns                ;
+; N/A                                     ; 273.90 MHz ( period = 3.651 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[30] ; Clk        ; Clk      ; None                        ; None                      ; 3.438 ns                ;
+; N/A                                     ; 274.27 MHz ( period = 3.646 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[29] ; Clk        ; Clk      ; None                        ; None                      ; 3.433 ns                ;
+; N/A                                     ; 274.95 MHz ( period = 3.637 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[6]  ; Clk        ; Clk      ; None                        ; None                      ; 3.425 ns                ;
+; N/A                                     ; 275.03 MHz ( period = 3.636 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 3.424 ns                ;
+; N/A                                     ; 275.10 MHz ( period = 3.635 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 3.423 ns                ;
+; N/A                                     ; 275.10 MHz ( period = 3.635 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.423 ns                ;
+; N/A                                     ; 275.48 MHz ( period = 3.630 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.418 ns                ;
+; N/A                                     ; 275.56 MHz ( period = 3.629 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.417 ns                ;
+; N/A                                     ; 275.63 MHz ( period = 3.628 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 3.416 ns                ;
+; N/A                                     ; 275.71 MHz ( period = 3.627 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 3.415 ns                ;
+; N/A                                     ; 275.71 MHz ( period = 3.627 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 3.415 ns                ;
+; N/A                                     ; 275.94 MHz ( period = 3.624 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.410 ns                ;
+; N/A                                     ; 276.01 MHz ( period = 3.623 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[28] ; Clk        ; Clk      ; None                        ; None                      ; 3.408 ns                ;
+; N/A                                     ; 276.40 MHz ( period = 3.618 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 3.405 ns                ;
+; N/A                                     ; 277.39 MHz ( period = 3.605 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 3.391 ns                ;
+; N/A                                     ; 278.86 MHz ( period = 3.586 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[30] ; Clk        ; Clk      ; None                        ; None                      ; 3.373 ns                ;
+; N/A                                     ; 279.33 MHz ( period = 3.580 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[29] ; Clk        ; Clk      ; None                        ; None                      ; 3.367 ns                ;
+; N/A                                     ; 279.64 MHz ( period = 3.576 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.364 ns                ;
+; N/A                                     ; 279.72 MHz ( period = 3.575 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[28] ; Clk        ; Clk      ; None                        ; None                      ; 3.362 ns                ;
+; N/A                                     ; 280.19 MHz ( period = 3.569 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.357 ns                ;
+; N/A                                     ; 280.27 MHz ( period = 3.568 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 3.356 ns                ;
+; N/A                                     ; 280.90 MHz ( period = 3.560 ns )                    ; div_freq:div|compteur[12] ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.343 ns                ;
+; N/A                                     ; 281.14 MHz ( period = 3.557 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 3.345 ns                ;
+; N/A                                     ; 281.45 MHz ( period = 3.553 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[18] ; Clk        ; Clk      ; None                        ; None                      ; 3.341 ns                ;
+; N/A                                     ; 281.53 MHz ( period = 3.552 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[27] ; Clk        ; Clk      ; None                        ; None                      ; 3.337 ns                ;
+; N/A                                     ; 281.61 MHz ( period = 3.551 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 3.337 ns                ;
+; N/A                                     ; 281.93 MHz ( period = 3.547 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[30] ; Clk        ; Clk      ; None                        ; None                      ; 3.334 ns                ;
+; N/A                                     ; 282.57 MHz ( period = 3.539 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[6]  ; Clk        ; Clk      ; None                        ; None                      ; 3.327 ns                ;
+; N/A                                     ; 282.65 MHz ( period = 3.538 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 3.326 ns                ;
+; N/A                                     ; 282.73 MHz ( period = 3.537 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 3.325 ns                ;
+; N/A                                     ; 282.97 MHz ( period = 3.534 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.319 ns                ;
+; N/A                                     ; 283.13 MHz ( period = 3.532 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.320 ns                ;
+; N/A                                     ; 283.13 MHz ( period = 3.532 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[18] ; Clk        ; Clk      ; None                        ; None                      ; 3.318 ns                ;
+; N/A                                     ; 283.21 MHz ( period = 3.531 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.319 ns                ;
+; N/A                                     ; 283.29 MHz ( period = 3.530 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 3.318 ns                ;
+; N/A                                     ; 283.37 MHz ( period = 3.529 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 3.317 ns                ;
+; N/A                                     ; 283.37 MHz ( period = 3.529 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 3.317 ns                ;
+; N/A                                     ; 284.41 MHz ( period = 3.516 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[18] ; Clk        ; Clk      ; None                        ; None                      ; 3.304 ns                ;
+; N/A                                     ; 284.50 MHz ( period = 3.515 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 3.302 ns                ;
+; N/A                                     ; 284.50 MHz ( period = 3.515 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[29] ; Clk        ; Clk      ; None                        ; None                      ; 3.302 ns                ;
+; N/A                                     ; 284.90 MHz ( period = 3.510 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.298 ns                ;
+; N/A                                     ; 284.98 MHz ( period = 3.509 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[28] ; Clk        ; Clk      ; None                        ; None                      ; 3.296 ns                ;
+; N/A                                     ; 285.39 MHz ( period = 3.504 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[27] ; Clk        ; Clk      ; None                        ; None                      ; 3.291 ns                ;
+; N/A                                     ; 285.47 MHz ( period = 3.503 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 3.291 ns                ;
+; N/A                                     ; 286.45 MHz ( period = 3.491 ns )                    ; div_freq:div|compteur[13] ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.274 ns                ;
+; N/A                                     ; 286.45 MHz ( period = 3.491 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 3.279 ns                ;
+; N/A                                     ; 287.03 MHz ( period = 3.484 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[18] ; Clk        ; Clk      ; None                        ; None                      ; 3.272 ns                ;
+; N/A                                     ; 287.27 MHz ( period = 3.481 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[26] ; Clk        ; Clk      ; None                        ; None                      ; 3.266 ns                ;
+; N/A                                     ; 287.69 MHz ( period = 3.476 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 3.263 ns                ;
+; N/A                                     ; 287.69 MHz ( period = 3.476 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[29] ; Clk        ; Clk      ; None                        ; None                      ; 3.263 ns                ;
+; N/A                                     ; 289.86 MHz ( period = 3.450 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[6]  ; Clk        ; Clk      ; None                        ; None                      ; 3.238 ns                ;
+; N/A                                     ; 289.94 MHz ( period = 3.449 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 3.237 ns                ;
+; N/A                                     ; 290.02 MHz ( period = 3.448 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 3.236 ns                ;
+; N/A                                     ; 290.36 MHz ( period = 3.444 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[30] ; Clk        ; Clk      ; None                        ; None                      ; 3.231 ns                ;
+; N/A                                     ; 290.36 MHz ( period = 3.444 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[28] ; Clk        ; Clk      ; None                        ; None                      ; 3.231 ns                ;
+; N/A                                     ; 290.61 MHz ( period = 3.441 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 3.229 ns                ;
+; N/A                                     ; 290.70 MHz ( period = 3.440 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 3.228 ns                ;
+; N/A                                     ; 290.87 MHz ( period = 3.438 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 3.226 ns                ;
+; N/A                                     ; 290.87 MHz ( period = 3.438 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[27] ; Clk        ; Clk      ; None                        ; None                      ; 3.225 ns                ;
+; N/A                                     ; 290.95 MHz ( period = 3.437 ns )                    ; div_freq:div|compteur[11] ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 3.222 ns                ;
+; N/A                                     ; 291.29 MHz ( period = 3.433 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[26] ; Clk        ; Clk      ; None                        ; None                      ; 3.220 ns                ;
+; N/A                                     ; 291.97 MHz ( period = 3.425 ns )                    ; div_freq:div|compteur[10] ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 3.213 ns                ;
+; N/A                                     ; 293.17 MHz ( period = 3.411 ns )                    ; div_freq:div|compteur[14] ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.194 ns                ;
+; N/A                                     ; 293.26 MHz ( period = 3.410 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[25] ; Clk        ; Clk      ; None                        ; None                      ; 3.195 ns                ;
+; N/A                                     ; 293.69 MHz ( period = 3.405 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[30] ; Clk        ; Clk      ; None                        ; None                      ; 3.192 ns                ;
+; N/A                                     ; 293.69 MHz ( period = 3.405 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[28] ; Clk        ; Clk      ; None                        ; None                      ; 3.192 ns                ;
+; N/A                                     ; 293.86 MHz ( period = 3.403 ns )                    ; div_freq:div|compteur[8]  ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.188 ns                ;
+; N/A                                     ; 294.20 MHz ( period = 3.399 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[16] ; Clk        ; Clk      ; None                        ; None                      ; 3.182 ns                ;
+; N/A                                     ; 294.46 MHz ( period = 3.396 ns )                    ; div_freq:div|compteur[10] ; div_freq:div|compteur[6]  ; Clk        ; Clk      ; None                        ; None                      ; 3.184 ns                ;
+; N/A                                     ; 294.55 MHz ( period = 3.395 ns )                    ; div_freq:div|compteur[10] ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 3.183 ns                ;
+; N/A                                     ; 294.64 MHz ( period = 3.394 ns )                    ; div_freq:div|compteur[10] ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 3.182 ns                ;
+; N/A                                     ; 294.64 MHz ( period = 3.394 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[18] ; Clk        ; Clk      ; None                        ; None                      ; 3.182 ns                ;
+; N/A                                     ; 294.72 MHz ( period = 3.393 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 3.179 ns                ;
+; N/A                                     ; 295.07 MHz ( period = 3.389 ns )                    ; div_freq:div|compteur[10] ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.177 ns                ;
+; N/A                                     ; 295.16 MHz ( period = 3.388 ns )                    ; div_freq:div|compteur[10] ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.176 ns                ;
+; N/A                                     ; 295.25 MHz ( period = 3.387 ns )                    ; div_freq:div|compteur[10] ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 3.175 ns                ;
+; N/A                                     ; 295.33 MHz ( period = 3.386 ns )                    ; div_freq:div|compteur[10] ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 3.174 ns                ;
+; N/A                                     ; 295.33 MHz ( period = 3.386 ns )                    ; div_freq:div|compteur[10] ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 3.174 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[27] ; Clk        ; Clk      ; None                        ; None                      ; 3.160 ns                ;
+; N/A                                     ; 296.47 MHz ( period = 3.373 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[29] ; Clk        ; Clk      ; None                        ; None                      ; 3.160 ns                ;
+; N/A                                     ; 296.74 MHz ( period = 3.370 ns )                    ; div_freq:div|compteur[15] ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 3.158 ns                ;
+; N/A                                     ; 297.00 MHz ( period = 3.367 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[26] ; Clk        ; Clk      ; None                        ; None                      ; 3.154 ns                ;
+; N/A                                     ; 297.09 MHz ( period = 3.366 ns )                    ; div_freq:div|compteur[11] ; div_freq:div|compteur[30] ; Clk        ; Clk      ; None                        ; None                      ; 3.151 ns                ;
+; N/A                                     ; 297.44 MHz ( period = 3.362 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[25] ; Clk        ; Clk      ; None                        ; None                      ; 3.149 ns                ;
+; N/A                                     ; 297.62 MHz ( period = 3.360 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 3.146 ns                ;
+; N/A                                     ; 298.42 MHz ( period = 3.351 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[16] ; Clk        ; Clk      ; None                        ; None                      ; 3.136 ns                ;
+; N/A                                     ; 298.60 MHz ( period = 3.349 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 3.135 ns                ;
+; N/A                                     ; 298.95 MHz ( period = 3.345 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 3.133 ns                ;
+; N/A                                     ; 299.13 MHz ( period = 3.343 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 3.131 ns                ;
+; N/A                                     ; 299.31 MHz ( period = 3.341 ns )                    ; div_freq:div|compteur[15] ; div_freq:div|compteur[6]  ; Clk        ; Clk      ; None                        ; None                      ; 3.129 ns                ;
+; N/A                                     ; 299.40 MHz ( period = 3.340 ns )                    ; div_freq:div|compteur[15] ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 3.128 ns                ;
+; N/A                                     ; 299.49 MHz ( period = 3.339 ns )                    ; div_freq:div|compteur[15] ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 3.127 ns                ;
+; N/A                                     ; 299.94 MHz ( period = 3.334 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[27] ; Clk        ; Clk      ; None                        ; None                      ; 3.121 ns                ;
+; N/A                                     ; 299.94 MHz ( period = 3.334 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[29] ; Clk        ; Clk      ; None                        ; None                      ; 3.121 ns                ;
+; N/A                                     ; 299.94 MHz ( period = 3.334 ns )                    ; div_freq:div|compteur[15] ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.122 ns                ;
+; N/A                                     ; 300.03 MHz ( period = 3.333 ns )                    ; div_freq:div|compteur[15] ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.121 ns                ;
+; N/A                                     ; 300.12 MHz ( period = 3.332 ns )                    ; div_freq:div|compteur[15] ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 3.120 ns                ;
+; N/A                                     ; 300.12 MHz ( period = 3.332 ns )                    ; div_freq:div|compteur[12] ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 3.117 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; div_freq:div|compteur[15] ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 3.119 ns                ;
+; N/A                                     ; 300.21 MHz ( period = 3.331 ns )                    ; div_freq:div|compteur[15] ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 3.119 ns                ;
+; N/A                                     ; 300.93 MHz ( period = 3.323 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.111 ns                ;
+; N/A                                     ; 301.11 MHz ( period = 3.321 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 3.109 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[6]  ; Clk        ; Clk      ; None                        ; None                      ; 3.102 ns                ;
+; N/A                                     ; 301.75 MHz ( period = 3.314 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[18] ; Clk        ; Clk      ; None                        ; None                      ; 3.102 ns                ;
+; N/A                                     ; 301.84 MHz ( period = 3.313 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 3.101 ns                ;
+; N/A                                     ; 301.93 MHz ( period = 3.312 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 301.93 MHz ( period = 3.312 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 3.100 ns                ;
+; N/A                                     ; 302.11 MHz ( period = 3.310 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|var_temp     ; Clk        ; Clk      ; None                        ; None                      ; 2.904 ns                ;
+; N/A                                     ; 302.39 MHz ( period = 3.307 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.095 ns                ;
+; N/A                                     ; 302.48 MHz ( period = 3.306 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 3.093 ns                ;
+; N/A                                     ; 302.48 MHz ( period = 3.306 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.094 ns                ;
+; N/A                                     ; 302.57 MHz ( period = 3.305 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 3.093 ns                ;
+; N/A                                     ; 302.66 MHz ( period = 3.304 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 3.092 ns                ;
+; N/A                                     ; 302.66 MHz ( period = 3.304 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 3.092 ns                ;
+; N/A                                     ; 302.85 MHz ( period = 3.302 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[26] ; Clk        ; Clk      ; None                        ; None                      ; 3.089 ns                ;
+; N/A                                     ; 302.85 MHz ( period = 3.302 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[28] ; Clk        ; Clk      ; None                        ; None                      ; 3.089 ns                ;
+; N/A                                     ; 302.94 MHz ( period = 3.301 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 3.089 ns                ;
+; N/A                                     ; 303.40 MHz ( period = 3.296 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[25] ; Clk        ; Clk      ; None                        ; None                      ; 3.083 ns                ;
+; N/A                                     ; 303.49 MHz ( period = 3.295 ns )                    ; div_freq:div|compteur[9]  ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.080 ns                ;
+; N/A                                     ; 303.49 MHz ( period = 3.295 ns )                    ; div_freq:div|compteur[11] ; div_freq:div|compteur[29] ; Clk        ; Clk      ; None                        ; None                      ; 3.080 ns                ;
+; N/A                                     ; 303.77 MHz ( period = 3.292 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[6]  ; Clk        ; Clk      ; None                        ; None                      ; 3.080 ns                ;
+; N/A                                     ; 303.86 MHz ( period = 3.291 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 3.079 ns                ;
+; N/A                                     ; 303.95 MHz ( period = 3.290 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 3.078 ns                ;
+; N/A                                     ; 304.41 MHz ( period = 3.285 ns )                    ; div_freq:div|compteur[1]  ; div_freq:div|compteur[16] ; Clk        ; Clk      ; None                        ; None                      ; 3.070 ns                ;
+; N/A                                     ; 304.41 MHz ( period = 3.285 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.073 ns                ;
+; N/A                                     ; 304.51 MHz ( period = 3.284 ns )                    ; div_freq:div|compteur[11] ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.070 ns                ;
+; N/A                                     ; 304.60 MHz ( period = 3.283 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 3.071 ns                ;
+; N/A                                     ; 304.69 MHz ( period = 3.282 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 3.070 ns                ;
+; N/A                                     ; 304.69 MHz ( period = 3.282 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 3.070 ns                ;
+; N/A                                     ; 305.34 MHz ( period = 3.275 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[6]  ; Clk        ; Clk      ; None                        ; None                      ; 3.063 ns                ;
+; N/A                                     ; 306.00 MHz ( period = 3.268 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 3.054 ns                ;
+; N/A                                     ; 306.18 MHz ( period = 3.266 ns )                    ; div_freq:div|compteur[0]  ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 3.054 ns                ;
+; N/A                                     ; 306.47 MHz ( period = 3.263 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[26] ; Clk        ; Clk      ; None                        ; None                      ; 3.050 ns                ;
+; N/A                                     ; 306.47 MHz ( period = 3.263 ns )                    ; div_freq:div|compteur[13] ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 3.048 ns                ;
+; N/A                                     ; 306.47 MHz ( period = 3.263 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[28] ; Clk        ; Clk      ; None                        ; None                      ; 3.050 ns                ;
+; N/A                                     ; 306.56 MHz ( period = 3.262 ns )                    ; div_freq:div|compteur[31] ; div_freq:div|compteur[18] ; Clk        ; Clk      ; None                        ; None                      ; 3.049 ns                ;
+; N/A                                     ; 306.65 MHz ( period = 3.261 ns )                    ; div_freq:div|compteur[10] ; div_freq:div|compteur[24] ; Clk        ; Clk      ; None                        ; None                      ; 3.046 ns                ;
+; N/A                                     ; 306.65 MHz ( period = 3.261 ns )                    ; div_freq:div|compteur[12] ; div_freq:div|compteur[30] ; Clk        ; Clk      ; None                        ; None                      ; 3.046 ns                ;
+; N/A                                     ; 306.65 MHz ( period = 3.261 ns )                    ; div_freq:div|compteur[8]  ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 3.049 ns                ;
+; N/A                                     ; 307.31 MHz ( period = 3.254 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|var_temp     ; Clk        ; Clk      ; None                        ; None                      ; 2.848 ns                ;
+; N/A                                     ; 309.12 MHz ( period = 3.235 ns )                    ; div_freq:div|compteur[7]  ; div_freq:div|compteur[30] ; Clk        ; Clk      ; None                        ; None                      ; 3.022 ns                ;
+; N/A                                     ; 309.41 MHz ( period = 3.232 ns )                    ; div_freq:div|compteur[8]  ; div_freq:div|compteur[6]  ; Clk        ; Clk      ; None                        ; None                      ; 3.020 ns                ;
+; N/A                                     ; 309.50 MHz ( period = 3.231 ns )                    ; div_freq:div|compteur[4]  ; div_freq:div|compteur[27] ; Clk        ; Clk      ; None                        ; None                      ; 3.018 ns                ;
+; N/A                                     ; 309.50 MHz ( period = 3.231 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[25] ; Clk        ; Clk      ; None                        ; None                      ; 3.018 ns                ;
+; N/A                                     ; 309.50 MHz ( period = 3.231 ns )                    ; div_freq:div|compteur[8]  ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 3.019 ns                ;
+; N/A                                     ; 309.60 MHz ( period = 3.230 ns )                    ; div_freq:div|compteur[8]  ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 3.018 ns                ;
+; N/A                                     ; 310.08 MHz ( period = 3.225 ns )                    ; div_freq:div|compteur[11] ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.011 ns                ;
+; N/A                                     ; 310.08 MHz ( period = 3.225 ns )                    ; div_freq:div|compteur[8]  ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 3.013 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; div_freq:div|compteur[11] ; div_freq:div|compteur[28] ; Clk        ; Clk      ; None                        ; None                      ; 3.009 ns                ;
+; N/A                                     ; 310.17 MHz ( period = 3.224 ns )                    ; div_freq:div|compteur[8]  ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 3.012 ns                ;
+; N/A                                     ; 310.27 MHz ( period = 3.223 ns )                    ; div_freq:div|compteur[8]  ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 3.011 ns                ;
+; N/A                                     ; 310.37 MHz ( period = 3.222 ns )                    ; div_freq:div|compteur[8]  ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.37 MHz ( period = 3.222 ns )                    ; div_freq:div|compteur[8]  ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 3.010 ns                ;
+; N/A                                     ; 310.56 MHz ( period = 3.220 ns )                    ; div_freq:div|compteur[2]  ; div_freq:div|compteur[16] ; Clk        ; Clk      ; None                        ; None                      ; 3.005 ns                ;
+; N/A                                     ; 311.04 MHz ( period = 3.215 ns )                    ; div_freq:div|compteur[26] ; div_freq:div|compteur[18] ; Clk        ; Clk      ; None                        ; None                      ; 3.002 ns                ;
+; N/A                                     ; 311.92 MHz ( period = 3.206 ns )                    ; div_freq:div|compteur[11] ; div_freq:div|compteur[19] ; Clk        ; Clk      ; None                        ; None                      ; 2.992 ns                ;
+; N/A                                     ; 312.89 MHz ( period = 3.196 ns )                    ; div_freq:div|compteur[31] ; div_freq:div|compteur[6]  ; Clk        ; Clk      ; None                        ; None                      ; 2.983 ns                ;
+; N/A                                     ; 312.99 MHz ( period = 3.195 ns )                    ; div_freq:div|compteur[31] ; div_freq:div|compteur[12] ; Clk        ; Clk      ; None                        ; None                      ; 2.982 ns                ;
+; N/A                                     ; 313.09 MHz ( period = 3.194 ns )                    ; div_freq:div|compteur[31] ; div_freq:div|compteur[20] ; Clk        ; Clk      ; None                        ; None                      ; 2.981 ns                ;
+; N/A                                     ; 313.28 MHz ( period = 3.192 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[27] ; Clk        ; Clk      ; None                        ; None                      ; 2.979 ns                ;
+; N/A                                     ; 313.28 MHz ( period = 3.192 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[25] ; Clk        ; Clk      ; None                        ; None                      ; 2.979 ns                ;
+; N/A                                     ; 313.28 MHz ( period = 3.192 ns )                    ; div_freq:div|compteur[13] ; div_freq:div|compteur[30] ; Clk        ; Clk      ; None                        ; None                      ; 2.977 ns                ;
+; N/A                                     ; 313.48 MHz ( period = 3.190 ns )                    ; div_freq:div|compteur[12] ; div_freq:div|compteur[29] ; Clk        ; Clk      ; None                        ; None                      ; 2.975 ns                ;
+; N/A                                     ; 313.77 MHz ( period = 3.187 ns )                    ; div_freq:div|compteur[31] ; div_freq:div|compteur[13] ; Clk        ; Clk      ; None                        ; None                      ; 2.974 ns                ;
+; N/A                                     ; 313.87 MHz ( period = 3.186 ns )                    ; div_freq:div|compteur[31] ; div_freq:div|compteur[14] ; Clk        ; Clk      ; None                        ; None                      ; 2.973 ns                ;
+; N/A                                     ; 314.07 MHz ( period = 3.184 ns )                    ; div_freq:div|compteur[31] ; div_freq:div|compteur[11] ; Clk        ; Clk      ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 314.07 MHz ( period = 3.184 ns )                    ; div_freq:div|compteur[31] ; div_freq:div|compteur[21] ; Clk        ; Clk      ; None                        ; None                      ; 2.971 ns                ;
+; N/A                                     ; 314.17 MHz ( period = 3.183 ns )                    ; div_freq:div|compteur[14] ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 2.968 ns                ;
+; N/A                                     ; 314.17 MHz ( period = 3.183 ns )                    ; div_freq:div|compteur[31] ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 2.970 ns                ;
+; N/A                                     ; 314.37 MHz ( period = 3.181 ns )                    ; div_freq:div|compteur[3]  ; div_freq:div|compteur[16] ; Clk        ; Clk      ; None                        ; None                      ; 2.966 ns                ;
+; N/A                                     ; 314.47 MHz ( period = 3.180 ns )                    ; div_freq:div|compteur[6]  ; div_freq:div|compteur[23] ; Clk        ; Clk      ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 314.56 MHz ( period = 3.179 ns )                    ; div_freq:div|compteur[12] ; div_freq:div|compteur[22] ; Clk        ; Clk      ; None                        ; None                      ; 2.965 ns                ;
+; N/A                                     ; 314.96 MHz ( period = 3.175 ns )                    ; div_freq:div|compteur[8]  ; div_freq:div|compteur[31] ; Clk        ; Clk      ; None                        ; None                      ; 2.962 ns                ;
+; N/A                                     ; 315.26 MHz ( period = 3.172 ns )                    ; div_freq:div|compteur[5]  ; div_freq:div|compteur[18] ; Clk        ; Clk      ; None                        ; None                      ; 2.960 ns                ;
+; Timing analysis restricted to 200 rows. ; To change the limit use Settings (Assignments menu) ;                           ;                           ;            ;          ;                             ;                           ;                         ;
++-----------------------------------------+-----------------------------------------------------+---------------------------+---------------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+
+
++-------------------------------------------------------------------------------------+
+; tco                                                                                 ;
++-------+--------------+------------+-----------------------------+------+------------+
+; Slack ; Required tco ; Actual tco ; From                        ; To   ; From Clock ;
++-------+--------------+------------+-----------------------------+------+------------+
+; N/A   ; None         ; 10.619 ns  ; cpt_bcd_1:cpt_BCD|nombre[2] ; S[6] ; Clk        ;
+; N/A   ; None         ; 10.615 ns  ; cpt_bcd_1:cpt_BCD|nombre[0] ; S[6] ; Clk        ;
+; N/A   ; None         ; 10.415 ns  ; cpt_bcd_1:cpt_BCD|nombre[2] ; S[0] ; Clk        ;
+; N/A   ; None         ; 10.401 ns  ; cpt_bcd_1:cpt_BCD|nombre[2] ; S[5] ; Clk        ;
+; N/A   ; None         ; 10.382 ns  ; cpt_bcd_1:cpt_BCD|nombre[0] ; S[0] ; Clk        ;
+; N/A   ; None         ; 10.373 ns  ; cpt_bcd_1:cpt_BCD|nombre[0] ; S[5] ; Clk        ;
+; N/A   ; None         ; 10.215 ns  ; cpt_bcd_1:cpt_BCD|nombre[1] ; S[6] ; Clk        ;
+; N/A   ; None         ; 10.201 ns  ; cpt_bcd_1:cpt_BCD|nombre[2] ; S[3] ; Clk        ;
+; N/A   ; None         ; 10.199 ns  ; cpt_bcd_1:cpt_BCD|nombre[2] ; S[1] ; Clk        ;
+; N/A   ; None         ; 10.195 ns  ; cpt_bcd_1:cpt_BCD|nombre[2] ; S[4] ; Clk        ;
+; N/A   ; None         ; 10.177 ns  ; cpt_bcd_1:cpt_BCD|nombre[2] ; S[2] ; Clk        ;
+; N/A   ; None         ; 10.173 ns  ; cpt_bcd_1:cpt_BCD|nombre[0] ; S[3] ; Clk        ;
+; N/A   ; None         ; 10.172 ns  ; cpt_bcd_1:cpt_BCD|nombre[0] ; S[1] ; Clk        ;
+; N/A   ; None         ; 10.167 ns  ; cpt_bcd_1:cpt_BCD|nombre[0] ; S[4] ; Clk        ;
+; N/A   ; None         ; 10.151 ns  ; cpt_bcd_1:cpt_BCD|nombre[3] ; S[6] ; Clk        ;
+; N/A   ; None         ; 10.145 ns  ; cpt_bcd_1:cpt_BCD|nombre[0] ; S[2] ; Clk        ;
+; N/A   ; None         ; 9.986 ns   ; cpt_bcd_1:cpt_BCD|nombre[1] ; S[0] ; Clk        ;
+; N/A   ; None         ; 9.974 ns   ; cpt_bcd_1:cpt_BCD|nombre[1] ; S[5] ; Clk        ;
+; N/A   ; None         ; 9.916 ns   ; cpt_bcd_1:cpt_BCD|nombre[3] ; S[0] ; Clk        ;
+; N/A   ; None         ; 9.904 ns   ; cpt_bcd_1:cpt_BCD|nombre[3] ; S[5] ; Clk        ;
+; N/A   ; None         ; 9.769 ns   ; cpt_bcd_1:cpt_BCD|nombre[1] ; S[3] ; Clk        ;
+; N/A   ; None         ; 9.768 ns   ; cpt_bcd_1:cpt_BCD|nombre[1] ; S[2] ; Clk        ;
+; N/A   ; None         ; 9.766 ns   ; cpt_bcd_1:cpt_BCD|nombre[1] ; S[4] ; Clk        ;
+; N/A   ; None         ; 9.766 ns   ; cpt_bcd_1:cpt_BCD|nombre[1] ; S[1] ; Clk        ;
+; N/A   ; None         ; 9.706 ns   ; cpt_bcd_1:cpt_BCD|nombre[3] ; S[3] ; Clk        ;
+; N/A   ; None         ; 9.704 ns   ; cpt_bcd_1:cpt_BCD|nombre[3] ; S[2] ; Clk        ;
+; N/A   ; None         ; 9.704 ns   ; cpt_bcd_1:cpt_BCD|nombre[3] ; S[1] ; Clk        ;
+; N/A   ; None         ; 9.697 ns   ; cpt_bcd_1:cpt_BCD|nombre[3] ; S[4] ; Clk        ;
++-------+--------------+------------+-----------------------------+------+------------+
+
+
++--------------------------+
+; Timing Analyzer Messages ;
++--------------------------+
+Info: *******************************************************************
+Info: Running Quartus II Classic Timing Analyzer
+    Info: Version 9.0 Build 235 06/17/2009 Service Pack 2 SJ Web Edition
+    Info: Processing started: Tue Sep 07 08:54:54 2021
+Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off ecoulement_secondes -c ecoulement_secondes --timing_analysis_only
+Warning: Found pins functioning as undefined clocks and/or memory enables
+    Info: Assuming node "Clk" is an undefined clock
+Warning: Found 1 node(s) in clock paths which may be acting as ripple and/or gated clocks -- node(s) analyzed as buffer(s) resulting in clock skew
+    Info: Detected ripple clock "div_freq:div|var_temp" as buffer
+Info: Clock "Clk" has Internal fmax of 246.06 MHz between source register "div_freq:div|compteur[6]" and destination register "div_freq:div|compteur[24]" (period= 4.064 ns)
+    Info: + Longest register to register delay is 3.847 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X20_Y18_N1; Fanout = 3; REG Node = 'div_freq:div|compteur[6]'
+        Info: 2: + IC(0.779 ns) + CELL(0.393 ns) = 1.172 ns; Loc. = LCCOMB_X19_Y19_N12; Fanout = 2; COMB Node = 'div_freq:div|Add0~13'
+        Info: 3: + IC(0.000 ns) + CELL(0.159 ns) = 1.331 ns; Loc. = LCCOMB_X19_Y19_N14; Fanout = 2; COMB Node = 'div_freq:div|Add0~15'
+        Info: 4: + IC(0.000 ns) + CELL(0.071 ns) = 1.402 ns; Loc. = LCCOMB_X19_Y19_N16; Fanout = 2; COMB Node = 'div_freq:div|Add0~17'
+        Info: 5: + IC(0.000 ns) + CELL(0.071 ns) = 1.473 ns; Loc. = LCCOMB_X19_Y19_N18; Fanout = 2; COMB Node = 'div_freq:div|Add0~19'
+        Info: 6: + IC(0.000 ns) + CELL(0.071 ns) = 1.544 ns; Loc. = LCCOMB_X19_Y19_N20; Fanout = 2; COMB Node = 'div_freq:div|Add0~21'
+        Info: 7: + IC(0.000 ns) + CELL(0.071 ns) = 1.615 ns; Loc. = LCCOMB_X19_Y19_N22; Fanout = 2; COMB Node = 'div_freq:div|Add0~23'
+        Info: 8: + IC(0.000 ns) + CELL(0.071 ns) = 1.686 ns; Loc. = LCCOMB_X19_Y19_N24; Fanout = 2; COMB Node = 'div_freq:div|Add0~25'
+        Info: 9: + IC(0.000 ns) + CELL(0.071 ns) = 1.757 ns; Loc. = LCCOMB_X19_Y19_N26; Fanout = 2; COMB Node = 'div_freq:div|Add0~27'
+        Info: 10: + IC(0.000 ns) + CELL(0.071 ns) = 1.828 ns; Loc. = LCCOMB_X19_Y19_N28; Fanout = 2; COMB Node = 'div_freq:div|Add0~29'
+        Info: 11: + IC(0.000 ns) + CELL(0.146 ns) = 1.974 ns; Loc. = LCCOMB_X19_Y19_N30; Fanout = 2; COMB Node = 'div_freq:div|Add0~31'
+        Info: 12: + IC(0.000 ns) + CELL(0.071 ns) = 2.045 ns; Loc. = LCCOMB_X19_Y18_N0; Fanout = 2; COMB Node = 'div_freq:div|Add0~33'
+        Info: 13: + IC(0.000 ns) + CELL(0.071 ns) = 2.116 ns; Loc. = LCCOMB_X19_Y18_N2; Fanout = 2; COMB Node = 'div_freq:div|Add0~35'
+        Info: 14: + IC(0.000 ns) + CELL(0.071 ns) = 2.187 ns; Loc. = LCCOMB_X19_Y18_N4; Fanout = 2; COMB Node = 'div_freq:div|Add0~37'
+        Info: 15: + IC(0.000 ns) + CELL(0.071 ns) = 2.258 ns; Loc. = LCCOMB_X19_Y18_N6; Fanout = 2; COMB Node = 'div_freq:div|Add0~39'
+        Info: 16: + IC(0.000 ns) + CELL(0.071 ns) = 2.329 ns; Loc. = LCCOMB_X19_Y18_N8; Fanout = 2; COMB Node = 'div_freq:div|Add0~41'
+        Info: 17: + IC(0.000 ns) + CELL(0.071 ns) = 2.400 ns; Loc. = LCCOMB_X19_Y18_N10; Fanout = 2; COMB Node = 'div_freq:div|Add0~43'
+        Info: 18: + IC(0.000 ns) + CELL(0.071 ns) = 2.471 ns; Loc. = LCCOMB_X19_Y18_N12; Fanout = 2; COMB Node = 'div_freq:div|Add0~45'
+        Info: 19: + IC(0.000 ns) + CELL(0.159 ns) = 2.630 ns; Loc. = LCCOMB_X19_Y18_N14; Fanout = 2; COMB Node = 'div_freq:div|Add0~47'
+        Info: 20: + IC(0.000 ns) + CELL(0.410 ns) = 3.040 ns; Loc. = LCCOMB_X19_Y18_N16; Fanout = 1; COMB Node = 'div_freq:div|Add0~48'
+        Info: 21: + IC(0.448 ns) + CELL(0.275 ns) = 3.763 ns; Loc. = LCCOMB_X18_Y18_N4; Fanout = 1; COMB Node = 'div_freq:div|compteur~43'
+        Info: 22: + IC(0.000 ns) + CELL(0.084 ns) = 3.847 ns; Loc. = LCFF_X18_Y18_N5; Fanout = 3; REG Node = 'div_freq:div|compteur[24]'
+        Info: Total cell delay = 2.620 ns ( 68.11 % )
+        Info: Total interconnect delay = 1.227 ns ( 31.89 % )
+    Info: - Smallest clock skew is -0.003 ns
+        Info: + Shortest clock path from clock "Clk" to destination register is 2.684 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'Clk'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 32; COMB Node = 'Clk~clkctrl'
+            Info: 3: + IC(1.030 ns) + CELL(0.537 ns) = 2.684 ns; Loc. = LCFF_X18_Y18_N5; Fanout = 3; REG Node = 'div_freq:div|compteur[24]'
+            Info: Total cell delay = 1.536 ns ( 57.23 % )
+            Info: Total interconnect delay = 1.148 ns ( 42.77 % )
+        Info: - Longest clock path from clock "Clk" to source register is 2.687 ns
+            Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'Clk'
+            Info: 2: + IC(0.118 ns) + CELL(0.000 ns) = 1.117 ns; Loc. = CLKCTRL_G2; Fanout = 32; COMB Node = 'Clk~clkctrl'
+            Info: 3: + IC(1.033 ns) + CELL(0.537 ns) = 2.687 ns; Loc. = LCFF_X20_Y18_N1; Fanout = 3; REG Node = 'div_freq:div|compteur[6]'
+            Info: Total cell delay = 1.536 ns ( 57.16 % )
+            Info: Total interconnect delay = 1.151 ns ( 42.84 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Micro setup delay of destination is -0.036 ns
+Info: tco from clock "Clk" to destination pin "S[6]" through register "cpt_bcd_1:cpt_BCD|nombre[2]" is 10.619 ns
+    Info: + Longest clock path from clock "Clk" to source register is 5.604 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.999 ns) = 0.999 ns; Loc. = PIN_N2; Fanout = 2; CLK Node = 'Clk'
+        Info: 2: + IC(0.957 ns) + CELL(0.787 ns) = 2.743 ns; Loc. = LCFF_X18_Y18_N9; Fanout = 2; REG Node = 'div_freq:div|var_temp'
+        Info: 3: + IC(1.306 ns) + CELL(0.000 ns) = 4.049 ns; Loc. = CLKCTRL_G0; Fanout = 4; COMB Node = 'div_freq:div|var_temp~clkctrl'
+        Info: 4: + IC(1.018 ns) + CELL(0.537 ns) = 5.604 ns; Loc. = LCFF_X64_Y8_N27; Fanout = 10; REG Node = 'cpt_bcd_1:cpt_BCD|nombre[2]'
+        Info: Total cell delay = 2.323 ns ( 41.45 % )
+        Info: Total interconnect delay = 3.281 ns ( 58.55 % )
+    Info: + Micro clock to output delay of source is 0.250 ns
+    Info: + Longest register to pin delay is 4.765 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LCFF_X64_Y8_N27; Fanout = 10; REG Node = 'cpt_bcd_1:cpt_BCD|nombre[2]'
+        Info: 2: + IC(0.802 ns) + CELL(0.408 ns) = 1.210 ns; Loc. = LCCOMB_X64_Y8_N12; Fanout = 1; COMB Node = 'deco_7seg:decodeur|S[6]~124'
+        Info: 3: + IC(0.923 ns) + CELL(2.632 ns) = 4.765 ns; Loc. = PIN_W24; Fanout = 0; PIN Node = 'S[6]'
+        Info: Total cell delay = 3.040 ns ( 63.80 % )
+        Info: Total interconnect delay = 1.725 ns ( 36.20 % )
+Info: Quartus II Classic Timing Analyzer was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 173 megabytes
+    Info: Processing ended: Tue Sep 07 08:54:55 2021
+    Info: Elapsed time: 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
+
+
