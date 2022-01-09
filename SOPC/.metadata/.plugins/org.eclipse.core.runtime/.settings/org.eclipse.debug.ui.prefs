@@ -1,0 +1,8 @@
+#Tue Oct 19 11:34:33 CEST 2021
+org.eclipse.debug.ui.memory.columnSize\:org.eclipse.cdt.debug.core=4
+pref_state_memento.org.eclipse.debug.ui.DebugVieworg.eclipse.debug.ui.DebugView=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<DebugViewMemento org.eclipse.debug.ui.BREADCRUMB_DROPDOWN_AUTO_EXPAND\="false"/>
+eclipse.preferences.version=1
+preferredDetailPanes=DefaultDetailPane\:DefaultDetailPane|
+preferredTargets=org.eclipse.cdt.debug.ui.toggleCBreakpointTarget\:org.eclipse.cdt.debug.ui.toggleCBreakpointTarget|
+org.eclipse.debug.ui.PREF_LAUNCH_PERSPECTIVES=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?>\r\n<launchPerspectives/>\r\n
+org.eclipse.debug.ui.memory.rowSize\:org.eclipse.cdt.debug.core=16

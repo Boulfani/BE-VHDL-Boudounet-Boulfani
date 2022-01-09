@@ -1,0 +1,6 @@
+
+State Machine - |conversion_compas|etat_present
+Name etat_present.etat2 etat_present.etat1 etat_present.etat0 
+etat_present.etat0 0 0 0 
+etat_present.etat1 0 1 1 
+etat_present.etat2 1 0 1 

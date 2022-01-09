@@ -1,0 +1,241 @@
+!SESSION 2021-10-15 09:14:52.832 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -data C:\Users\Etudiant\Documents\BE_VHDL_Boulfani_Boudounet\SOPC\sopc_helloworld_sim -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-10-15 09:18:26.835
+!MESSAGE Indexed 'test_HelloWorld_bsp' (77 sources, 55 headers) in 0,56 sec: 919 declarations; 2 178 references; 113 unresolved inclusions; 5 syntax errors; 193 unresolved names (5,87 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-10-15 09:18:31.921
+!MESSAGE Indexed 'test_HelloWorld' (1 sources, 13 headers) in 0,02 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00 %)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-10-15 09:20:22.381
+!MESSAGE Indexed 'test_HelloWorld1_bsp' (77 sources, 55 headers) in 0,31 sec: 919 declarations; 2 178 references; 113 unresolved inclusions; 5 syntax errors; 193 unresolved names (5,87 %)
+
+!ENTRY org.eclipse.cdt.managedbuilder.core 4 0 2021-10-15 09:20:26.922
+!MESSAGE Could not save the project location for 'test_HelloWorld1'.
+!STACK 1
+org.eclipse.core.internal.resources.ResourceException(null)[566]: java.io.FileNotFoundException: C:\Users\Etudiant\Documents\BE_VHDL_Boulfani_Boudounet\SOPC\sopc_helloworld_sim\.metadata\.plugins\org.eclipse.core.resources\.projects\test_HelloWorld1\.location (Accès refusé)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:43)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:39)
+	at org.eclipse.core.internal.resources.LocalMetaArea.writePrivateDescription(LocalMetaArea.java:398)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.internalWrite(FileSystemResourceManager.java:525)
+	at org.eclipse.core.internal.resources.Project.writeDescription(Project.java:1325)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1214)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1238)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider$DesApplyRunnable.run(ConfigurationDataProvider.java:98)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$CompositeWorkspaceRunnable.run(CProjectDescriptionManager.java:198)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$CompositeWorkspaceRunnable.run(CProjectDescriptionManager.java:198)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$5.run(CProjectDescriptionManager.java:501)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.runAtomic(CProjectDescriptionManager.java:498)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.runWspModification(CProjectDescriptionManager.java:463)
+	at org.eclipse.cdt.internal.core.settings.model.SetCProjectDescriptionOperation.executeOperation(SetCProjectDescriptionOperation.java:155)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:338)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:603)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.settings.model.AbstractCProjectDescriptionStorage.setProjectDescription(AbstractCProjectDescriptionStorage.java:203)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionStorageManager.setProjectDescription(CProjectDescriptionStorageManager.java:147)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:836)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:806)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:801)
+	at org.eclipse.cdt.core.CCorePlugin.setProjectDescription(CCorePlugin.java:1153)
+	at org.eclipse.cdt.core.CCorePlugin$3.run(CCorePlugin.java:800)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.core.CCorePlugin.createCDTProject(CCorePlugin.java:758)
+	at org.eclipse.cdt.core.CCorePlugin.convertProjectToNewCC(CCorePlugin.java:877)
+	at com.altera.sbtgui.project.importer.Importer.importProject(Importer.java:163)
+	at com.altera.sbtgui.project.importer.Importer.importProject(Importer.java:108)
+	at com.altera.sbtgui.ui.wizards.NewSbtGuiProject$1.run(NewSbtGuiProject.java:106)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+!SUBENTRY 1 org.eclipse.core.resources 4 566 2021-10-15 09:20:26.923
+!MESSAGE Could not save the project location for 'test_HelloWorld1'.
+!STACK 0
+java.io.FileNotFoundException: C:\Users\Etudiant\Documents\BE_VHDL_Boulfani_Boudounet\SOPC\sopc_helloworld_sim\.metadata\.plugins\org.eclipse.core.resources\.projects\test_HelloWorld1\.location (Accès refusé)
+	at java.io.FileOutputStream.openAppend(Native Method)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at java.io.FileOutputStream.<init>(Unknown Source)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:43)
+	at org.eclipse.core.internal.localstore.SafeChunkyOutputStream.<init>(SafeChunkyOutputStream.java:39)
+	at org.eclipse.core.internal.resources.LocalMetaArea.writePrivateDescription(LocalMetaArea.java:398)
+	at org.eclipse.core.internal.localstore.FileSystemResourceManager.internalWrite(FileSystemResourceManager.java:525)
+	at org.eclipse.core.internal.resources.Project.writeDescription(Project.java:1325)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1214)
+	at org.eclipse.core.internal.resources.Project.setDescription(Project.java:1238)
+	at org.eclipse.cdt.managedbuilder.internal.dataprovider.ConfigurationDataProvider$DesApplyRunnable.run(ConfigurationDataProvider.java:98)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$CompositeWorkspaceRunnable.run(CProjectDescriptionManager.java:198)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$CompositeWorkspaceRunnable.run(CProjectDescriptionManager.java:198)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager$5.run(CProjectDescriptionManager.java:501)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.runAtomic(CProjectDescriptionManager.java:498)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.runWspModification(CProjectDescriptionManager.java:463)
+	at org.eclipse.cdt.internal.core.settings.model.SetCProjectDescriptionOperation.executeOperation(SetCProjectDescriptionOperation.java:155)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.execute(CModelOperation.java:338)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.run(CModelOperation.java:603)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.internal.core.model.CModelOperation.runOperation(CModelOperation.java:635)
+	at org.eclipse.cdt.internal.core.settings.model.AbstractCProjectDescriptionStorage.setProjectDescription(AbstractCProjectDescriptionStorage.java:203)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionStorageManager.setProjectDescription(CProjectDescriptionStorageManager.java:147)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:836)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:806)
+	at org.eclipse.cdt.internal.core.settings.model.CProjectDescriptionManager.setProjectDescription(CProjectDescriptionManager.java:801)
+	at org.eclipse.cdt.core.CCorePlugin.setProjectDescription(CCorePlugin.java:1153)
+	at org.eclipse.cdt.core.CCorePlugin$3.run(CCorePlugin.java:800)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:1975)
+	at org.eclipse.cdt.core.CCorePlugin.createCDTProject(CCorePlugin.java:758)
+	at org.eclipse.cdt.core.CCorePlugin.convertProjectToNewCC(CCorePlugin.java:877)
+	at com.altera.sbtgui.project.importer.Importer.importProject(Importer.java:163)
+	at com.altera.sbtgui.project.importer.Importer.importProject(Importer.java:108)
+	at com.altera.sbtgui.ui.wizards.NewSbtGuiProject$1.run(NewSbtGuiProject.java:106)
+	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:121)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-10-15 09:20:27.103
+!MESSAGE Indexed 'test_HelloWorld1' (1 sources, 13 headers) in 0,03 sec: 1 declarations; 1 references; 14 unresolved inclusions; 0 syntax errors; 0 unresolved names (0,00 %)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 09:36:56.544
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 09:37:00.104
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 09:46:01.663
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 09:46:03.916
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 09:46:06.935
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 10:44:20.627
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 10:44:23.530
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 10:44:51.892
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 10:44:54.045
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 10:44:56.838
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 10:45:15.774
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 10:45:17.886
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 10:45:20.821
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 10:47:02.765
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 10:47:04.885
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 10:47:07.614
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]
+!SESSION 2021-10-15 10:54:53.382 -----------------------------------------------
+eclipse.buildId=M20100909-0800
+java.version=1.6.0_23
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=win32, ARCH=x86, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+Command-line arguments:  -os win32 -ws win32 -arch x86 -product org.eclipse.epp.package.cpp.product -perspective com.altera.sbtgui.ui.cPerspective
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:00:12.023
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-10-15 11:00:15.772
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:00:15.845
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:03:11.492
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:03:13.766
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-10-15 11:03:17.493
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:03:17.578
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:10:01.640
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:10:03.804
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-10-15 11:10:07.563
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:10:07.630
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:19:51.578
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:19:53.959
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-10-15 11:19:57.684
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:19:57.761
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:20:38.470
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:20:40.588
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-10-15 11:20:44.376
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:20:44.429
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:21:43.317
+!MESSAGE Terminated Launch with connection: 10USB-Blaster on localhost [USB-0]
+
+!ENTRY org.eclipse.core.jobs 4 2 2021-10-15 11:21:45.315
+!MESSAGE An internal error occurred during: "Launching test_HelloWorld1 Nios II Hardware configuration".
+!STACK 0
+java.lang.NullPointerException
+	at com.altera.systemconsole.internal.plugin.jtag.JtagUartService.closeService(JtagUartService.java:67)
+	at com.altera.systemconsole.internal.core.ChannelService.close(ChannelService.java:82)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.closeByteStreamService(SystemConsoleConnectionModel.java:1103)
+	at com.altera.embeddedsw.flash.model.internal.SystemConsoleConnectionModel.testByteStreamServiceAvailable(SystemConsoleConnectionModel.java:1275)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.terminalAction(AbstractNios2CLaunchDelegate.java:338)
+	at com.altera.sbtgui.launch.hardware.AbstractNios2CLaunchDelegate.launch(AbstractNios2CLaunchDelegate.java:141)
+	at com.altera.sbtgui.launch.hardware.Nios2HardwareLaunchDelegate.launch(Nios2HardwareLaunchDelegate.java:98)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:853)
+	at org.eclipse.debug.internal.core.LaunchConfiguration.launch(LaunchConfiguration.java:702)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin.buildAndLaunch(DebugUIPlugin.java:923)
+	at org.eclipse.debug.internal.ui.DebugUIPlugin$8.run(DebugUIPlugin.java:1126)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:54)
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:21:45.395
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2021-10-15 11:21:49.678
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2021-10-15 11:21:49.756
+!MESSAGE Executing: [C:\Windows\system32\cmd.exe, /C, C:/altera/11.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Etudiant/Documents/BE_VHDL_Boulfani_Boudounet/SOPC/software/test_HelloWorld1/test_HelloWorld1.elf]

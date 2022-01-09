@@ -1,0 +1,101 @@
+|gestion_bip
+clk => generateur_bip:gene.clk
+clk => mae_bip:MAE.clk
+clk => cpt:compteur.clk
+arazb => generateur_bip:gene.arazb
+arazb => mae_bip:MAE.arazb
+arazb => cpt:compteur.arazb
+code[0] => mae_bip:MAE.code[0]
+code[1] => mae_bip:MAE.code[1]
+etat[0] <= mae_bip:MAE.etat_mae[0]
+etat[1] <= mae_bip:MAE.etat_mae[1]
+out_bip <= generateur_bip:gene.bip
+
+
+|gestion_bip|generateur_bip:gene
+clk => ibip.CLK
+arazb => ibip.ACLR
+en => ibip.ENA
+bip <= ibip.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gestion_bip|mae_bip:MAE
+clk => etat_present~1.DATAIN
+arazb => etat_present~3.DATAIN
+code[0] => Equal0.IN3
+code[0] => Equal1.IN3
+code[1] => Equal0.IN2
+code[1] => Equal1.IN2
+in_cpt[0] => Equal2.IN19
+in_cpt[0] => Equal3.IN19
+in_cpt[1] => Equal2.IN18
+in_cpt[1] => Equal3.IN18
+in_cpt[2] => Equal2.IN17
+in_cpt[2] => Equal3.IN17
+in_cpt[3] => Equal2.IN16
+in_cpt[3] => Equal3.IN16
+in_cpt[4] => Equal2.IN15
+in_cpt[4] => Equal3.IN15
+in_cpt[5] => Equal2.IN14
+in_cpt[5] => Equal3.IN14
+in_cpt[6] => Equal2.IN13
+in_cpt[6] => Equal3.IN13
+in_cpt[7] => Equal2.IN12
+in_cpt[7] => Equal3.IN12
+in_cpt[8] => Equal2.IN11
+in_cpt[8] => Equal3.IN11
+en_gene <= en_gene.DB_MAX_OUTPUT_PORT_TYPE
+en_cpt <= en_cpt.DB_MAX_OUTPUT_PORT_TYPE
+reset_cpt <= reset_cpt.DB_MAX_OUTPUT_PORT_TYPE
+etat_mae[0] <= etat_mae[0].DB_MAX_OUTPUT_PORT_TYPE
+etat_mae[1] <= etat_mae.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|gestion_bip|cpt:compteur
+clk => nombre[0].CLK
+clk => nombre[1].CLK
+clk => nombre[2].CLK
+clk => nombre[3].CLK
+clk => nombre[4].CLK
+clk => nombre[5].CLK
+clk => nombre[6].CLK
+clk => nombre[7].CLK
+clk => nombre[8].CLK
+arazb => nombre[0].ACLR
+arazb => nombre[1].ACLR
+arazb => nombre[2].ACLR
+arazb => nombre[3].ACLR
+arazb => nombre[4].ACLR
+arazb => nombre[5].ACLR
+arazb => nombre[6].ACLR
+arazb => nombre[7].ACLR
+arazb => nombre[8].ACLR
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+reset => nombre.OUTPUTSELECT
+en => nombre.OUTPUTSELECT
+en => nombre.OUTPUTSELECT
+en => nombre.OUTPUTSELECT
+en => nombre.OUTPUTSELECT
+en => nombre.OUTPUTSELECT
+en => nombre.OUTPUTSELECT
+en => nombre.OUTPUTSELECT
+en => nombre.OUTPUTSELECT
+en => nombre.OUTPUTSELECT
+S[0] <= nombre[0].DB_MAX_OUTPUT_PORT_TYPE
+S[1] <= nombre[1].DB_MAX_OUTPUT_PORT_TYPE
+S[2] <= nombre[2].DB_MAX_OUTPUT_PORT_TYPE
+S[3] <= nombre[3].DB_MAX_OUTPUT_PORT_TYPE
+S[4] <= nombre[4].DB_MAX_OUTPUT_PORT_TYPE
+S[5] <= nombre[5].DB_MAX_OUTPUT_PORT_TYPE
+S[6] <= nombre[6].DB_MAX_OUTPUT_PORT_TYPE
+S[7] <= nombre[7].DB_MAX_OUTPUT_PORT_TYPE
+S[8] <= nombre[8].DB_MAX_OUTPUT_PORT_TYPE
+
+

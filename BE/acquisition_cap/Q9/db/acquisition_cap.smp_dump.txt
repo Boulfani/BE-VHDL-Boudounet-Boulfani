@@ -1,0 +1,9 @@
+
+State Machine - |acquisition_cap|cap_mae:MAE|etat_present
+Name etat_present.etat5 etat_present.etat4 etat_present.etat3 etat_present.etat2 etat_present.etat1 etat_present.etat0 
+etat_present.etat0 0 0 0 0 0 0 
+etat_present.etat1 0 0 0 0 1 1 
+etat_present.etat2 0 0 0 1 0 1 
+etat_present.etat3 0 0 1 0 0 1 
+etat_present.etat4 0 1 0 0 0 1 
+etat_present.etat5 1 0 0 0 0 1 

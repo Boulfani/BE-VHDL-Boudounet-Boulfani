@@ -1,0 +1,267 @@
+Quartus II
+Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+11
+1000
+OFF
+OFF
+OFF
+ON
+ON
+ON
+FV_OFF
+Level2
+0
+0
+VRSM_ON
+VHSM_ON
+0
+-- Start Library Paths --
+-- End Library Paths --
+-- Start VHDL Libraries --
+-- End VHDL Libraries --
+# entity
+acquisition_cap
+# storage
+db|acquisition_cap.(0).cnf
+db|acquisition_cap.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+acquisition_cap.vhd
+9af71fad6a9a433cace4da96c7be1af
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|m2 eea sme|boulfani_boudounet|be_vhdl_boulfani_boudounet|be|package_be|package_be.vhd
+aafbc43bb621da89341aae9fcaac1e
+}
+# hierarchies {
+|
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+cpt
+# storage
+db|acquisition_cap.(1).cnf
+db|acquisition_cap.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|m2 eea sme|boulfani_boudounet|be_vhdl_boulfani_boudounet|be|package_be|cpt.vhd
+104210273dce703c36c335109af46f3e
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(s)
+8 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|m2 eea sme|boulfani_boudounet|be_vhdl_boulfani_boudounet|be|package_be|package_be.vhd
+aafbc43bb621da89341aae9fcaac1e
+}
+# hierarchies {
+cpt:compteur
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+prediv_us
+# storage
+db|acquisition_cap.(2).cnf
+db|acquisition_cap.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|m2 eea sme|boulfani_boudounet|be_vhdl_boulfani_boudounet|be|package_be|prediv_us.vhd
+67d04f1e9ec5735a5abd2567a31654
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# include_file {
+|m2 eea sme|boulfani_boudounet|be_vhdl_boulfani_boudounet|be|package_be|package_be.vhd
+aafbc43bb621da89341aae9fcaac1e
+}
+# hierarchies {
+prediv_us:prediviseur
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+timer_1s
+# storage
+db|acquisition_cap.(3).cnf
+db|acquisition_cap.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|m2 eea sme|boulfani_boudounet|be_vhdl_boulfani_boudounet|be|package_be|timer_1s.vhd
+a09f3682adf08080ed77ed9c86a4fbe1
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+timer_1s:timer
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+cap_mae
+# storage
+db|acquisition_cap.(4).cnf
+db|acquisition_cap.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|m2 eea sme|boulfani_boudounet|be_vhdl_boulfani_boudounet|be|package_be|cap_mae.vhd
+7372dc4f48dda1fb8e840ae47cfde49
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(val_cpt)
+8 downto 0
+PARAMETER_STRING
+USR
+ constraint(data_compas)
+8 downto 0
+PARAMETER_STRING
+USR
+ constraint(etat_pres)
+2 downto 0
+PARAMETER_STRING
+USR
+}
+# include_file {
+|m2 eea sme|boulfani_boudounet|be_vhdl_boulfani_boudounet|be|package_be|package_be.vhd
+aafbc43bb621da89341aae9fcaac1e
+}
+# hierarchies {
+cap_mae:MAE
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# entity
+bascule_D
+# storage
+db|acquisition_cap.(5).cnf
+db|acquisition_cap.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+|m2 eea sme|boulfani_boudounet|be_vhdl_boulfani_boudounet|be|package_be|bascule_d.vhd
+5ea816202315b05527c86fee8ede53df
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(d)
+8 downto 0
+PARAMETER_STRING
+USR
+ constraint(q)
+8 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+bascule_D:bascule
+}
+# lmf
+c:|altera|91sp2|quartus|lmf|maxplus2.lmf
+a36c8ec425c8a2589af98b2d4daabc3
+# macro_sequence
+
+# end
+# complete
+

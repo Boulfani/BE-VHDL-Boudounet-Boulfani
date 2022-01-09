@@ -1,0 +1,621 @@
+Simulator report for acquisition_cap
+Fri Jan 07 19:27:43 2022
+Quartus II Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++--------------------------------------------+
+; Simulator Summary                          ;
++-----------------------------+--------------+
+; Type                        ; Value        ;
++-----------------------------+--------------+
+; Simulation Start Time       ; 0 ps         ;
+; Simulation End Time         ; 5.0 ms       ;
+; Simulation Netlist Size     ; 239 nodes    ;
+; Simulation Coverage         ;      54.43 % ;
+; Total Number of Transitions ; 6693568      ;
+; Simulation Breakpoints      ; 0            ;
+; Family                      ; Cyclone II   ;
+; Device                      ; EP2C35F672C6 ;
++-----------------------------+--------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                                                     ;
++--------------------------------------------------------------------------------------------+-------------------------------------------+---------------+
+; Option                                                                                     ; Setting                                   ; Default Value ;
++--------------------------------------------------------------------------------------------+-------------------------------------------+---------------+
+; Simulation mode                                                                            ; Timing                                    ; Timing        ;
+; Start time                                                                                 ; 0 ns                                      ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF                                      ;               ;
+; Vector input source                                                                        ; ../../package_BE/acquisition_cap_simu.vwf ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On                                        ; On            ;
+; Check outputs                                                                              ; Off                                       ; Off           ;
+; Report simulation coverage                                                                 ; On                                        ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On                                        ; On            ;
+; Display missing 1-value coverage report                                                    ; On                                        ; On            ;
+; Display missing 0-value coverage report                                                    ; On                                        ; On            ;
+; Detect setup and hold time violations                                                      ; Off                                       ; Off           ;
+; Detect glitches                                                                            ; Off                                       ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off                                       ; Off           ;
+; Generate Signal Activity File                                                              ; Off                                       ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off                                       ; Off           ;
+; Group bus channels in simulation results                                                   ; Off                                       ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On                                        ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE                                ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off                                       ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; On                                        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto                                      ; Auto          ;
++--------------------------------------------------------------------------------------------+-------------------------------------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      54.43 % ;
+; Total nodes checked                                 ; 239          ;
+; Total output ports checked                          ; 316          ;
+; Total output ports with complete 1/0-value coverage ; 172          ;
+; Total output ports with no 1/0-value coverage       ; 140          ;
+; Total output ports with no 1-value coverage         ; 141          ;
+; Total output ports with no 0-value coverage         ; 143          ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                                          ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; Node Name                                               ; Output Port Name                                        ; Output Port Type ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+; |acquisition_cap|bascule_D:bascule|Q[1]                 ; |acquisition_cap|bascule_D:bascule|Q[1]                 ; regout           ;
+; |acquisition_cap|bascule_D:bascule|Q[2]                 ; |acquisition_cap|bascule_D:bascule|Q[2]                 ; regout           ;
+; |acquisition_cap|bascule_D:bascule|Q[3]                 ; |acquisition_cap|bascule_D:bascule|Q[3]                 ; regout           ;
+; |acquisition_cap|bascule_D:bascule|Q[4]                 ; |acquisition_cap|bascule_D:bascule|Q[4]                 ; regout           ;
+; |acquisition_cap|bascule_D:bascule|Q[5]                 ; |acquisition_cap|bascule_D:bascule|Q[5]                 ; regout           ;
+; |acquisition_cap|bascule_D:bascule|Q[6]                 ; |acquisition_cap|bascule_D:bascule|Q[6]                 ; regout           ;
+; |acquisition_cap|bascule_D:bascule|Q[7]                 ; |acquisition_cap|bascule_D:bascule|Q[7]                 ; regout           ;
+; |acquisition_cap|bascule_D:bascule|Q[8]                 ; |acquisition_cap|bascule_D:bascule|Q[8]                 ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[0]             ; |acquisition_cap|timer_1s:timer|compteur[0]             ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[1]             ; |acquisition_cap|timer_1s:timer|compteur[1]             ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[2]             ; |acquisition_cap|timer_1s:timer|compteur[2]             ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[3]             ; |acquisition_cap|timer_1s:timer|compteur[3]             ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[7]             ; |acquisition_cap|timer_1s:timer|compteur[7]             ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[4]             ; |acquisition_cap|timer_1s:timer|compteur[4]             ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[5]             ; |acquisition_cap|timer_1s:timer|compteur[5]             ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[6]             ; |acquisition_cap|timer_1s:timer|compteur[6]             ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[8]             ; |acquisition_cap|timer_1s:timer|compteur[8]             ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[9]             ; |acquisition_cap|timer_1s:timer|compteur[9]             ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[10]            ; |acquisition_cap|timer_1s:timer|compteur[10]            ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[11]            ; |acquisition_cap|timer_1s:timer|compteur[11]            ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[12]            ; |acquisition_cap|timer_1s:timer|compteur[12]            ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[13]            ; |acquisition_cap|timer_1s:timer|compteur[13]            ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[14]            ; |acquisition_cap|timer_1s:timer|compteur[14]            ; regout           ;
+; |acquisition_cap|cpt:compteur|nombre[0]                 ; |acquisition_cap|cpt:compteur|nombre[0]                 ; regout           ;
+; |acquisition_cap|cpt:compteur|nombre[1]                 ; |acquisition_cap|cpt:compteur|nombre[1]                 ; regout           ;
+; |acquisition_cap|bascule_D:bascule|Q[1]~8               ; |acquisition_cap|bascule_D:bascule|Q[1]~8               ; combout          ;
+; |acquisition_cap|bascule_D:bascule|Q[1]~8               ; |acquisition_cap|bascule_D:bascule|Q[1]~9               ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[2]                 ; |acquisition_cap|cpt:compteur|nombre[2]                 ; regout           ;
+; |acquisition_cap|bascule_D:bascule|Q[2]~10              ; |acquisition_cap|bascule_D:bascule|Q[2]~10              ; combout          ;
+; |acquisition_cap|bascule_D:bascule|Q[2]~10              ; |acquisition_cap|bascule_D:bascule|Q[2]~11              ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[3]                 ; |acquisition_cap|cpt:compteur|nombre[3]                 ; regout           ;
+; |acquisition_cap|bascule_D:bascule|Q[3]~12              ; |acquisition_cap|bascule_D:bascule|Q[3]~12              ; combout          ;
+; |acquisition_cap|bascule_D:bascule|Q[3]~12              ; |acquisition_cap|bascule_D:bascule|Q[3]~13              ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[4]                 ; |acquisition_cap|cpt:compteur|nombre[4]                 ; regout           ;
+; |acquisition_cap|bascule_D:bascule|Q[4]~14              ; |acquisition_cap|bascule_D:bascule|Q[4]~14              ; combout          ;
+; |acquisition_cap|bascule_D:bascule|Q[4]~14              ; |acquisition_cap|bascule_D:bascule|Q[4]~15              ; cout             ;
+; |acquisition_cap|bascule_D:bascule|Q[5]~16              ; |acquisition_cap|bascule_D:bascule|Q[5]~16              ; combout          ;
+; |acquisition_cap|bascule_D:bascule|Q[5]~16              ; |acquisition_cap|bascule_D:bascule|Q[5]~17              ; cout             ;
+; |acquisition_cap|bascule_D:bascule|Q[6]~18              ; |acquisition_cap|bascule_D:bascule|Q[6]~18              ; combout          ;
+; |acquisition_cap|bascule_D:bascule|Q[6]~18              ; |acquisition_cap|bascule_D:bascule|Q[6]~19              ; cout             ;
+; |acquisition_cap|bascule_D:bascule|Q[7]~20              ; |acquisition_cap|bascule_D:bascule|Q[7]~20              ; combout          ;
+; |acquisition_cap|bascule_D:bascule|Q[7]~20              ; |acquisition_cap|bascule_D:bascule|Q[7]~21              ; cout             ;
+; |acquisition_cap|bascule_D:bascule|Q[8]~22              ; |acquisition_cap|bascule_D:bascule|Q[8]~22              ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[0]~32          ; |acquisition_cap|timer_1s:timer|compteur[0]~32          ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[0]~32          ; |acquisition_cap|timer_1s:timer|compteur[0]~33          ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[1]~35          ; |acquisition_cap|timer_1s:timer|compteur[1]~35          ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[1]~35          ; |acquisition_cap|timer_1s:timer|compteur[1]~36          ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[2]~37          ; |acquisition_cap|timer_1s:timer|compteur[2]~37          ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[2]~37          ; |acquisition_cap|timer_1s:timer|compteur[2]~38          ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[3]~39          ; |acquisition_cap|timer_1s:timer|compteur[3]~39          ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[3]~39          ; |acquisition_cap|timer_1s:timer|compteur[3]~40          ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[4]~41          ; |acquisition_cap|timer_1s:timer|compteur[4]~41          ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[4]~41          ; |acquisition_cap|timer_1s:timer|compteur[4]~42          ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[5]~43          ; |acquisition_cap|timer_1s:timer|compteur[5]~43          ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[5]~43          ; |acquisition_cap|timer_1s:timer|compteur[5]~44          ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[6]~45          ; |acquisition_cap|timer_1s:timer|compteur[6]~45          ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[6]~45          ; |acquisition_cap|timer_1s:timer|compteur[6]~46          ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[7]~47          ; |acquisition_cap|timer_1s:timer|compteur[7]~47          ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[7]~47          ; |acquisition_cap|timer_1s:timer|compteur[7]~48          ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[8]~49          ; |acquisition_cap|timer_1s:timer|compteur[8]~49          ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[8]~49          ; |acquisition_cap|timer_1s:timer|compteur[8]~50          ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[9]~51          ; |acquisition_cap|timer_1s:timer|compteur[9]~51          ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[9]~51          ; |acquisition_cap|timer_1s:timer|compteur[9]~52          ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[10]~53         ; |acquisition_cap|timer_1s:timer|compteur[10]~53         ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[10]~53         ; |acquisition_cap|timer_1s:timer|compteur[10]~54         ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[11]~55         ; |acquisition_cap|timer_1s:timer|compteur[11]~55         ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[11]~55         ; |acquisition_cap|timer_1s:timer|compteur[11]~56         ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[12]~57         ; |acquisition_cap|timer_1s:timer|compteur[12]~57         ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[12]~57         ; |acquisition_cap|timer_1s:timer|compteur[12]~58         ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[13]~59         ; |acquisition_cap|timer_1s:timer|compteur[13]~59         ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[13]~59         ; |acquisition_cap|timer_1s:timer|compteur[13]~60         ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[14]~61         ; |acquisition_cap|timer_1s:timer|compteur[14]~61         ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[14]~61         ; |acquisition_cap|timer_1s:timer|compteur[14]~62         ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[15]~63         ; |acquisition_cap|timer_1s:timer|compteur[15]~63         ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[0]~9               ; |acquisition_cap|cpt:compteur|nombre[0]~9               ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[0]~9               ; |acquisition_cap|cpt:compteur|nombre[0]~10              ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[1]~13              ; |acquisition_cap|cpt:compteur|nombre[1]~13              ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[1]~13              ; |acquisition_cap|cpt:compteur|nombre[1]~14              ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[2]~15              ; |acquisition_cap|cpt:compteur|nombre[2]~15              ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[2]~15              ; |acquisition_cap|cpt:compteur|nombre[2]~16              ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[3]~17              ; |acquisition_cap|cpt:compteur|nombre[3]~17              ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[3]~17              ; |acquisition_cap|cpt:compteur|nombre[3]~18              ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[4]~19              ; |acquisition_cap|cpt:compteur|nombre[4]~19              ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[4]~19              ; |acquisition_cap|cpt:compteur|nombre[4]~20              ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[5]~21              ; |acquisition_cap|cpt:compteur|nombre[5]~21              ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[5]~21              ; |acquisition_cap|cpt:compteur|nombre[5]~22              ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[6]~23              ; |acquisition_cap|cpt:compteur|nombre[6]~23              ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~0           ; |acquisition_cap|prediv_us:prediviseur|Add0~0           ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~0           ; |acquisition_cap|prediv_us:prediviseur|Add0~1           ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~2           ; |acquisition_cap|prediv_us:prediviseur|Add0~2           ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~2           ; |acquisition_cap|prediv_us:prediviseur|Add0~3           ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~4           ; |acquisition_cap|prediv_us:prediviseur|Add0~4           ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~4           ; |acquisition_cap|prediv_us:prediviseur|Add0~5           ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~6           ; |acquisition_cap|prediv_us:prediviseur|Add0~6           ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~6           ; |acquisition_cap|prediv_us:prediviseur|Add0~7           ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~8           ; |acquisition_cap|prediv_us:prediviseur|Add0~8           ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~8           ; |acquisition_cap|prediv_us:prediviseur|Add0~9           ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~10          ; |acquisition_cap|prediv_us:prediviseur|Add0~10          ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~10          ; |acquisition_cap|prediv_us:prediviseur|Add0~11          ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~12          ; |acquisition_cap|prediv_us:prediviseur|Add0~12          ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~12          ; |acquisition_cap|prediv_us:prediviseur|Add0~13          ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~14          ; |acquisition_cap|prediv_us:prediviseur|Add0~14          ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~14          ; |acquisition_cap|prediv_us:prediviseur|Add0~15          ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~16          ; |acquisition_cap|prediv_us:prediviseur|Add0~16          ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~16          ; |acquisition_cap|prediv_us:prediviseur|Add0~17          ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~18          ; |acquisition_cap|prediv_us:prediviseur|Add0~18          ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~18          ; |acquisition_cap|prediv_us:prediviseur|Add0~19          ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~20          ; |acquisition_cap|prediv_us:prediviseur|Add0~20          ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~20          ; |acquisition_cap|prediv_us:prediviseur|Add0~21          ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~22          ; |acquisition_cap|prediv_us:prediviseur|Add0~22          ; combout          ;
+; |acquisition_cap|cap_mae:MAE|etat_present.etat5         ; |acquisition_cap|cap_mae:MAE|etat_present.etat5         ; regout           ;
+; |acquisition_cap|cap_mae:MAE|etat_present.etat4         ; |acquisition_cap|cap_mae:MAE|etat_present.etat4         ; regout           ;
+; |acquisition_cap|cap_mae:MAE|etat_present.etat1         ; |acquisition_cap|cap_mae:MAE|etat_present.etat1         ; regout           ;
+; |acquisition_cap|cap_mae:MAE|etat_present.etat3         ; |acquisition_cap|cap_mae:MAE|etat_present.etat3         ; regout           ;
+; |acquisition_cap|cap_mae:MAE|etat_pres[0]~0             ; |acquisition_cap|cap_mae:MAE|etat_pres[0]~0             ; combout          ;
+; |acquisition_cap|cap_mae:MAE|etat_pres[0]~1             ; |acquisition_cap|cap_mae:MAE|etat_pres[0]~1             ; combout          ;
+; |acquisition_cap|cap_mae:MAE|etat_pres~2                ; |acquisition_cap|cap_mae:MAE|etat_pres~2                ; combout          ;
+; |acquisition_cap|cap_mae:MAE|etat_pres[2]~3             ; |acquisition_cap|cap_mae:MAE|etat_pres[2]~3             ; combout          ;
+; |acquisition_cap|bascule_D:bascule|Q[0]                 ; |acquisition_cap|bascule_D:bascule|Q[0]                 ; regout           ;
+; |acquisition_cap|cap_mae:MAE|Selector3~1                ; |acquisition_cap|cap_mae:MAE|Selector3~1                ; combout          ;
+; |acquisition_cap|cap_mae:MAE|etat_suivant.etat4~0       ; |acquisition_cap|cap_mae:MAE|etat_suivant.etat4~0       ; combout          ;
+; |acquisition_cap|cap_mae:MAE|Selector2~0                ; |acquisition_cap|cap_mae:MAE|Selector2~0                ; combout          ;
+; |acquisition_cap|cap_mae:MAE|Selector2~1                ; |acquisition_cap|cap_mae:MAE|Selector2~1                ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~0                ; |acquisition_cap|timer_1s:timer|Equal0~0                ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~1                ; |acquisition_cap|timer_1s:timer|Equal0~1                ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~2                ; |acquisition_cap|timer_1s:timer|Equal0~2                ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~3                ; |acquisition_cap|timer_1s:timer|Equal0~3                ; combout          ;
+; |acquisition_cap|timer_1s:timer|var_temp~2              ; |acquisition_cap|timer_1s:timer|var_temp~2              ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|var_temp         ; |acquisition_cap|prediv_us:prediviseur|var_temp         ; regout           ;
+; |acquisition_cap|cpt:compteur|Equal0~0                  ; |acquisition_cap|cpt:compteur|Equal0~0                  ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[0]~11              ; |acquisition_cap|cpt:compteur|nombre[0]~11              ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[0]~12              ; |acquisition_cap|cpt:compteur|nombre[0]~12              ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[6]      ; |acquisition_cap|prediv_us:prediviseur|compteur[6]      ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[5]      ; |acquisition_cap|prediv_us:prediviseur|compteur[5]      ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[4]      ; |acquisition_cap|prediv_us:prediviseur|compteur[4]      ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[3]      ; |acquisition_cap|prediv_us:prediviseur|compteur[3]      ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~0         ; |acquisition_cap|prediv_us:prediviseur|Equal0~0         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[1]      ; |acquisition_cap|prediv_us:prediviseur|compteur[1]      ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[0]      ; |acquisition_cap|prediv_us:prediviseur|compteur[0]      ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[7]      ; |acquisition_cap|prediv_us:prediviseur|compteur[7]      ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[2]      ; |acquisition_cap|prediv_us:prediviseur|compteur[2]      ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~1         ; |acquisition_cap|prediv_us:prediviseur|Equal0~1         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[8]      ; |acquisition_cap|prediv_us:prediviseur|compteur[8]      ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[11]     ; |acquisition_cap|prediv_us:prediviseur|compteur[11]     ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[9]      ; |acquisition_cap|prediv_us:prediviseur|compteur[9]      ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[10]     ; |acquisition_cap|prediv_us:prediviseur|compteur[10]     ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~2         ; |acquisition_cap|prediv_us:prediviseur|Equal0~2         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~4         ; |acquisition_cap|prediv_us:prediviseur|Equal0~4         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|var_temp~0       ; |acquisition_cap|prediv_us:prediviseur|var_temp~0       ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur~0       ; |acquisition_cap|prediv_us:prediviseur|compteur~0       ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur~1       ; |acquisition_cap|prediv_us:prediviseur|compteur~1       ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur~2       ; |acquisition_cap|prediv_us:prediviseur|compteur~2       ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur~3       ; |acquisition_cap|prediv_us:prediviseur|compteur~3       ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur~4       ; |acquisition_cap|prediv_us:prediviseur|compteur~4       ; combout          ;
+; |acquisition_cap|etat_mae[0]                            ; |acquisition_cap|etat_mae[0]                            ; padio            ;
+; |acquisition_cap|etat_mae[1]                            ; |acquisition_cap|etat_mae[1]                            ; padio            ;
+; |acquisition_cap|etat_mae[2]                            ; |acquisition_cap|etat_mae[2]                            ; padio            ;
+; |acquisition_cap|data_valid                             ; |acquisition_cap|data_valid                             ; padio            ;
+; |acquisition_cap|data_compas[0]                         ; |acquisition_cap|data_compas[0]                         ; padio            ;
+; |acquisition_cap|data_compas[1]                         ; |acquisition_cap|data_compas[1]                         ; padio            ;
+; |acquisition_cap|data_compas[2]                         ; |acquisition_cap|data_compas[2]                         ; padio            ;
+; |acquisition_cap|data_compas[3]                         ; |acquisition_cap|data_compas[3]                         ; padio            ;
+; |acquisition_cap|data_compas[4]                         ; |acquisition_cap|data_compas[4]                         ; padio            ;
+; |acquisition_cap|data_compas[5]                         ; |acquisition_cap|data_compas[5]                         ; padio            ;
+; |acquisition_cap|data_compas[6]                         ; |acquisition_cap|data_compas[6]                         ; padio            ;
+; |acquisition_cap|data_compas[7]                         ; |acquisition_cap|data_compas[7]                         ; padio            ;
+; |acquisition_cap|data_compas[8]                         ; |acquisition_cap|data_compas[8]                         ; padio            ;
+; |acquisition_cap|start_stop                             ; |acquisition_cap|start_stop~corein                      ; combout          ;
+; |acquisition_cap|in_pwm_compas                          ; |acquisition_cap|in_pwm_compas~corein                   ; combout          ;
+; |acquisition_cap|clk_50M                                ; |acquisition_cap|clk_50M~corein                         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|var_temp~clkctrl ; |acquisition_cap|prediv_us:prediviseur|var_temp~clkctrl ; outclk           ;
+; |acquisition_cap|clk_50M~clkctrl                        ; |acquisition_cap|clk_50M~clkctrl                        ; outclk           ;
++---------------------------------------------------------+---------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                                                           ;
++--------------------------------------------------------+--------------------------------------------------------+------------------+
+; Node Name                                              ; Output Port Name                                       ; Output Port Type ;
++--------------------------------------------------------+--------------------------------------------------------+------------------+
+; |acquisition_cap|timer_1s:timer|compteur[16]           ; |acquisition_cap|timer_1s:timer|compteur[16]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[18]           ; |acquisition_cap|timer_1s:timer|compteur[18]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[17]           ; |acquisition_cap|timer_1s:timer|compteur[17]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[19]           ; |acquisition_cap|timer_1s:timer|compteur[19]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[20]           ; |acquisition_cap|timer_1s:timer|compteur[20]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[21]           ; |acquisition_cap|timer_1s:timer|compteur[21]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[22]           ; |acquisition_cap|timer_1s:timer|compteur[22]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[23]           ; |acquisition_cap|timer_1s:timer|compteur[23]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[24]           ; |acquisition_cap|timer_1s:timer|compteur[24]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[26]           ; |acquisition_cap|timer_1s:timer|compteur[26]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[27]           ; |acquisition_cap|timer_1s:timer|compteur[27]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[25]           ; |acquisition_cap|timer_1s:timer|compteur[25]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[28]           ; |acquisition_cap|timer_1s:timer|compteur[28]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[29]           ; |acquisition_cap|timer_1s:timer|compteur[29]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[30]           ; |acquisition_cap|timer_1s:timer|compteur[30]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[31]           ; |acquisition_cap|timer_1s:timer|compteur[31]           ; regout           ;
+; |acquisition_cap|cpt:compteur|nombre[6]                ; |acquisition_cap|cpt:compteur|nombre[6]                ; regout           ;
+; |acquisition_cap|cpt:compteur|nombre[7]                ; |acquisition_cap|cpt:compteur|nombre[7]                ; regout           ;
+; |acquisition_cap|cpt:compteur|nombre[8]                ; |acquisition_cap|cpt:compteur|nombre[8]                ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[15]~63        ; |acquisition_cap|timer_1s:timer|compteur[15]~64        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[16]~65        ; |acquisition_cap|timer_1s:timer|compteur[16]~65        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[16]~65        ; |acquisition_cap|timer_1s:timer|compteur[16]~66        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[17]~67        ; |acquisition_cap|timer_1s:timer|compteur[17]~67        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[17]~67        ; |acquisition_cap|timer_1s:timer|compteur[17]~68        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[18]~69        ; |acquisition_cap|timer_1s:timer|compteur[18]~69        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[18]~69        ; |acquisition_cap|timer_1s:timer|compteur[18]~70        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[19]~71        ; |acquisition_cap|timer_1s:timer|compteur[19]~71        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[19]~71        ; |acquisition_cap|timer_1s:timer|compteur[19]~72        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[20]~73        ; |acquisition_cap|timer_1s:timer|compteur[20]~73        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[20]~73        ; |acquisition_cap|timer_1s:timer|compteur[20]~74        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[21]~75        ; |acquisition_cap|timer_1s:timer|compteur[21]~75        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[21]~75        ; |acquisition_cap|timer_1s:timer|compteur[21]~76        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[22]~77        ; |acquisition_cap|timer_1s:timer|compteur[22]~77        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[22]~77        ; |acquisition_cap|timer_1s:timer|compteur[22]~78        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[23]~79        ; |acquisition_cap|timer_1s:timer|compteur[23]~79        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[23]~79        ; |acquisition_cap|timer_1s:timer|compteur[23]~80        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[24]~81        ; |acquisition_cap|timer_1s:timer|compteur[24]~81        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[24]~81        ; |acquisition_cap|timer_1s:timer|compteur[24]~82        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[25]~83        ; |acquisition_cap|timer_1s:timer|compteur[25]~83        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[25]~83        ; |acquisition_cap|timer_1s:timer|compteur[25]~84        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[26]~85        ; |acquisition_cap|timer_1s:timer|compteur[26]~85        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[26]~85        ; |acquisition_cap|timer_1s:timer|compteur[26]~86        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[27]~87        ; |acquisition_cap|timer_1s:timer|compteur[27]~87        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[27]~87        ; |acquisition_cap|timer_1s:timer|compteur[27]~88        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[28]~89        ; |acquisition_cap|timer_1s:timer|compteur[28]~89        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[28]~89        ; |acquisition_cap|timer_1s:timer|compteur[28]~90        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[29]~91        ; |acquisition_cap|timer_1s:timer|compteur[29]~91        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[29]~91        ; |acquisition_cap|timer_1s:timer|compteur[29]~92        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[30]~93        ; |acquisition_cap|timer_1s:timer|compteur[30]~93        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[30]~93        ; |acquisition_cap|timer_1s:timer|compteur[30]~94        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[31]~95        ; |acquisition_cap|timer_1s:timer|compteur[31]~95        ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[6]~23             ; |acquisition_cap|cpt:compteur|nombre[6]~24             ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[7]~25             ; |acquisition_cap|cpt:compteur|nombre[7]~25             ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[7]~25             ; |acquisition_cap|cpt:compteur|nombre[7]~26             ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[8]~27             ; |acquisition_cap|cpt:compteur|nombre[8]~27             ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~22         ; |acquisition_cap|prediv_us:prediviseur|Add0~23         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~24         ; |acquisition_cap|prediv_us:prediviseur|Add0~24         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~24         ; |acquisition_cap|prediv_us:prediviseur|Add0~25         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~26         ; |acquisition_cap|prediv_us:prediviseur|Add0~26         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~26         ; |acquisition_cap|prediv_us:prediviseur|Add0~27         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~28         ; |acquisition_cap|prediv_us:prediviseur|Add0~28         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~28         ; |acquisition_cap|prediv_us:prediviseur|Add0~29         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~30         ; |acquisition_cap|prediv_us:prediviseur|Add0~30         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~30         ; |acquisition_cap|prediv_us:prediviseur|Add0~31         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~32         ; |acquisition_cap|prediv_us:prediviseur|Add0~32         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~32         ; |acquisition_cap|prediv_us:prediviseur|Add0~33         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~34         ; |acquisition_cap|prediv_us:prediviseur|Add0~34         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~34         ; |acquisition_cap|prediv_us:prediviseur|Add0~35         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~36         ; |acquisition_cap|prediv_us:prediviseur|Add0~36         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~36         ; |acquisition_cap|prediv_us:prediviseur|Add0~37         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~38         ; |acquisition_cap|prediv_us:prediviseur|Add0~38         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~38         ; |acquisition_cap|prediv_us:prediviseur|Add0~39         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~40         ; |acquisition_cap|prediv_us:prediviseur|Add0~40         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~40         ; |acquisition_cap|prediv_us:prediviseur|Add0~41         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~42         ; |acquisition_cap|prediv_us:prediviseur|Add0~42         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~42         ; |acquisition_cap|prediv_us:prediviseur|Add0~43         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~44         ; |acquisition_cap|prediv_us:prediviseur|Add0~44         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~44         ; |acquisition_cap|prediv_us:prediviseur|Add0~45         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~46         ; |acquisition_cap|prediv_us:prediviseur|Add0~46         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~46         ; |acquisition_cap|prediv_us:prediviseur|Add0~47         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~48         ; |acquisition_cap|prediv_us:prediviseur|Add0~48         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~48         ; |acquisition_cap|prediv_us:prediviseur|Add0~49         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~50         ; |acquisition_cap|prediv_us:prediviseur|Add0~50         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~50         ; |acquisition_cap|prediv_us:prediviseur|Add0~51         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~52         ; |acquisition_cap|prediv_us:prediviseur|Add0~52         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~52         ; |acquisition_cap|prediv_us:prediviseur|Add0~53         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~54         ; |acquisition_cap|prediv_us:prediviseur|Add0~54         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~54         ; |acquisition_cap|prediv_us:prediviseur|Add0~55         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~56         ; |acquisition_cap|prediv_us:prediviseur|Add0~56         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~56         ; |acquisition_cap|prediv_us:prediviseur|Add0~57         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~58         ; |acquisition_cap|prediv_us:prediviseur|Add0~58         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~58         ; |acquisition_cap|prediv_us:prediviseur|Add0~59         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~60         ; |acquisition_cap|prediv_us:prediviseur|Add0~60         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~60         ; |acquisition_cap|prediv_us:prediviseur|Add0~61         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~62         ; |acquisition_cap|prediv_us:prediviseur|Add0~62         ; combout          ;
+; |acquisition_cap|cap_mae:MAE|etat_present.etat2        ; |acquisition_cap|cap_mae:MAE|etat_present.etat2        ; regout           ;
+; |acquisition_cap|timer_1s:timer|var_temp               ; |acquisition_cap|timer_1s:timer|var_temp               ; regout           ;
+; |acquisition_cap|cap_mae:MAE|Selector3~0               ; |acquisition_cap|cap_mae:MAE|Selector3~0               ; combout          ;
+; |acquisition_cap|cap_mae:MAE|Selector1~0               ; |acquisition_cap|cap_mae:MAE|Selector1~0               ; combout          ;
+; |acquisition_cap|cap_mae:MAE|Selector1~1               ; |acquisition_cap|cap_mae:MAE|Selector1~1               ; combout          ;
+; |acquisition_cap|cap_mae:MAE|Selector0~0               ; |acquisition_cap|cap_mae:MAE|Selector0~0               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~4               ; |acquisition_cap|timer_1s:timer|Equal0~4               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~5               ; |acquisition_cap|timer_1s:timer|Equal0~5               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~6               ; |acquisition_cap|timer_1s:timer|Equal0~6               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~7               ; |acquisition_cap|timer_1s:timer|Equal0~7               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~8               ; |acquisition_cap|timer_1s:timer|Equal0~8               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~9               ; |acquisition_cap|timer_1s:timer|Equal0~9               ; combout          ;
+; |acquisition_cap|timer_1s:timer|var_temp~0             ; |acquisition_cap|timer_1s:timer|var_temp~0             ; combout          ;
+; |acquisition_cap|timer_1s:timer|var_temp~1             ; |acquisition_cap|timer_1s:timer|var_temp~1             ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[6]~34         ; |acquisition_cap|timer_1s:timer|compteur[6]~34         ; combout          ;
+; |acquisition_cap|cpt:compteur|Equal0~1                 ; |acquisition_cap|cpt:compteur|Equal0~1                 ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[12]    ; |acquisition_cap|prediv_us:prediviseur|compteur[12]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[13]    ; |acquisition_cap|prediv_us:prediviseur|compteur[13]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[14]    ; |acquisition_cap|prediv_us:prediviseur|compteur[14]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[15]    ; |acquisition_cap|prediv_us:prediviseur|compteur[15]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~3        ; |acquisition_cap|prediv_us:prediviseur|Equal0~3        ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[16]    ; |acquisition_cap|prediv_us:prediviseur|compteur[16]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[17]    ; |acquisition_cap|prediv_us:prediviseur|compteur[17]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[18]    ; |acquisition_cap|prediv_us:prediviseur|compteur[18]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[19]    ; |acquisition_cap|prediv_us:prediviseur|compteur[19]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~5        ; |acquisition_cap|prediv_us:prediviseur|Equal0~5        ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[20]    ; |acquisition_cap|prediv_us:prediviseur|compteur[20]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[21]    ; |acquisition_cap|prediv_us:prediviseur|compteur[21]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[22]    ; |acquisition_cap|prediv_us:prediviseur|compteur[22]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[23]    ; |acquisition_cap|prediv_us:prediviseur|compteur[23]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~6        ; |acquisition_cap|prediv_us:prediviseur|Equal0~6        ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[24]    ; |acquisition_cap|prediv_us:prediviseur|compteur[24]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[25]    ; |acquisition_cap|prediv_us:prediviseur|compteur[25]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[26]    ; |acquisition_cap|prediv_us:prediviseur|compteur[26]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[27]    ; |acquisition_cap|prediv_us:prediviseur|compteur[27]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~7        ; |acquisition_cap|prediv_us:prediviseur|Equal0~7        ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[28]    ; |acquisition_cap|prediv_us:prediviseur|compteur[28]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[29]    ; |acquisition_cap|prediv_us:prediviseur|compteur[29]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[30]    ; |acquisition_cap|prediv_us:prediviseur|compteur[30]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[31]    ; |acquisition_cap|prediv_us:prediviseur|compteur[31]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~8        ; |acquisition_cap|prediv_us:prediviseur|Equal0~8        ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~9        ; |acquisition_cap|prediv_us:prediviseur|Equal0~9        ; combout          ;
+; |acquisition_cap|out_1s                                ; |acquisition_cap|out_1s                                ; padio            ;
+; |acquisition_cap|continu                               ; |acquisition_cap|continu~corein                        ; combout          ;
+; |acquisition_cap|raz_n                                 ; |acquisition_cap|raz_n~corein                          ; combout          ;
+; |acquisition_cap|cap_mae:MAE|etat_present.etat0~feeder ; |acquisition_cap|cap_mae:MAE|etat_present.etat0~feeder ; combout          ;
++--------------------------------------------------------+--------------------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++------------------------------------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                                                           ;
++--------------------------------------------------------+--------------------------------------------------------+------------------+
+; Node Name                                              ; Output Port Name                                       ; Output Port Type ;
++--------------------------------------------------------+--------------------------------------------------------+------------------+
+; |acquisition_cap|timer_1s:timer|compteur[15]           ; |acquisition_cap|timer_1s:timer|compteur[15]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[16]           ; |acquisition_cap|timer_1s:timer|compteur[16]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[18]           ; |acquisition_cap|timer_1s:timer|compteur[18]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[17]           ; |acquisition_cap|timer_1s:timer|compteur[17]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[19]           ; |acquisition_cap|timer_1s:timer|compteur[19]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[20]           ; |acquisition_cap|timer_1s:timer|compteur[20]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[21]           ; |acquisition_cap|timer_1s:timer|compteur[21]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[22]           ; |acquisition_cap|timer_1s:timer|compteur[22]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[23]           ; |acquisition_cap|timer_1s:timer|compteur[23]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[24]           ; |acquisition_cap|timer_1s:timer|compteur[24]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[26]           ; |acquisition_cap|timer_1s:timer|compteur[26]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[27]           ; |acquisition_cap|timer_1s:timer|compteur[27]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[25]           ; |acquisition_cap|timer_1s:timer|compteur[25]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[28]           ; |acquisition_cap|timer_1s:timer|compteur[28]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[29]           ; |acquisition_cap|timer_1s:timer|compteur[29]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[30]           ; |acquisition_cap|timer_1s:timer|compteur[30]           ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[31]           ; |acquisition_cap|timer_1s:timer|compteur[31]           ; regout           ;
+; |acquisition_cap|cpt:compteur|nombre[5]                ; |acquisition_cap|cpt:compteur|nombre[5]                ; regout           ;
+; |acquisition_cap|cpt:compteur|nombre[6]                ; |acquisition_cap|cpt:compteur|nombre[6]                ; regout           ;
+; |acquisition_cap|cpt:compteur|nombre[7]                ; |acquisition_cap|cpt:compteur|nombre[7]                ; regout           ;
+; |acquisition_cap|cpt:compteur|nombre[8]                ; |acquisition_cap|cpt:compteur|nombre[8]                ; regout           ;
+; |acquisition_cap|timer_1s:timer|compteur[15]~63        ; |acquisition_cap|timer_1s:timer|compteur[15]~64        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[16]~65        ; |acquisition_cap|timer_1s:timer|compteur[16]~65        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[16]~65        ; |acquisition_cap|timer_1s:timer|compteur[16]~66        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[17]~67        ; |acquisition_cap|timer_1s:timer|compteur[17]~67        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[17]~67        ; |acquisition_cap|timer_1s:timer|compteur[17]~68        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[18]~69        ; |acquisition_cap|timer_1s:timer|compteur[18]~69        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[18]~69        ; |acquisition_cap|timer_1s:timer|compteur[18]~70        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[19]~71        ; |acquisition_cap|timer_1s:timer|compteur[19]~71        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[19]~71        ; |acquisition_cap|timer_1s:timer|compteur[19]~72        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[20]~73        ; |acquisition_cap|timer_1s:timer|compteur[20]~73        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[20]~73        ; |acquisition_cap|timer_1s:timer|compteur[20]~74        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[21]~75        ; |acquisition_cap|timer_1s:timer|compteur[21]~75        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[21]~75        ; |acquisition_cap|timer_1s:timer|compteur[21]~76        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[22]~77        ; |acquisition_cap|timer_1s:timer|compteur[22]~77        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[22]~77        ; |acquisition_cap|timer_1s:timer|compteur[22]~78        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[23]~79        ; |acquisition_cap|timer_1s:timer|compteur[23]~79        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[23]~79        ; |acquisition_cap|timer_1s:timer|compteur[23]~80        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[24]~81        ; |acquisition_cap|timer_1s:timer|compteur[24]~81        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[24]~81        ; |acquisition_cap|timer_1s:timer|compteur[24]~82        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[25]~83        ; |acquisition_cap|timer_1s:timer|compteur[25]~83        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[25]~83        ; |acquisition_cap|timer_1s:timer|compteur[25]~84        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[26]~85        ; |acquisition_cap|timer_1s:timer|compteur[26]~85        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[26]~85        ; |acquisition_cap|timer_1s:timer|compteur[26]~86        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[27]~87        ; |acquisition_cap|timer_1s:timer|compteur[27]~87        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[27]~87        ; |acquisition_cap|timer_1s:timer|compteur[27]~88        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[28]~89        ; |acquisition_cap|timer_1s:timer|compteur[28]~89        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[28]~89        ; |acquisition_cap|timer_1s:timer|compteur[28]~90        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[29]~91        ; |acquisition_cap|timer_1s:timer|compteur[29]~91        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[29]~91        ; |acquisition_cap|timer_1s:timer|compteur[29]~92        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[30]~93        ; |acquisition_cap|timer_1s:timer|compteur[30]~93        ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[30]~93        ; |acquisition_cap|timer_1s:timer|compteur[30]~94        ; cout             ;
+; |acquisition_cap|timer_1s:timer|compteur[31]~95        ; |acquisition_cap|timer_1s:timer|compteur[31]~95        ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[6]~23             ; |acquisition_cap|cpt:compteur|nombre[6]~24             ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[7]~25             ; |acquisition_cap|cpt:compteur|nombre[7]~25             ; combout          ;
+; |acquisition_cap|cpt:compteur|nombre[7]~25             ; |acquisition_cap|cpt:compteur|nombre[7]~26             ; cout             ;
+; |acquisition_cap|cpt:compteur|nombre[8]~27             ; |acquisition_cap|cpt:compteur|nombre[8]~27             ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~22         ; |acquisition_cap|prediv_us:prediviseur|Add0~23         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~24         ; |acquisition_cap|prediv_us:prediviseur|Add0~24         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~24         ; |acquisition_cap|prediv_us:prediviseur|Add0~25         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~26         ; |acquisition_cap|prediv_us:prediviseur|Add0~26         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~26         ; |acquisition_cap|prediv_us:prediviseur|Add0~27         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~28         ; |acquisition_cap|prediv_us:prediviseur|Add0~28         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~28         ; |acquisition_cap|prediv_us:prediviseur|Add0~29         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~30         ; |acquisition_cap|prediv_us:prediviseur|Add0~30         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~30         ; |acquisition_cap|prediv_us:prediviseur|Add0~31         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~32         ; |acquisition_cap|prediv_us:prediviseur|Add0~32         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~32         ; |acquisition_cap|prediv_us:prediviseur|Add0~33         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~34         ; |acquisition_cap|prediv_us:prediviseur|Add0~34         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~34         ; |acquisition_cap|prediv_us:prediviseur|Add0~35         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~36         ; |acquisition_cap|prediv_us:prediviseur|Add0~36         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~36         ; |acquisition_cap|prediv_us:prediviseur|Add0~37         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~38         ; |acquisition_cap|prediv_us:prediviseur|Add0~38         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~38         ; |acquisition_cap|prediv_us:prediviseur|Add0~39         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~40         ; |acquisition_cap|prediv_us:prediviseur|Add0~40         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~40         ; |acquisition_cap|prediv_us:prediviseur|Add0~41         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~42         ; |acquisition_cap|prediv_us:prediviseur|Add0~42         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~42         ; |acquisition_cap|prediv_us:prediviseur|Add0~43         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~44         ; |acquisition_cap|prediv_us:prediviseur|Add0~44         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~44         ; |acquisition_cap|prediv_us:prediviseur|Add0~45         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~46         ; |acquisition_cap|prediv_us:prediviseur|Add0~46         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~46         ; |acquisition_cap|prediv_us:prediviseur|Add0~47         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~48         ; |acquisition_cap|prediv_us:prediviseur|Add0~48         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~48         ; |acquisition_cap|prediv_us:prediviseur|Add0~49         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~50         ; |acquisition_cap|prediv_us:prediviseur|Add0~50         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~50         ; |acquisition_cap|prediv_us:prediviseur|Add0~51         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~52         ; |acquisition_cap|prediv_us:prediviseur|Add0~52         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~52         ; |acquisition_cap|prediv_us:prediviseur|Add0~53         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~54         ; |acquisition_cap|prediv_us:prediviseur|Add0~54         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~54         ; |acquisition_cap|prediv_us:prediviseur|Add0~55         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~56         ; |acquisition_cap|prediv_us:prediviseur|Add0~56         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~56         ; |acquisition_cap|prediv_us:prediviseur|Add0~57         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~58         ; |acquisition_cap|prediv_us:prediviseur|Add0~58         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~58         ; |acquisition_cap|prediv_us:prediviseur|Add0~59         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~60         ; |acquisition_cap|prediv_us:prediviseur|Add0~60         ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~60         ; |acquisition_cap|prediv_us:prediviseur|Add0~61         ; cout             ;
+; |acquisition_cap|prediv_us:prediviseur|Add0~62         ; |acquisition_cap|prediv_us:prediviseur|Add0~62         ; combout          ;
+; |acquisition_cap|cap_mae:MAE|etat_present.etat2        ; |acquisition_cap|cap_mae:MAE|etat_present.etat2        ; regout           ;
+; |acquisition_cap|timer_1s:timer|var_temp               ; |acquisition_cap|timer_1s:timer|var_temp               ; regout           ;
+; |acquisition_cap|cap_mae:MAE|Selector3~0               ; |acquisition_cap|cap_mae:MAE|Selector3~0               ; combout          ;
+; |acquisition_cap|cap_mae:MAE|etat_present.etat0        ; |acquisition_cap|cap_mae:MAE|etat_present.etat0        ; regout           ;
+; |acquisition_cap|cap_mae:MAE|Selector1~0               ; |acquisition_cap|cap_mae:MAE|Selector1~0               ; combout          ;
+; |acquisition_cap|cap_mae:MAE|Selector1~1               ; |acquisition_cap|cap_mae:MAE|Selector1~1               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~4               ; |acquisition_cap|timer_1s:timer|Equal0~4               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~5               ; |acquisition_cap|timer_1s:timer|Equal0~5               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~6               ; |acquisition_cap|timer_1s:timer|Equal0~6               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~7               ; |acquisition_cap|timer_1s:timer|Equal0~7               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~8               ; |acquisition_cap|timer_1s:timer|Equal0~8               ; combout          ;
+; |acquisition_cap|timer_1s:timer|Equal0~9               ; |acquisition_cap|timer_1s:timer|Equal0~9               ; combout          ;
+; |acquisition_cap|timer_1s:timer|var_temp~0             ; |acquisition_cap|timer_1s:timer|var_temp~0             ; combout          ;
+; |acquisition_cap|timer_1s:timer|var_temp~1             ; |acquisition_cap|timer_1s:timer|var_temp~1             ; combout          ;
+; |acquisition_cap|timer_1s:timer|compteur[6]~34         ; |acquisition_cap|timer_1s:timer|compteur[6]~34         ; combout          ;
+; |acquisition_cap|cpt:compteur|Equal0~1                 ; |acquisition_cap|cpt:compteur|Equal0~1                 ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[12]    ; |acquisition_cap|prediv_us:prediviseur|compteur[12]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[13]    ; |acquisition_cap|prediv_us:prediviseur|compteur[13]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[14]    ; |acquisition_cap|prediv_us:prediviseur|compteur[14]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[15]    ; |acquisition_cap|prediv_us:prediviseur|compteur[15]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~3        ; |acquisition_cap|prediv_us:prediviseur|Equal0~3        ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[16]    ; |acquisition_cap|prediv_us:prediviseur|compteur[16]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[17]    ; |acquisition_cap|prediv_us:prediviseur|compteur[17]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[18]    ; |acquisition_cap|prediv_us:prediviseur|compteur[18]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[19]    ; |acquisition_cap|prediv_us:prediviseur|compteur[19]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~5        ; |acquisition_cap|prediv_us:prediviseur|Equal0~5        ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[20]    ; |acquisition_cap|prediv_us:prediviseur|compteur[20]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[21]    ; |acquisition_cap|prediv_us:prediviseur|compteur[21]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[22]    ; |acquisition_cap|prediv_us:prediviseur|compteur[22]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[23]    ; |acquisition_cap|prediv_us:prediviseur|compteur[23]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~6        ; |acquisition_cap|prediv_us:prediviseur|Equal0~6        ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[24]    ; |acquisition_cap|prediv_us:prediviseur|compteur[24]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[25]    ; |acquisition_cap|prediv_us:prediviseur|compteur[25]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[26]    ; |acquisition_cap|prediv_us:prediviseur|compteur[26]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[27]    ; |acquisition_cap|prediv_us:prediviseur|compteur[27]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~7        ; |acquisition_cap|prediv_us:prediviseur|Equal0~7        ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[28]    ; |acquisition_cap|prediv_us:prediviseur|compteur[28]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[29]    ; |acquisition_cap|prediv_us:prediviseur|compteur[29]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[30]    ; |acquisition_cap|prediv_us:prediviseur|compteur[30]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|compteur[31]    ; |acquisition_cap|prediv_us:prediviseur|compteur[31]    ; regout           ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~8        ; |acquisition_cap|prediv_us:prediviseur|Equal0~8        ; combout          ;
+; |acquisition_cap|prediv_us:prediviseur|Equal0~9        ; |acquisition_cap|prediv_us:prediviseur|Equal0~9        ; combout          ;
+; |acquisition_cap|out_1s                                ; |acquisition_cap|out_1s                                ; padio            ;
+; |acquisition_cap|continu                               ; |acquisition_cap|continu~corein                        ; combout          ;
+; |acquisition_cap|raz_n                                 ; |acquisition_cap|raz_n~corein                          ; combout          ;
+; |acquisition_cap|cap_mae:MAE|etat_present.etat0~feeder ; |acquisition_cap|cap_mae:MAE|etat_present.etat0~feeder ; combout          ;
++--------------------------------------------------------+--------------------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II Simulator
+    Info: Version 9.1 Build 350 03/24/2010 Service Pack 2 SJ Web Edition
+    Info: Processing started: Fri Jan 07 19:27:20 2022
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off acquisition_cap -c acquisition_cap
+Info: Using vector source file "../../package_BE/acquisition_cap_simu.vwf"
+Info: Overwriting simulation input file with simulation results
+    Info: A backup of acquisition_cap_simu.vwf called acquisition_cap.sim_ori.vwf has been created in the db folder
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      54.43 %
+Info: Number of transitions in simulation is 6693568
+Info: Vector file acquisition_cap_simu.vwf is saved in VWF text format. You can compress it into CVWF format in order to reduce file size. For more details please refer to the Quartus II Help.
+Info: Quartus II Simulator was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 159 megabytes
+    Info: Processing ended: Fri Jan 07 19:27:43 2022
+    Info: Elapsed time: 00:00:23
+    Info: Total CPU time (on all processors): 00:00:24
+
+

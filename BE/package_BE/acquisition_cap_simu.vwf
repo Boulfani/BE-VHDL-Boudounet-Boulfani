@@ -1,0 +1,793 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+
+/*
+Copyright (C) 1991-2010 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+*/
+
+HEADER
+{
+	VERSION = 1;
+	TIME_UNIT = ns;
+	DATA_OFFSET = 0.0;
+	DATA_DURATION = 5000000.0;
+	SIMULATION_TIME = 5000000.0;
+	GRID_PHASE = 0.0;
+	GRID_PERIOD = 10.0;
+	GRID_DUTY_CYCLE = 50;
+}
+
+SIGNAL("clk_50M")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("continu")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("data_compas")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 9;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("data_compas[8]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "data_compas";
+}
+
+SIGNAL("data_compas[7]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "data_compas";
+}
+
+SIGNAL("data_compas[6]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "data_compas";
+}
+
+SIGNAL("data_compas[5]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "data_compas";
+}
+
+SIGNAL("data_compas[4]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "data_compas";
+}
+
+SIGNAL("data_compas[3]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "data_compas";
+}
+
+SIGNAL("data_compas[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "data_compas";
+}
+
+SIGNAL("data_compas[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "data_compas";
+}
+
+SIGNAL("data_compas[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "data_compas";
+}
+
+SIGNAL("data_valid")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("etat_mae")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = BUS;
+	WIDTH = 3;
+	LSB_INDEX = 0;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("etat_mae[2]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "etat_mae";
+}
+
+SIGNAL("etat_mae[1]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "etat_mae";
+}
+
+SIGNAL("etat_mae[0]")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "etat_mae";
+}
+
+SIGNAL("in_pwm_compas")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("out_1s")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = OUTPUT;
+	PARENT = "";
+}
+
+SIGNAL("raz_n")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("start_stop")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider 2022")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider 782")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider 2820")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+SIGNAL("divider 2509")
+{
+	VALUE_TYPE = NINE_LEVEL_BIT;
+	SIGNAL_TYPE = SINGLE_BIT;
+	WIDTH = 1;
+	LSB_INDEX = -1;
+	DIRECTION = INPUT;
+	PARENT = "";
+}
+
+TRANSITION_LIST("clk_50M")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 250000;
+			LEVEL 0 FOR 10.0;
+			LEVEL 1 FOR 10.0;
+		}
+	}
+}
+
+TRANSITION_LIST("continu")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("data_compas[8]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 137.108;
+		LEVEL 1 FOR 949900.0;
+		LEVEL 0 FOR 4049962.892;
+	}
+}
+
+TRANSITION_LIST("data_compas[7]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 136.399;
+		LEVEL 1 FOR 949900.0;
+		LEVEL 0 FOR 4049963.601;
+	}
+}
+
+TRANSITION_LIST("data_compas[6]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 136.402;
+		LEVEL 1 FOR 949900.0;
+		LEVEL 0 FOR 4049963.598;
+	}
+}
+
+TRANSITION_LIST("data_compas[5]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 136.629;
+		LEVEL 1 FOR 949900.0;
+		LEVEL 0 FOR 3200000.0;
+		LEVEL 1 FOR 849963.371;
+	}
+}
+
+TRANSITION_LIST("data_compas[4]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 136.624;
+		LEVEL 1 FOR 949900.0;
+		LEVEL 0 FOR 1600000.0;
+		LEVEL 1 FOR 1600000.0;
+		LEVEL 0 FOR 849963.376;
+	}
+}
+
+TRANSITION_LIST("data_compas[3]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 150036.605;
+		NODE
+		{
+			REPEAT = 3;
+			LEVEL 1 FOR 800000.0;
+			LEVEL 0 FOR 800000.0;
+		}
+		LEVEL 1 FOR 49963.395;
+	}
+}
+
+TRANSITION_LIST("data_compas[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 136.609;
+		LEVEL 1 FOR 149900.0;
+		NODE
+		{
+			REPEAT = 6;
+			LEVEL 0 FOR 400000.0;
+			LEVEL 1 FOR 400000.0;
+		}
+		LEVEL 0 FOR 49963.391;
+	}
+}
+
+TRANSITION_LIST("data_compas[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 136.689;
+		LEVEL 1 FOR 149900.0;
+		NODE
+		{
+			REPEAT = 12;
+			LEVEL 0 FOR 200000.0;
+			LEVEL 1 FOR 200000.0;
+		}
+		LEVEL 0 FOR 49963.311;
+	}
+}
+
+TRANSITION_LIST("data_compas[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 50036.635;
+		NODE
+		{
+			REPEAT = 24;
+			LEVEL 1 FOR 100000.0;
+			LEVEL 0 FOR 100000.0;
+		}
+		LEVEL 1 FOR 100000.0;
+		LEVEL 0 FOR 49963.365;
+	}
+}
+
+TRANSITION_LIST("data_valid")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 116.434;
+		NODE
+		{
+			REPEAT = 49998;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 80.0;
+		}
+		LEVEL 1 FOR 20.0;
+		LEVEL 0 FOR 63.566;
+	}
+}
+
+TRANSITION_LIST("etat_mae[2]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 79.539;
+		NODE
+		{
+			REPEAT = 49999;
+			LEVEL 1 FOR 59.144;
+			LEVEL 0 FOR 40.856;
+		}
+		LEVEL 1 FOR 20.461;
+	}
+}
+
+TRANSITION_LIST("etat_mae[1]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 38.646;
+		NODE
+		{
+			REPEAT = 49999;
+			LEVEL 1 FOR 40.0;
+			LEVEL 0 FOR 60.0;
+		}
+		LEVEL 1 FOR 40.0;
+		LEVEL 0 FOR 21.354;
+	}
+}
+
+TRANSITION_LIST("etat_mae[0]")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 19.743;
+		LEVEL 1 FOR 59.895;
+		NODE
+		{
+			REPEAT = 49999;
+			LEVEL 0 FOR 39.146;
+			LEVEL 1 FOR 20.0;
+			LEVEL 0 FOR 0.854;
+			LEVEL 1 FOR 40.0;
+		}
+		LEVEL 0 FOR 20.362;
+	}
+}
+
+TRANSITION_LIST("in_pwm_compas")
+{
+	NODE
+	{
+		REPEAT = 1;
+		NODE
+		{
+			REPEAT = 50000;
+			LEVEL 0 FOR 50.0;
+			LEVEL 1 FOR 50.0;
+		}
+	}
+}
+
+TRANSITION_LIST("out_1s")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("raz_n")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 1 FOR 5000000.0;
+	}
+}
+
+TRANSITION_LIST("start_stop")
+{
+	NODE
+	{
+		REPEAT = 1;
+		LEVEL 0 FOR 30.0;
+		LEVEL 1 FOR 30.0;
+		LEVEL 0 FOR 4999940.0;
+	}
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "raz_n";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 0;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "clk_50M";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 1;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "divider 2022";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 2;
+	TREE_LEVEL = 0;
+	IS_DIVIDER = ON;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "continu";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 3;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "start_stop";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 4;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "divider 2509";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 5;
+	TREE_LEVEL = 0;
+	IS_DIVIDER = ON;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "in_pwm_compas";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 6;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "divider 782";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 7;
+	TREE_LEVEL = 0;
+	IS_DIVIDER = ON;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_compas";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 8;
+	TREE_LEVEL = 0;
+	CHILDREN = 9, 10, 11, 12, 13, 14, 15, 16, 17;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_compas[8]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 9;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_compas[7]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 10;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_compas[6]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 11;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_compas[5]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 12;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_compas[4]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 13;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_compas[3]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 14;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_compas[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 15;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_compas[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 16;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_compas[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Unsigned;
+	TREE_INDEX = 17;
+	TREE_LEVEL = 1;
+	PARENT = 8;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "out_1s";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 18;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "data_valid";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 19;
+	TREE_LEVEL = 0;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "divider 2820";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Binary;
+	TREE_INDEX = 20;
+	TREE_LEVEL = 0;
+	IS_DIVIDER = ON;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "etat_mae";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 21;
+	TREE_LEVEL = 0;
+	CHILDREN = 22, 23, 24;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "etat_mae[2]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 22;
+	TREE_LEVEL = 1;
+	PARENT = 21;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "etat_mae[1]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 23;
+	TREE_LEVEL = 1;
+	PARENT = 21;
+}
+
+DISPLAY_LINE
+{
+	CHANNEL = "etat_mae[0]";
+	EXPAND_STATUS = COLLAPSED;
+	RADIX = Hexadecimal;
+	TREE_INDEX = 24;
+	TREE_LEVEL = 1;
+	PARENT = 21;
+}
+
+TIME_BAR
+{
+	TIME = 30000;
+	MASTER = TRUE;
+}
+;

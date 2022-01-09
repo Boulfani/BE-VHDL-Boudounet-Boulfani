@@ -1,0 +1,27 @@
+#include "sys/alt_stdio.h"
+#include "unistd.h"
+#include "system.h"
+#include <stdlib.h>
+#include <stdio.h>
+
+unsigned char* switchs = PIO_0_BASE;
+unsigned char* leds = PIO_1_BASE;
+int main()
+{ 
+  alt_putstr("Hello from Nios II!\n");
+
+  /* Event loop never exits. */
+  while (1){
+
+	  	  switch(*switchs)
+	  	  {
+	  	  	  case 0: *leds=0;break;
+	  	  	  case 1: *leds=1;break;
+	  	  	  case 2: *leds=*leds +1;break;
+	  	  	  case 3: *leds=0xFF;break;
+	  	  	  default: *leds=0;break;
+	  	  	  usleep(1000000);
+	  	  }
+  }
+  return 0;
+}

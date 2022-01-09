@@ -1,0 +1,123 @@
+Library ieee;
+Use ieee.std_logic_1164.all;
+Use ieee.std_logic_unsigned.all;
+
+Library work;
+Use work.package_BE.all;
+
+Entity gestion_leds is
+port	(
+		--entrées 
+		clk 			: in std_logic; 
+		arazb			: in std_logic;
+		 
+		code 			: in std_logic_vector(2 downto 0);
+		chx_leds		: in std_logic_vector(2 downto 0);
+
+		-- sorties 
+		leds			: out std_logic_vector(2 downto 0);
+		etat : out std_logic_vector(1 downto 0)  	
+						
+		);
+End gestion_leds;
+
+Architecture ar of gestion_leds is
+
+Signal ien_cpt, ireset_cpt : std_logic;
+Signal ival_cpt: std_logic_vector (8 downto 0);
+
+Signal ipwm0, ipwm1, ipwm2 : std_logic_vector(15 downto 0);
+Signal isortie_basculeD0,isortie_basculeD1,isortie_basculeD2: std_logic_vector(15 downto 0);
+
+Begin
+
+MAE : mae_leds
+port map(
+		--entrées 
+		clk =>clk, arazb=>arazb, 
+		code =>code, chx_leds=>chx_leds,	
+		in_cpt=>ival_cpt,		
+		in_basculeD0=>isortie_basculeD0, in_basculeD1=>isortie_basculeD1, in_basculeD2=>isortie_basculeD2,
+
+		-- sorties
+			--Compteur
+		en_cpt=>ien_cpt, reset_cpt	=>ireset_cpt,
+		
+			--PWM x3
+		freq0 <=ipwm0(7 downto 0), duty0 <=ipwm0(15 downto 8),
+		freq1 <=ipwm1(7 downto 0), duty1 <=ipwm1(15 downto 8),
+		freq2 <=ipwm2(7 downto 0), duty2 <=ipwm2(15 downto 8),
+		
+			--Bascule D x3
+		sortie_basculeD0<=ipwm0, sortie_basculeD1<=ipwm1, sortie_basculeD2<=ipwm2,	
+			
+		etat_mae=>etat
+		);
+
+Bascule0 : bascule_D_generic
+generic map (n=>16)
+port map(
+		clk =>clk, arazb=>arazb, 
+		
+		en	=>'1',
+		D =>ipwm0,
+		
+		Q =>isortie_basculeD0
+		);
+
+Bascule1 : bascule_D_generic
+generic map (n=>16)
+port map(
+		clk =>clk, arazb=>arazb, 
+		
+		en	=>'1',
+		D =>ipwm1,
+		
+		Q =>isortie_basculeD1
+		);
+		
+Bascule2 : bascule_D_generic
+generic map (n=>16)
+port map(
+		clk =>clk, arazb=>arazb, 
+		
+		en	=>'1',
+		D =>ipwm2,
+		
+		Q =>isortie_basculeD2
+		);
+		
+compteur : cpt
+port map(
+		clk =>clk, arazb=>arazb, 
+		reset=>ireset_cpt, en=>ien_cpt,	
+		S		=>ival_cpt
+		);
+		
+PWM0 : pwm
+port map(
+		clk =>clk, araz=>arazb, 
+		freq	=>ipwm0(7 downto 0), duty	=>ipwm0(15 downto 8),
+		
+		pwm_out	=>leds(0)
+		);
+
+
+PWM1 : pwm
+port map(
+		clk =>clk, araz=>arazb, 
+		freq	=>ipwm1(7 downto 0), duty	=>ipwm1(15 downto 8),
+		
+		pwm_out	=>leds(1)
+		);
+
+
+PWM2 : pwm
+port map(
+		clk =>clk, araz=>arazb,
+		freq	=>ipwm2(7 downto 0), duty	=>ipwm2(15 downto 8),
+		
+		pwm_out	=>leds(2)
+		);
+		
+End ar;
